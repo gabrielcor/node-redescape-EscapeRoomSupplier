@@ -16,7 +16,7 @@ This "base" flows will take care of handling common operations and ensure that a
 * Provide the ability to emulate an UPC, enabling the modeling of an Escape Room with that devices in mind
 * Provide more "creative" and increase the density of puzzles that we can create for each UPC 
 * Enable recording of telemetry data to analyze escape room behavior
-* Provide Escape Room state persistence in a database
+* Provide Escape Room state persistence in a database (SQL)
 
 ## Screenshots
 ### Dashboard
