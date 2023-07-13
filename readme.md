@@ -20,7 +20,7 @@ This "base" flows will take care of handling common operations and ensure that a
 
 ## Screenshots
 ### Dashboard
-!["Example GM Dashboard"](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/main/Documentation/screenshots/InitialDashboard.png)
+!["Example GM Dashboard"](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/main/Documentation/screenshots/InitialDashboard.png)
 
 ## Features
 * Free and open source - Completely free to download and use. 
