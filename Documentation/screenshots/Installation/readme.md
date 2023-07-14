@@ -14,5 +14,6 @@ you add the nodes
 * node-red-node-ui-table
 
 as shown below
-!["Add nodes "](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/main/Documentation/screenshots/ManagePallete02.png)
 
+#
+!["Add nodes "](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/main/Documentation/screenshots/ManagePallete02.png)
