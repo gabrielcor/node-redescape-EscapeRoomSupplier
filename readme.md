@@ -26,5 +26,7 @@ This "base" flows will take care of handling common operations and ensure that a
 * Free and open source - Completely free to download and use. 
 
 ## To Get Started
+To install node-red and basic palette we have this <a href="https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/tree/main/Documentation/screenshots/Installation">Tutorial</a>
+
 The <a href="">Wiki</a> contains a growing list of "recipes" - examples of different common functionality that you can learn from, copy, and adapt. 
 Choose a recipe from the wiki sidebar and read the notes. To create a flow using that recipe, highlight and copy the JSON file to your clipboard and paste it into the import menu of your own Node-RED instance. 

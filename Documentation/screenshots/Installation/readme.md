@@ -4,7 +4,8 @@ Follow the instructions provided in <a href="https://nodered.org/docs/getting-st
 
 ## Add nodes
 There are some required nodes for the different solutions that we need to add to the node-red installation.
-For this you go to !["Manage Palette Menu"](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/main/Documentation/screenshots/ManagePalette01.png)
+For this you go to !["Manage Palette Menu"](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/main/Documentation/screenshots/ManagePallete01.png)
+
 and once you access the dialog
 you add the nodes 
 * node-red-contrib-aedes
@@ -13,5 +14,5 @@ you add the nodes
 * node-red-node-ui-table
 
 as shown below
-!["Add nodes "](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/main/Documentation/screenshots/ManagePalette02.png)
+!["Add nodes "](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/main/Documentation/screenshots/ManagePallete02.png)
 
