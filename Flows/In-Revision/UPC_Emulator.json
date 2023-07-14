@@ -1,0 +1,250 @@
+[
+    {
+        "id": "f34a734e23ab2adb",
+        "type": "tab",
+        "label": "UPC emulator",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "20cf7a31fd07c7de",
+        "type": "group",
+        "z": "f34a734e23ab2adb",
+        "name": "Emulate UPC API",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "e4497c21a570e794",
+            "89d13ab50091906a",
+            "6ba2f25e60f5ab6c",
+            "60929ae8deb96abd"
+        ],
+        "x": 174,
+        "y": 499,
+        "w": 712,
+        "h": 82
+    },
+    {
+        "id": "e4497c21a570e794",
+        "type": "http in",
+        "z": "f34a734e23ab2adb",
+        "g": "20cf7a31fd07c7de",
+        "name": "Hall Sensor",
+        "url": "/mock/001",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 270,
+        "y": 540,
+        "wires": [
+            [
+                "89d13ab50091906a"
+            ]
+        ]
+    },
+    {
+        "id": "89d13ab50091906a",
+        "type": "change",
+        "z": "f34a734e23ab2adb",
+        "g": "20cf7a31fd07c7de",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"id\":\"99129022401001\",\"sv\":\"01.01.06\",\"hv\":\"5\",\"puzzle_state\":{\"number_of_steps\":\"10\",\"current_step\":\"10\",\"attempt_number\":\"0\"},\"universal_state\":{\"machine_state\":\"2\",\"output_state\":\"1\",\"input_states\":\"65534\",\"overwritten_inputs\":\"0\"},\"message\":{\"type\":\"info\",\"content\":\"OK!\"}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 540,
+        "wires": [
+            [
+                "60929ae8deb96abd"
+            ]
+        ]
+    },
+    {
+        "id": "6ba2f25e60f5ab6c",
+        "type": "http response",
+        "z": "f34a734e23ab2adb",
+        "g": "20cf7a31fd07c7de",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 810,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "60929ae8deb96abd",
+        "type": "function",
+        "z": "f34a734e23ab2adb",
+        "g": "20cf7a31fd07c7de",
+        "name": "function 3",
+        "func": "var payload = msg.payload; //get payload\npayload.universal_state.machine_state = flow.get(\"deviceState\");\n\nmsg.payload = payload;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 540,
+        "wires": [
+            [
+                "6ba2f25e60f5ab6c"
+            ]
+        ]
+    },
+    {
+        "id": "40d25260ba98c7df",
+        "type": "link in",
+        "z": "f34a734e23ab2adb",
+        "name": "link in 3",
+        "links": [
+            "442e7bc38dd4c3b7",
+            "758310f9eb5818de"
+        ],
+        "x": 215,
+        "y": 100,
+        "wires": [
+            [
+                "6da2aadb1065f060"
+            ]
+        ]
+    },
+    {
+        "id": "6da2aadb1065f060",
+        "type": "change",
+        "z": "f34a734e23ab2adb",
+        "name": "Initialize Device",
+        "rules": [
+            {
+                "t": "set",
+                "p": "deviceState",
+                "pt": "flow",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e9d1d412b322641b",
+        "type": "ui_button",
+        "z": "f34a734e23ab2adb",
+        "name": "",
+        "group": "f1caa4f5e2c54ed0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "RESET",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 240,
+        "y": 220,
+        "wires": [
+            [
+                "6da2aadb1065f060"
+            ]
+        ]
+    },
+    {
+        "id": "53618b53ce69988c",
+        "type": "change",
+        "z": "f34a734e23ab2adb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "deviceState",
+                "pt": "flow",
+                "to": "2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c3f77b0195a85b35",
+        "type": "ui_button",
+        "z": "f34a734e23ab2adb",
+        "name": "",
+        "group": "f1caa4f5e2c54ed0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "SOLVE",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 260,
+        "y": 320,
+        "wires": [
+            [
+                "53618b53ce69988c"
+            ]
+        ]
+    },
+    {
+        "id": "f1caa4f5e2c54ed0",
+        "type": "ui_group",
+        "name": "Hall Sensor 01",
+        "tab": "7f2947c85d1fbc50",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7f2947c85d1fbc50",
+        "type": "ui_tab",
+        "name": "UPC Emulators",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    }
+]

@@ -1,0 +1,107 @@
+[
+    {
+        "id": "e6bf3e66f1775fc0",
+        "type": "tab",
+        "label": "Process Init Messages From Devices",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1aaf6cfe14348092",
+        "type": "mqtt in",
+        "z": "e6bf3e66f1775fc0",
+        "name": "Receive initialize messages",
+        "topic": "Initialize/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "e21e4642.c12f6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 160,
+        "wires": [
+            [
+                "89cca040e12c7ef5"
+            ]
+        ]
+    },
+    {
+        "id": "89cca040e12c7ef5",
+        "type": "json",
+        "z": "e6bf3e66f1775fc0",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": true,
+        "x": 390,
+        "y": 380,
+        "wires": [
+            [
+                "0f1d138ac5e417f1"
+            ]
+        ]
+    },
+    {
+        "id": "9279911921b45e08",
+        "type": "link out",
+        "z": "e6bf3e66f1775fc0",
+        "name": "link out 3",
+        "mode": "link",
+        "links": [
+            "18404cad9ee52512"
+        ],
+        "x": 1075,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "0f1d138ac5e417f1",
+        "type": "function",
+        "z": "e6bf3e66f1775fc0",
+        "name": "UpdateDeviceSetup",
+        "func": "var payload = msg.payload; //get payload\nvar id = msg.payload[\"id\"];\nif (id == \"70B8F65D437C\")\n{\n    payload.command = \"INITIALIZERESULT\";\n    payload.deviceName = \"REED001\";\n    payload.secondsToUpdateServer = 1;\n}\nif (id == \"083AF2B74D6C\")\n{\n    payload.command = \"INITIALIZERESULT\";\n    payload.deviceName = \"WLED001\";\n}\nmsg.payload = payload;\nmsg.topic = \"ToDevice/\" + msg.payload[\"id\"];\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 220,
+        "wires": [
+            [
+                "9279911921b45e08"
+            ]
+        ]
+    },
+    {
+        "id": "e21e4642.c12f6",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.5.160",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]

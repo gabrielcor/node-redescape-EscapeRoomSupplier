@@ -1,0 +1,142 @@
+[
+    {
+        "id": "29f4ff9c6fcbf566",
+        "type": "tab",
+        "label": "ERS_MQTT Send_Receive",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "287cddd6953c1cbd",
+        "type": "group",
+        "z": "29f4ff9c6fcbf566",
+        "name": "Send updates to device",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "9b390b713b48f7f6",
+            "18404cad9ee52512"
+        ],
+        "x": 244,
+        "y": 179,
+        "w": 462,
+        "h": 122
+    },
+    {
+        "id": "83ec599797030eba",
+        "type": "group",
+        "z": "29f4ff9c6fcbf566",
+        "name": "Receive updates from device",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "eae1ab410ce116f7"
+        ],
+        "x": 134,
+        "y": 79,
+        "w": 232,
+        "h": 82
+    },
+    {
+        "id": "9b390b713b48f7f6",
+        "type": "mqtt out",
+        "z": "29f4ff9c6fcbf566",
+        "g": "287cddd6953c1cbd",
+        "name": "MQTT ToDevice",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "125f6c81.60151b",
+        "x": 600,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "18404cad9ee52512",
+        "type": "link in",
+        "z": "29f4ff9c6fcbf566",
+        "g": "287cddd6953c1cbd",
+        "name": "in Send to MQTT",
+        "links": [
+            "46fe3fba38d8ec55",
+            "9279911921b45e08"
+        ],
+        "x": 285,
+        "y": 260,
+        "wires": [
+            [
+                "9b390b713b48f7f6"
+            ]
+        ]
+    },
+    {
+        "id": "30db58981b73ee5f",
+        "type": "link out",
+        "z": "29f4ff9c6fcbf566",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "7975934d833d8651"
+        ],
+        "x": 515,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "eae1ab410ce116f7",
+        "type": "mqtt in",
+        "z": "29f4ff9c6fcbf566",
+        "g": "83ec599797030eba",
+        "name": "MQTT FromDevice",
+        "topic": "FromDevice/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "125f6c81.60151b",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 250,
+        "y": 120,
+        "wires": [
+            [
+                "30db58981b73ee5f"
+            ]
+        ]
+    },
+    {
+        "id": "125f6c81.60151b",
+        "type": "mqtt-broker",
+        "name": "MQTT Server",
+        "broker": "192.168.5.160",
+        "port": "1883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]

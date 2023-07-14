@@ -4,7 +4,7 @@ This project aims to create several templates to use in node-red to control <a h
 
 ## Architecture
 This is a "recipe based" approach, where each "recipe" will be a json file that contains a node-red definition for a flow that can be used in a stand-alone way.
-There will be some dependencies on previous flows but that will only be to the flows that are part of the "base" architecture and we will try to keep them to a minimum.
+There will be some dependencies on previous flows but that will only be to the flows that are part of the "core" architecture and we will try to keep them to a minimum.
 This "base" flows will take care of handling common operations and ensure that all recipes follow the same patterns & practices.
 
 ## Objectives

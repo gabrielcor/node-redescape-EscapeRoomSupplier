@@ -1,0 +1,109 @@
+[
+    {
+        "id": "e1f045082e6b20f1",
+        "type": "tab",
+        "label": "ERS_Update State",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d244cacd33b48c04",
+        "type": "json",
+        "z": "e1f045082e6b20f1",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 330,
+        "y": 220,
+        "wires": [
+            [
+                "b0bbeb33dee663d4"
+            ]
+        ]
+    },
+    {
+        "id": "b0bbeb33dee663d4",
+        "type": "function",
+        "z": "e1f045082e6b20f1",
+        "name": "Parse JSON and update global state",
+        "func": "// The prop id is in the message\n// that's how we standarized communication\nvar propid = msg.payload[\"id\"];\n\n// Get the current stored value of this prop,\n// Or create a new entry if we didn't previously know about it\nvar prop = global.get(propid) || {};\n\n// Now loop over the incoming values and update the stored state\nvar count = 0;\nfor (var key in msg.payload) {\n  if (!(key == \"command\")) // don't save commands\n    {\n      if (msg.payload.hasOwnProperty(key)) {\n        prop[key] = msg.payload[key];\n        count++;\n    }\n  }\n}\n\n// Check if msg has a command\nif (msg.payload.hasOwnProperty(\"command\"))\n{\n  // if it is asking for initial config send it to the correct flow\n  var command = msg.payload[\"command\"];\n  if (command == \"INITIALIZE\")\n  {\n    msg.topic = \"Initialize/\" + propid;\n  }\n  else\n  {\n    msg.topic = \"Internal/\" + propid;\n  }\n}\nelse\n{\n  // Pass the updated status through the message flow\n  msg.topic = \"Internal/\"+propid;\n}\n\n\n// Save the global value again\nglobal.set(propid, prop);\n\nmsg.payload = prop;\n\n// Pass the value along the flow\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 380,
+        "wires": [
+            [
+                "f070c390e9e89c11"
+            ]
+        ]
+    },
+    {
+        "id": "7975934d833d8651",
+        "type": "link in",
+        "z": "e1f045082e6b20f1",
+        "name": "Update State In",
+        "links": [
+            "30db58981b73ee5f",
+            "67ed85c7985c08f7",
+            "f041921445dae881"
+        ],
+        "x": 195,
+        "y": 220,
+        "wires": [
+            [
+                "d244cacd33b48c04"
+            ]
+        ]
+    },
+    {
+        "id": "f070c390e9e89c11",
+        "type": "mqtt out",
+        "z": "e1f045082e6b20f1",
+        "name": "NotifyDeviceFlowViaMQTT",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "e21e4642.c12f6",
+        "x": 980,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e21e4642.c12f6",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.5.160",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]

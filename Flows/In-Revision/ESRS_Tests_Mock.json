@@ -1,0 +1,190 @@
+[
+    {
+        "id": "3b387bd86a8412e5",
+        "type": "tab",
+        "label": "ESRS_Test_Mock",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "518590794501de1b",
+        "type": "link in",
+        "z": "3b387bd86a8412e5",
+        "name": "link in 2",
+        "links": [
+            "c7c4685c94a69e6f"
+        ],
+        "x": 145,
+        "y": 220,
+        "wires": [
+            [
+                "395b69b4893d6bc1"
+            ]
+        ]
+    },
+    {
+        "id": "d6af169e13b9b55b",
+        "type": "http request",
+        "z": "3b387bd86a8412e5",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 510,
+        "y": 280,
+        "wires": [
+            [
+                "8fb9c6fc474732f7"
+            ]
+        ]
+    },
+    {
+        "id": "9d6fdf7ddf13b99e",
+        "type": "debug",
+        "z": "3b387bd86a8412e5",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "8fb9c6fc474732f7",
+        "type": "rbe",
+        "z": "3b387bd86a8412e5",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 590,
+        "y": 440,
+        "wires": [
+            [
+                "96e6e7bc78b718c8"
+            ]
+        ]
+    },
+    {
+        "id": "395b69b4893d6bc1",
+        "type": "change",
+        "z": "3b387bd86a8412e5",
+        "name": "set msg request",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "http://127.0.0.1:1880/mock/001?command=state",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 400,
+        "wires": [
+            [
+                "d6af169e13b9b55b"
+            ]
+        ]
+    },
+    {
+        "id": "07d70b2053bbb9f8",
+        "type": "ui_template",
+        "z": "3b387bd86a8412e5",
+        "group": "a6b704e571129787",
+        "name": "Button Panel",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "format": "<md-card-title>\n    <md-card-title-text>\n        <p class=\"md-headline\">{{msg.payload.deviceName}}</p>\n    </md-card-title-text>\n    <span ng-class=\"msg.payload.universal_state.machine_state=='2' ? 'fa fa-unlock fa-2x' : 'fa fa-lock fa-2x'\"></span>\n</md-card-title>\n<md-card-content>\n    <div ng-style=\"{width:'100%',height:'8px','background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\" ></div>\n    <p>\n        {{msg.payload.description?msg.payload.description:'Unknown'}}\n<br>\n        {{msg.payload.id?msg.payload.id:'Unknown'}}\n        - {{msg.payload.time?msg.payload.time:'Unknown'}}\n<br>\n        {{msg.payload.universal_state.input_states?universal_state.input_states:'Unknown'}}\n    </p>\n    <div style=\"text-align:center\">\n        <span style=\"font-size: 2em;\">&nbsp;</span>\n    </div>\n</md-card-content>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 930,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3b0cf453dbafdd83",
+        "type": "function",
+        "z": "3b387bd86a8412e5",
+        "name": "function 2",
+        "func": "var payload = msg.payload; //get payload\nvar id = msg.payload.id;\npayload.deviceName = \"ESRS-MOCKTEST\";\npayload.description = \"Contact & Hall Sensor\";\n\nvar d= new Date();\npayload.time = d.toLocaleTimeString();\nmsg.payload = payload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 580,
+        "wires": [
+            [
+                "9d6fdf7ddf13b99e",
+                "07d70b2053bbb9f8"
+            ]
+        ]
+    },
+    {
+        "id": "96e6e7bc78b718c8",
+        "type": "json",
+        "z": "3b387bd86a8412e5",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 710,
+        "y": 340,
+        "wires": [
+            [
+                "3b0cf453dbafdd83"
+            ]
+        ]
+    },
+    {
+        "id": "a6b704e571129787",
+        "type": "ui_group",
+        "name": "ESRS-Mock-Test",
+        "tab": "7d66f574.b154cc",
+        "order": 4,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7d66f574.b154cc",
+        "type": "ui_tab",
+        "name": "Devices",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    }
+]

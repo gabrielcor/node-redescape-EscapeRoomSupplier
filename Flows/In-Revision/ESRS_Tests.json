@@ -1,0 +1,190 @@
+[
+    {
+        "id": "7cec459b408f9e65",
+        "type": "tab",
+        "label": "ESRS_Test",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0ebb81d8a4618708",
+        "type": "link in",
+        "z": "7cec459b408f9e65",
+        "name": "link in 1",
+        "links": [
+            "c7c4685c94a69e6f"
+        ],
+        "x": 145,
+        "y": 140,
+        "wires": [
+            [
+                "8138e05905f687ac"
+            ]
+        ]
+    },
+    {
+        "id": "5e28fca11e776c89",
+        "type": "http request",
+        "z": "7cec459b408f9e65",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 510,
+        "y": 200,
+        "wires": [
+            [
+                "d21b02c71b5bd77a"
+            ]
+        ]
+    },
+    {
+        "id": "1801b96c23b5805f",
+        "type": "debug",
+        "z": "7cec459b408f9e65",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "d21b02c71b5bd77a",
+        "type": "rbe",
+        "z": "7cec459b408f9e65",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 590,
+        "y": 360,
+        "wires": [
+            [
+                "3d92135786d31413"
+            ]
+        ]
+    },
+    {
+        "id": "8138e05905f687ac",
+        "type": "change",
+        "z": "7cec459b408f9e65",
+        "name": "set msg request",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "http://192.168.1.124?command=state",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 320,
+        "wires": [
+            [
+                "5e28fca11e776c89"
+            ]
+        ]
+    },
+    {
+        "id": "3b1c032c3fcaeff5",
+        "type": "ui_template",
+        "z": "7cec459b408f9e65",
+        "group": "487ff8a5c1e2834b",
+        "name": "Button Panel",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "format": "<md-card-title>\n    <md-card-title-text>\n        <p class=\"md-headline\">{{msg.payload.deviceName}}</p>\n    </md-card-title-text>\n    <span ng-class=\"msg.payload.universal_state.machine_state=='2' ? 'fa fa-unlock fa-2x' : 'fa fa-lock fa-2x'\"></span>\n</md-card-title>\n<md-card-content>\n    <div ng-style=\"{width:'100%',height:'8px','background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\" ></div>\n    <p>\n        {{msg.payload.description?msg.payload.description:'Unknown'}}\n<br>\n        {{msg.payload.id?msg.payload.id:'Unknown'}}\n        - {{msg.payload.time?msg.payload.time:'Unknown'}}\n<br>\n        {{msg.payload.universal_state.input_states?universal_state.input_states:'Unknown'}}\n    </p>\n    <div style=\"text-align:center\">\n        <span style=\"font-size: 2em;\">&nbsp;</span>\n    </div>\n</md-card-content>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 930,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "df3c1dacf6fb708e",
+        "type": "function",
+        "z": "7cec459b408f9e65",
+        "name": "function 1",
+        "func": "var payload = msg.payload; //get payload\nvar id = msg.payload.id;\nif (id == \"70129022401520\") {\n    payload.deviceName = \"ESRS-GABRIELTEST\";\n    payload.description = \"Contact & Hall Sensor\";\n}\n\nvar d= new Date();\npayload.time = d.toLocaleTimeString();\nmsg.payload = payload;\n\n// msg.topic = \"ToDevice/\" + msg.payload[\"id\"];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 500,
+        "wires": [
+            [
+                "1801b96c23b5805f",
+                "3b1c032c3fcaeff5"
+            ]
+        ]
+    },
+    {
+        "id": "3d92135786d31413",
+        "type": "json",
+        "z": "7cec459b408f9e65",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 710,
+        "y": 260,
+        "wires": [
+            [
+                "df3c1dacf6fb708e"
+            ]
+        ]
+    },
+    {
+        "id": "487ff8a5c1e2834b",
+        "type": "ui_group",
+        "name": "ESRS-GC",
+        "tab": "7d66f574.b154cc",
+        "order": 3,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7d66f574.b154cc",
+        "type": "ui_tab",
+        "name": "Devices",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    }
+]
