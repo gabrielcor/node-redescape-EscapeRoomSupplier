@@ -6,4 +6,4 @@ We have to copy the files that are here to the uibuilder/room_display/src folder
 
 ## Screenshots
 ### uibuilder node
-!["Example GM Dashboard"](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/main/Documentation/screenshots/InitialDashboard.png)
+!["Example GM Dashboard"](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/main/Documentation/screenshots/uibuildernode.png)
