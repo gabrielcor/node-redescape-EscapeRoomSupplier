@@ -8,3 +8,6 @@ Get UPC State details at <a href="https://github.com/gabrielcor/node-redescape-E
 
 ## UPC Emulator
 UPC Emulator details at <a href="https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/tree/main/Flows/UPC%20Emulator">UPC Emulator</a>
+
+## GET UPC Devices List
+GET UPC Devices details at <a href="https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/tree/main/Flows/Get-UPC-Devices">GET UPC Devices List</a>
