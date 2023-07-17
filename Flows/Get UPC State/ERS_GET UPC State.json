@@ -39,7 +39,6 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "credentials": {},
         "x": 530,
         "y": 320,
         "wires": [

@@ -21,9 +21,9 @@
             "6ba2f25e60f5ab6c",
             "60929ae8deb96abd"
         ],
-        "x": 174,
+        "x": 154,
         "y": 499,
-        "w": 712,
+        "w": 832,
         "h": 82
     },
     {
@@ -31,12 +31,12 @@
         "type": "http in",
         "z": "f34a734e23ab2adb",
         "g": "20cf7a31fd07c7de",
-        "name": "Hall Sensor",
-        "url": "/mock/001",
+        "name": "UPC API",
+        "url": "/upc/mock/99129022401001",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 270,
+        "x": 240,
         "y": 540,
         "wires": [
             [
@@ -55,7 +55,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"id\":\"99129022401001\",\"sv\":\"01.01.06\",\"hv\":\"5\",\"puzzle_state\":{\"number_of_steps\":\"10\",\"current_step\":\"10\",\"attempt_number\":\"0\"},\"universal_state\":{\"machine_state\":\"2\",\"output_state\":\"1\",\"input_states\":\"65534\",\"overwritten_inputs\":\"0\"},\"message\":{\"type\":\"info\",\"content\":\"OK!\"}}",
+                "to": "{\"id\":\"\",\"sv\":\"01.01.06\",\"hv\":\"5\",\"puzzle_state\":{\"number_of_steps\":\"10\",\"current_step\":\"10\",\"attempt_number\":\"0\"},\"universal_state\":{\"machine_state\":\"2\",\"output_state\":\"1\",\"input_states\":\"65534\",\"overwritten_inputs\":\"0\"},\"message\":{\"type\":\"info\",\"content\":\"OK!\"}}",
                 "tot": "json"
             }
         ],
@@ -64,7 +64,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 460,
+        "x": 440,
         "y": 540,
         "wires": [
             [
@@ -80,7 +80,7 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 810,
+        "x": 910,
         "y": 540,
         "wires": []
     },
@@ -89,14 +89,14 @@
         "type": "function",
         "z": "f34a734e23ab2adb",
         "g": "20cf7a31fd07c7de",
-        "name": "function 3",
-        "func": "var payload = msg.payload; //get payload\npayload.universal_state.machine_state = flow.get(\"deviceState\");\n\nmsg.payload = payload;\nreturn msg;\n",
+        "name": "Update payload with UPC state",
+        "func": "var payload = msg.payload; //get payload\npayload.universal_state.machine_state = flow.get(\"deviceState\");\npayload.id = flow.get(\"deviceId\");\nmsg.payload = payload;\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 640,
+        "x": 690,
         "y": 540,
         "wires": [
             [
@@ -132,6 +132,13 @@
                 "p": "deviceState",
                 "pt": "flow",
                 "to": "0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "deviceId",
+                "pt": "flow",
+                "to": "99129022401001",
                 "tot": "str"
             }
         ],
