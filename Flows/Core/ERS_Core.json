@@ -379,61 +379,6 @@
         "hidden": false
     },
     {
-        "id": "7d66f574.b154cc",
-        "type": "ui_tab",
-        "name": "Devices",
-        "icon": "dashboard",
-        "order": 3,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "e21e4642.c12f6",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "192.168.5.160",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "compatmode": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "7f2947c85d1fbc50",
-        "type": "ui_tab",
-        "name": "UPC Emulators",
-        "icon": "dashboard",
-        "order": 5,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "ad0d7f51f9ebbad1",
-        "type": "ui_tab",
-        "name": "UPC Devices",
-        "icon": "dashboard",
-        "order": 4,
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "733727e93f750e8c",
         "type": "ui_group",
         "name": "In-Game Display",
@@ -469,7 +414,8 @@
         "y": 360,
         "wires": [
             [
-                "98ab54042d4213d0"
+                "98ab54042d4213d0",
+                "93a13174ceac2dc5"
             ]
         ]
     },
@@ -880,7 +826,7 @@
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
-        "topic": "Initialise",
+        "topic": "Initialize",
         "payload": "",
         "payloadType": "date",
         "x": 160,
@@ -1062,29 +1008,10 @@
         "id": "cd9c79c0f7ca4c12",
         "type": "link out",
         "z": "350f3f1be5bf834e",
-        "name": "On System Start",
+        "name": "Init Global Vars",
+        "mode": "link",
         "links": [
-            "ce5e1241.adb708",
-            "891fa554.e2eb",
-            "a42117f2.e7b908",
-            "b382fdf1.42dfd",
-            "753e49af.e1fbf8",
-            "ab728aab.10a15",
-            "7a212126.b73c78",
-            "bca49e2.3ae506",
-            "fec95a4b.bb6bf",
-            "84bae66b.0b1488",
-            "91f5a57b8686c80a",
-            "46aaa4960e9ac869",
-            "e4bbd5899d3b356e",
-            "f64afdb2.ae6738",
-            "7fd4506cfed2714b",
-            "c4a8de8b032253c9",
-            "d22e738b256cdec6",
-            "75a596869f308dab",
-            "fde61d47216f1287",
-            "eb7d0ddb30a55c18",
-            "cae864a2b6640d37"
+            "75a596869f308dab"
         ],
         "x": 745,
         "y": 120,
@@ -1507,6 +1434,24 @@
         "info": "",
         "x": 1110,
         "y": 580,
+        "wires": []
+    },
+    {
+        "id": "93a13174ceac2dc5",
+        "type": "mqtt out",
+        "z": "350f3f1be5bf834e",
+        "name": "",
+        "topic": "/game",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "125f6c81.60151b",
+        "x": 550,
+        "y": 280,
         "wires": []
     },
     {
@@ -2453,12 +2398,11 @@
         "z": "31a7412f.61a816",
         "name": "Log",
         "links": [
-            "171ea618.d8a322",
-            "8a4dffa5.a7935",
-            "b32763f3.44a74",
-            "c9289f5e.1fb3b8",
-            "dd31298f.6fb86",
-            "e70201fd67e55953"
+            "442e7bc38dd4c3b7",
+            "4a863b19c2050c0a",
+            "758310f9eb5818de",
+            "e70201fd67e55953",
+            "ef582930fa6e08ef"
         ],
         "x": 255,
         "y": 340,
@@ -2593,7 +2537,7 @@
         "name": "Log event",
         "info": "",
         "x": 260,
-        "y": 300,
+        "y": 280,
         "wires": []
     },
     {
@@ -2633,7 +2577,7 @@
         "name": "Send Log to File",
         "info": "",
         "x": 1180,
-        "y": 420,
+        "y": 440,
         "wires": []
     },
     {
@@ -2733,11 +2677,11 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 330,
+        "x": 230,
         "y": 560,
         "wires": [
             [
-                "e70201fd67e55953"
+                "f427b94e9af56013"
             ]
         ]
     },
@@ -2745,12 +2689,12 @@
         "id": "e70201fd67e55953",
         "type": "link out",
         "z": "31a7412f.61a816",
-        "name": "link out 1",
+        "name": "Log MQTT traffic",
         "mode": "link",
         "links": [
             "f64afdb2.ae6738"
         ],
-        "x": 435,
+        "x": 485,
         "y": 560,
         "wires": []
     },
@@ -2760,7 +2704,7 @@
         "z": "31a7412f.61a816",
         "name": "MQTT traffic",
         "info": "",
-        "x": 350,
+        "x": 250,
         "y": 520,
         "wires": []
     },
@@ -2772,6 +2716,110 @@
         "info": "",
         "x": 1000,
         "y": 60,
+        "wires": []
+    },
+    {
+        "id": "f2326bee1c92e33d",
+        "type": "ui_switch",
+        "z": "31a7412f.61a816",
+        "name": "",
+        "label": "MQTT Log",
+        "tooltip": "",
+        "group": "eed1a8a6.8d8878",
+        "order": 4,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 210,
+        "y": 100,
+        "wires": [
+            [
+                "f47db3260e733c2b"
+            ]
+        ]
+    },
+    {
+        "id": "f47db3260e733c2b",
+        "type": "change",
+        "z": "31a7412f.61a816",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "mqttlog",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7a538c32a0d8567a",
+        "type": "comment",
+        "z": "31a7412f.61a816",
+        "name": "Toggle MQTT Log",
+        "info": "",
+        "x": 230,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "f427b94e9af56013",
+        "type": "switch",
+        "z": "31a7412f.61a816",
+        "name": "",
+        "property": "mqttlog",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "true",
+                "vt": "jsonata"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 370,
+        "y": 560,
+        "wires": [
+            [
+                "e70201fd67e55953"
+            ]
+        ]
+    },
+    {
+        "id": "be95a8ccdfebdf1c",
+        "type": "comment",
+        "z": "31a7412f.61a816",
+        "name": "MQTT log enabled",
+        "info": "",
+        "x": 410,
+        "y": 480,
         "wires": []
     }
 ]

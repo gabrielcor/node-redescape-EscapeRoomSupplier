@@ -2,7 +2,7 @@
     {
         "id": "7cec459b408f9e65",
         "type": "tab",
-        "label": "ESRS_Test",
+        "label": "GET_UPC_State",
         "disabled": false,
         "info": "",
         "env": []
@@ -15,8 +15,8 @@
         "links": [
             "c7c4685c94a69e6f"
         ],
-        "x": 145,
-        "y": 140,
+        "x": 165,
+        "y": 320,
         "wires": [
             [
                 "8138e05905f687ac"
@@ -27,7 +27,7 @@
         "id": "5e28fca11e776c89",
         "type": "http request",
         "z": "7cec459b408f9e65",
-        "name": "",
+        "name": "Call API on UPC device",
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
@@ -39,29 +39,14 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 510,
-        "y": 200,
+        "credentials": {},
+        "x": 530,
+        "y": 320,
         "wires": [
             [
                 "d21b02c71b5bd77a"
             ]
         ]
-    },
-    {
-        "id": "1801b96c23b5805f",
-        "type": "debug",
-        "z": "7cec459b408f9e65",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1060,
-        "y": 440,
-        "wires": []
     },
     {
         "id": "d21b02c71b5bd77a",
@@ -75,8 +60,8 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 590,
-        "y": 360,
+        "x": 730,
+        "y": 320,
         "wires": [
             [
                 "3d92135786d31413"
@@ -93,8 +78,8 @@
                 "t": "set",
                 "p": "url",
                 "pt": "msg",
-                "to": "http://192.168.1.124?command=state",
-                "tot": "str"
+                "to": "deviceUrl",
+                "tot": "flow"
             }
         ],
         "action": "",
@@ -125,8 +110,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 930,
-        "y": 660,
+        "x": 990,
+        "y": 540,
         "wires": [
             []
         ]
@@ -135,18 +120,17 @@
         "id": "df3c1dacf6fb708e",
         "type": "function",
         "z": "7cec459b408f9e65",
-        "name": "function 1",
-        "func": "var payload = msg.payload; //get payload\nvar id = msg.payload.id;\nif (id == \"70129022401520\") {\n    payload.deviceName = \"ESRS-GABRIELTEST\";\n    payload.description = \"Contact & Hall Sensor\";\n}\n\nvar d= new Date();\npayload.time = d.toLocaleTimeString();\nmsg.payload = payload;\n\n// msg.topic = \"ToDevice/\" + msg.payload[\"id\"];\nreturn msg;",
+        "name": "Assign values to display",
+        "func": "var payload = msg.payload; //get payload\nvar id = msg.payload.id; // comes from the device\n\npayload.deviceName = flow.get(\"deviceName\");\npayload.description = flow.get(\"description\");\n\nvar d= new Date();\npayload.time = d.toLocaleTimeString();\nmsg.payload = payload;\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 700,
-        "y": 500,
+        "x": 790,
+        "y": 540,
         "wires": [
             [
-                "1801b96c23b5805f",
                 "3b1c032c3fcaeff5"
             ]
         ]
@@ -159,8 +143,113 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 710,
-        "y": 260,
+        "x": 870,
+        "y": 320,
+        "wires": [
+            [
+                "df3c1dacf6fb708e"
+            ]
+        ]
+    },
+    {
+        "id": "434e2fc9d9c1a0b4",
+        "type": "comment",
+        "z": "7cec459b408f9e65",
+        "name": "Every tick",
+        "info": "",
+        "x": 140,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "2b373cf7867a5518",
+        "type": "link in",
+        "z": "7cec459b408f9e65",
+        "name": "link in 4",
+        "links": [
+            "442e7bc38dd4c3b7",
+            "758310f9eb5818de"
+        ],
+        "x": 335,
+        "y": 100,
+        "wires": [
+            [
+                "17f3273489c1790b"
+            ]
+        ]
+    },
+    {
+        "id": "17f3273489c1790b",
+        "type": "change",
+        "z": "7cec459b408f9e65",
+        "name": "Initialize target URL & device data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "deviceUrl",
+                "pt": "flow",
+                "to": "http://192.168.1.124?command=state",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "deviceName",
+                "pt": "flow",
+                "to": "ESRS-TEST01",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "description",
+                "pt": "flow",
+                "to": "Contact & Hall Sensor",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 100,
+        "wires": [
+            [
+                "b4079d6a2dca0996"
+            ]
+        ]
+    },
+    {
+        "id": "f989d7222c119b8d",
+        "type": "comment",
+        "z": "7cec459b408f9e65",
+        "name": "Always initialize to: http://nnn.nnn.nnn.nnn?command=state // where nnn.... is IP address of UPC device",
+        "info": "",
+        "x": 770,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "b4079d6a2dca0996",
+        "type": "change",
+        "z": "7cec459b408f9e65",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"id\":\"NOT connected\",\"sv\":\"01.01.06\",\"hv\":\"5\",\"puzzle_state\":{\"number_of_steps\":\"10\",\"current_step\":\"10\",\"attempt_number\":\"0\"},\"universal_state\":{\"machine_state\":\"0\",\"output_state\":\"\",\"input_states\":\"65534\",\"overwritten_inputs\":\"0\"},\"message\":{\"type\":\"info\",\"content\":\"OK!\"}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 860,
+        "y": 100,
         "wires": [
             [
                 "df3c1dacf6fb708e"
