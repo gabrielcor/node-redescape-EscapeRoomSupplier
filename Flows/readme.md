@@ -7,4 +7,4 @@ Logging details at <a href="https://github.com/gabrielcor/node-redescape-EscapeR
 Get UPC State details at <a href="https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/tree/main/Flows/Get%20UPC%20State">GET UPC State</a>
 
 ## UPC Emulator
-UPC Emulator details at <a href="https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/tree/main/Flows/Get%20UPC%20State">UPC Emulator</a>
+UPC Emulator details at <a href="https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/tree/main/Flows/UPC%20Emulator">UPC Emulator</a>
