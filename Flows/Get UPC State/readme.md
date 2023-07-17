@@ -1,4 +1,4 @@
-# Get Universal Puzzle Controller State ogging
+# Get Universal Puzzle Controller State
 ## Official documentation 
 
 The official documentation is at <a href="https://wiki.escaperoomsupplier.com/wiki/Universal_Puzzle_Controller_API_v1.0.0">Escape Room Supplier documentation API</a>. Problem is that the documentation for the most part of the invocation is wrong. 
