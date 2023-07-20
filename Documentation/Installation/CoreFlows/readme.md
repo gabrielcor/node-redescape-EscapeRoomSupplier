@@ -30,10 +30,10 @@ Go to that directory with the Windows Explorer
 and substitute the content with the files that you will find at <a href="https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/tree/main/uibuilder/room_display/src" >Uibuilder files</a> 
 
 Clic on the "Libraries" tab and add the libraries
-* bootstrap
-* bootstrap-vue
+* bootstrap-vue (installing boostrap-vue adds automatically bootstrap)
 * jquery
-* vue
+* vue@2.7.14
+**IMPORTANT** you need to install vue@2.7.14 cause new version have incompatibilities with the scripts we provide.
 
 using the "+ add" link in the bottom of the dialog
 !["Explorer "](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/main/Documentation/screenshots/CoreFlows05.png)
