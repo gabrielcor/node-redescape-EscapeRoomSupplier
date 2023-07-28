@@ -9,6 +9,7 @@ byte mac[] = {
   0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED
 };
 IPAddress ip(192, 168, 1, 177);
+char* EstadoPuzzle="UNSOLVED";
 
 // Initialize the Ethernet server library
 // with the IP address and port you want to use
@@ -66,6 +67,49 @@ void setup() {
   Serial.println(Ethernet.localIP());
 }
 
+void SendMessage(  EthernetClient client)
+{
+           client.println("HTTP/1.1 200 OK");
+          client.println("Content-Type: text/html");
+          client.println("Connection: close");  // the connection will be closed after completion of the response
+          client.println("Refresh: 5");  // refresh the page automatically every 5 sec
+          client.println();
+          client.println("<!DOCTYPE HTML>");
+          client.println("<html>");
+          // output the value of each analog input pin
+          for (int analogChannel = 0; analogChannel < 6; analogChannel++) {
+            int sensorReading = analogRead(analogChannel);
+            client.print("analog input ");
+            client.print(analogChannel);
+            client.print(" is ");
+            client.print(sensorReading);
+            client.println("<br />");
+          }
+          client.println("</html>");
+        
+}
+
+void SendMessage2(EthernetClient client)
+{
+          char macAddress[18];
+          sprintf(macAddress, "%02X:%02X:%02X:%02X:%02X:%02X", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
+          
+          client.println("HTTP/1.1 200 OK");
+          client.println("Content-Type: text/html");
+          client.println("Connection: close");  // the connection will be closed after completion of the response
+          client.println("Refresh: 5");  // refresh the page automatically every 5 sec
+          client.println();
+          client.println("<!DOCTYPE HTML>");
+
+                    client.println("<html>");
+                    client.println("</html>");
+
+          char formattedString[2000];
+          sprintf(formattedString, "<html><head><title>Emulando UPC</title></head><body><div style='text-align:center;'><h1>Arduino UPC emulator mac address - %s </h1>Tiempo transcurrido : %lu segundos<br /><br />Estado del Puzzle: %s <br /><a href=\"/?status=SOLVED\"><input type=\"button\" value=\"SOLVED\"></a><a href=\"/?status=UNSOLVED\"><input type=\"button\" value=\"UNSOLVED\"></a><br /><br /></body></html>"
+          , macAddress, millis()/1000, EstadoPuzzle);
+          // Serial.println(formattedString);
+          // client.println(formattedString);
+}
 
 void loop() {
   // listen for incoming clients
@@ -83,24 +127,8 @@ void loop() {
         // so you can send a reply
         if (c == '\n' && currentLineIsBlank) {
           // send a standard HTTP response header
-          client.println("HTTP/1.1 200 OK");
-          client.println("Content-Type: text/html");
-          client.println("Connection: close");  // the connection will be closed after completion of the response
-          client.println("Refresh: 5");  // refresh the page automatically every 5 sec
-          client.println();
-          client.println("<!DOCTYPE HTML>");
-          client.println("<html>");
-          // output the value of each analog input pin
-          for (int analogChannel = 0; analogChannel < 6; analogChannel++) {
-            int sensorReading = analogRead(analogChannel);
-            client.print("analog input ");
-            client.print(analogChannel);
-            client.print(" is ");
-            client.print(sensorReading);
-            client.println("<br />");
-          }
-          client.println("</html>");
-          break;
+          SendMessage2(client);
+            break;
         }
         if (c == '\n') {
           // you're starting a new line
