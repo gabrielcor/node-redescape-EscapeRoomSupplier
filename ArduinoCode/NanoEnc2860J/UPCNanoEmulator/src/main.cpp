@@ -10,6 +10,7 @@ byte mac[] = {
 };
 IPAddress ip(192, 168, 1, 177);
 char* EstadoPuzzle="UNSOLVED";
+String readString;
 
 // Initialize the Ethernet server library
 // with the IP address and port you want to use
@@ -97,21 +98,62 @@ void SendMessage2(EthernetClient client)
           client.println("HTTP/1.1 200 OK");
           client.println("Content-Type: text/html");
           client.println("Connection: close");  // the connection will be closed after completion of the response
-          client.println("Refresh: 5");  // refresh the page automatically every 5 sec
+          client.println("Refresh: 15");  // refresh the page automatically every 5 sec
           client.println();
           client.println("<!DOCTYPE HTML>");
 
                     client.println("<html>");
                     client.println("</html>");
+          char elapsedSecondsStr[12];
+          sprintf(elapsedSecondsStr, "%lu", millis()/1000);
+          client.print("<html><head><title>Emulando UPC</title></head><body><div style='text-align:center;'><h1>Arduino UPC emulator mac address - ");
+          client.print(macAddress);
+          client.print(" </h1>Tiempo transcurrido : ");
+          client.print(elapsedSecondsStr);
+          client.print(" segundos<br /><br />Estado del Puzzle: ");
+          client.print(EstadoPuzzle);
+          client.print(" <br /><a href=\"/?status=SOLVED\"><input type=\"button\" value=\"SOLVED\"></a><a href=\"/?status=UNSOLVED\"><input type=\"button\" value=\"UNSOLVED\"></a><br /><br /></body></html>");
 
-          char formattedString[2000];
-          sprintf(formattedString, "<html><head><title>Emulando UPC</title></head><body><div style='text-align:center;'><h1>Arduino UPC emulator mac address - %s </h1>Tiempo transcurrido : %lu segundos<br /><br />Estado del Puzzle: %s <br /><a href=\"/?status=SOLVED\"><input type=\"button\" value=\"SOLVED\"></a><a href=\"/?status=UNSOLVED\"><input type=\"button\" value=\"UNSOLVED\"></a><br /><br /></body></html>"
-          , macAddress, millis()/1000, EstadoPuzzle);
-          // Serial.println(formattedString);
-          // client.println(formattedString);
 }
 
-void loop() {
+void loop()
+{
+  EthernetClient client = server.available();
+  if (client) {
+    bool currentLineIsBlank = true;
+    while (client.connected()) {
+      if (client.available()) {
+        char c = client.read();
+        readString += c;
+        // Serial.write(c);
+        if (c == '\n' && currentLineIsBlank) {
+          // send a standard HTTP response header
+          Serial.println(readString);
+          Serial.println(readString.length());
+
+          // blank readString
+          readString="";
+          SendMessage2(client);
+            break;
+        }
+        if (c == '\n') {
+          // you're starting a new line
+          currentLineIsBlank = true;
+        } else if (c != '\r') {
+          // you've gotten a character on the current line
+          currentLineIsBlank = false;
+        }
+      
+      }
+    }
+    // give the web browser time to receive the data
+    delay(1);
+    // close the connection:
+    client.stop();
+  }
+
+}
+void Okloop() {
   // listen for incoming clients
   EthernetClient client = server.available();
   if (client) {
@@ -121,6 +163,7 @@ void loop() {
     while (client.connected()) {
       if (client.available()) {
         char c = client.read();
+
         Serial.write(c);
         // if you've gotten to the end of the line (received a newline
         // character) and the line is blank, the HTTP request has ended,
@@ -133,6 +176,8 @@ void loop() {
         if (c == '\n') {
           // you're starting a new line
           currentLineIsBlank = true;
+
+
         } else if (c != '\r') {
           // you've gotten a character on the current line
           currentLineIsBlank = false;
