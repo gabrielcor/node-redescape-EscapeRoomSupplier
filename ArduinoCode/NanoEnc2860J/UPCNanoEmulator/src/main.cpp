@@ -1,6 +1,8 @@
 
 #include <SPI.h>
 #include <EthernetENC.h>
+
+
 // The define below is used to configure the Ethernet shield
 // in DHCP mode. If you want to use a static IP address,
 // comment the following line and uncomment the Ethernet.begin
@@ -12,6 +14,7 @@ byte mac[] = {
   0xAD, 0xAD, 0xBE, 0xEF, 0xFE, 0xED
 };
 IPAddress ip(10, 1, 1, 121);
+
 char* EstadoPuzzle="UNSOLVED";
 char stringReceived[100];
 char postReceived[100];
@@ -19,6 +22,15 @@ int lugReceived = 0;
 int lugpostReceived = 0;
 bool ComandoState = false;
 bool ComandoPost = false;
+
+
+const unsigned int udpPort PROGMEM = 9811;
+char packetBuffer[24];  // buffer to hold incoming packet,
+char ReplyBuffer[30]; 
+
+// An EthernetUDP instance to let us send and receive packets over UDP
+EthernetUDP Udp;
+
 
 // Initialize the Ethernet server library
 // with the IP address and port you want to use
@@ -69,6 +81,7 @@ void setup() {
   if (Ethernet.linkStatus() == LinkOFF) {
     Serial.println(F("Ethernet cable is not connected."));
   }
+  Udp.begin(udpPort);
 
   // start the server
   server.begin();
@@ -80,7 +93,9 @@ void setup() {
 void SendMessage2(EthernetClient client)
 {
           char macAddress[18];
+
           sprintf(macAddress, "%02X:%02X:%02X:%02X:%02X:%02X", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
+
           char elapsedSecondsStr[12];
           sprintf(elapsedSecondsStr, "%lu", millis()/1000);
 
@@ -129,6 +144,38 @@ void SendMessage2(EthernetClient client)
 
 void loop()
 {
+     // look for UDP packets from the client
+    int packetSize = Udp.parsePacket();
+    if (packetSize) {
+        Serial.print(F("Received packet of size "));
+        Serial.println(packetSize);
+        Serial.print(F("From "));
+        IPAddress remote = Udp.remoteIP();
+        for (int i=0; i < 4; i++) {
+          Serial.print(remote[i], DEC);
+          if (i < 3) {
+            Serial.print(".");
+          }
+        }
+        Serial.print(F(", port "));
+        Serial.println(Udp.remotePort());
+    
+      // read the packet into packetBuffer
+        Udp.read(packetBuffer, 24);
+        Serial.println(F("Contents:"));
+        Serial.println(packetBuffer);
+ 
+        sprintf(ReplyBuffer, "UNIVERSAL_%02X:%02X:%02X:%02X:%02X:%02X-", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
+      
+      // send a reply to the IP address stating we are an UPC
+        Udp.beginPacket(Udp.remoteIP(), udpPort);
+        Udp.write(ReplyBuffer);
+        Udp.endPacket();
+    }
+    delay(10);
+
+  // if there's a new client, create a new connection
+  // process the incoming packet for server http
   EthernetClient client = server.available();
   if (client) {
     bool currentLineIsBlank = false;
@@ -200,10 +247,13 @@ void loop()
       }
     }
     // give the web browser time to receive the data
-    delay(1);
-    // close the connection:
-    client.stop();
-  }
+      delay(1);
+      // close the connection:
+      client.stop();
+    }
+
+ 
+  
 
 }
 
