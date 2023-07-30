@@ -1,14 +1,17 @@
 
 #include <SPI.h>
 #include <EthernetENC.h>
- #define DHCPSETUP
+// The define below is used to configure the Ethernet shield
+// in DHCP mode. If you want to use a static IP address,
+// comment the following line and uncomment the Ethernet.begin
+// #define DHCPSETUP
 
 // Enter a MAC address and IP address for your controller below.
 // The IP address will be dependent on your local network:
 byte mac[] = {
-  0xDA, 0xAD, 0xBE, 0xEF, 0xFE, 0xED
+  0xAD, 0xAD, 0xBE, 0xEF, 0xFE, 0xED
 };
-IPAddress ip(192, 168, 1, 177);
+IPAddress ip(10, 1, 1, 121);
 char* EstadoPuzzle="UNSOLVED";
 char stringReceived[100];
 char postReceived[100];
@@ -152,6 +155,7 @@ void loop()
             
              if(strstr((char *)postReceived, "\"universal_set\":{\"machine_state\":") != 0) {
                 Serial.println(F("Comando POST de cambio reconocido"));
+                ComandoState = true; // we have to return the JSON
                 if (strstr((char *)postReceived, ":2}") != 0)
                 {
                   Serial.println(F("Comando SOLVED recibido"));
