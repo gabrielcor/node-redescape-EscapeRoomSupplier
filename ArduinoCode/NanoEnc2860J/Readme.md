@@ -16,7 +16,7 @@ It implements the functionality described at <a href="https://wiki.escaperoomsup
 ## Arduino Website
 
 If you go to the IP address of the Arduino, it shows a page like the one below where you can interact with the puzzle state
-!["Arduino webpage"](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/main/Documentation/screenshots/InitialDashboard.png)
+!["Arduino webpage"](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/main/Documentation/screenshots/ArduinoUPCEmulator01.png)
 
 ## UPC webhook
 This development does not implement the webhook described in the ERS API
