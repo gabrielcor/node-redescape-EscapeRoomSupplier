@@ -106,9 +106,9 @@ void SendMessage2(WiFiClient client)
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+
  WiFiClient client = server.available();
-// TODO: make sure it works with several clients (e.g. Postman and a browser)
+
   if (client) {
     bool currentLineIsBlank = false;
     ComandoState = false;
@@ -116,7 +116,12 @@ void loop() {
     lugReceived = 0;
     lugpostReceived = 0;
 
-    while (client.connected()) {
+    // Hack to enable multiple clients to work without using an array of clients or something like that
+    // Keep track of the time when entering the loop Don't let any client be "connected" more than 5 seconds
+    // This is not a great solution, but it works (for now?)
+    unsigned long startTime = millis();
+
+    while (client.connected()  && (millis() - startTime) < 5000) {
       if (client.available()) {
         char c = client.read();
         if (!(lugReceived > 99)) {
