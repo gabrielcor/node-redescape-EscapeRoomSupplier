@@ -136,7 +136,9 @@
             "f2db8f5068ba4191"
         ],
         "x": 74,
-        "y": 79
+        "y": 79,
+        "w": 792,
+        "h": 122
     },
     {
         "id": "c7dcc2fc49c21692",
@@ -177,8 +179,10 @@
             "54d37284765e710e",
             "d5dc4f5d0fa7cd13"
         ],
-        "x": 54,
-        "y": 339
+        "x": 114,
+        "y": 379,
+        "w": 1292,
+        "h": 562
     },
     {
         "id": "7f1936f0fa1668a9",
@@ -196,7 +200,9 @@
             "adcec27242c6e92f"
         ],
         "x": 914,
-        "y": 79
+        "y": 79,
+        "w": 492,
+        "h": 122
     },
     {
         "id": "45013fdfd43f76cb",
@@ -339,7 +345,7 @@
         "id": "125f6c81.60151b",
         "type": "mqtt-broker",
         "name": "MQTT Server",
-        "broker": "localhost",
+        "broker": "192.168.5.160",
         "port": "1883",
         "tls": "",
         "clientid": "",
@@ -382,6 +388,66 @@
         "width": "6",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "f1caa4f5e2c54ed0",
+        "type": "ui_group",
+        "name": "Hall Sensor 01",
+        "tab": "7f2947c85d1fbc50",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7f2947c85d1fbc50",
+        "type": "ui_tab",
+        "name": "UPC Emulators",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "487ff8a5c1e2834b",
+        "type": "ui_group",
+        "name": "ESRS-GC",
+        "tab": "7d66f574.b154cc",
+        "order": 3,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7d66f574.b154cc",
+        "type": "ui_tab",
+        "name": "Devices",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "25ed5bac9f0a0e34",
+        "type": "ui_group",
+        "name": "Devices",
+        "tab": "ad0d7f51f9ebbad1",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ad0d7f51f9ebbad1",
+        "type": "ui_tab",
+        "name": "UPC Devices",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "197160bd5c9b62c4",
@@ -755,7 +821,9 @@
             "35e08daeabc5fa71",
             "af0afab53c87e0ad",
             "40d25260ba98c7df",
-            "689f8b8e61d5ce4b"
+            "689f8b8e61d5ce4b",
+            "2b373cf7867a5518",
+            "a73bab5de5dbaa72"
         ],
         "x": 495,
         "y": 480,
@@ -859,7 +927,9 @@
             "eb7d0ddb30a55c18",
             "cae864a2b6640d37",
             "40d25260ba98c7df",
-            "689f8b8e61d5ce4b"
+            "689f8b8e61d5ce4b",
+            "2b373cf7867a5518",
+            "a73bab5de5dbaa72"
         ],
         "x": 295,
         "y": 120,
@@ -875,7 +945,8 @@
         "links": [
             "75a596869f308dab",
             "0ebb81d8a4618708",
-            "518590794501de1b"
+            "518590794501de1b",
+            "a534313d858cdb4b"
         ],
         "x": 295,
         "y": 180,
@@ -947,8 +1018,8 @@
         "z": "350f3f1be5bf834e",
         "name": "",
         "scope": null,
-        "uncaught": false,
-        "x": 940,
+        "uncaught": true,
+        "x": 960,
         "y": 260,
         "wires": [
             [
@@ -1571,8 +1642,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 420,
-        "y": 420,
+        "x": 480,
+        "y": 460,
         "wires": [
             [
                 "302f16b7c2a5c97b"
@@ -1599,8 +1670,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
-        "y": 420,
+        "x": 720,
+        "y": 460,
         "wires": [
             [
                 "fe7b087d178d348e"
@@ -1643,8 +1714,8 @@
         "g": "c7dcc2fc49c21692",
         "name": "Duration before clearing",
         "info": "",
-        "x": 420,
-        "y": 380,
+        "x": 480,
+        "y": 420,
         "wires": []
     },
     {
@@ -1665,8 +1736,8 @@
         "g": "c7dcc2fc49c21692",
         "name": "Set msg variable from payload",
         "info": "",
-        "x": 690,
-        "y": 380,
+        "x": 750,
+        "y": 420,
         "wires": []
     },
     {
@@ -1726,8 +1797,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 450,
-        "y": 720,
+        "x": 510,
+        "y": 760,
         "wires": [
             [
                 "92a539e41b6f6f51"
@@ -1752,8 +1823,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 620,
-        "y": 800,
+        "x": 680,
+        "y": 840,
         "wires": [
             [
                 "73c45ad08b4e9499",
@@ -1781,8 +1852,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
-        "y": 800,
+        "x": 500,
+        "y": 840,
         "wires": [
             [
                 "a40603e3d65ccdeb"
@@ -1809,8 +1880,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 840,
-        "y": 860,
+        "x": 900,
+        "y": 900,
         "wires": [
             []
         ]
@@ -1835,8 +1906,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 850,
-        "y": 760,
+        "x": 910,
+        "y": 800,
         "wires": [
             [
                 "3ca3ba2c7f7323e4"
@@ -1878,8 +1949,8 @@
         "links": [
             "adcec27242c6e92f"
         ],
-        "x": 805,
-        "y": 420,
+        "x": 865,
+        "y": 460,
         "wires": []
     },
     {
@@ -1918,8 +1989,8 @@
         "topic": "",
         "topicType": "str",
         "className": "",
-        "x": 170,
-        "y": 420,
+        "x": 230,
+        "y": 460,
         "wires": [
             [
                 "ea19ec062e7e4159",
@@ -1934,8 +2005,8 @@
         "g": "c7dcc2fc49c21692",
         "name": "Predefined Messages",
         "info": "",
-        "x": 180,
-        "y": 380,
+        "x": 240,
+        "y": 420,
         "wires": []
     },
     {
@@ -1957,8 +2028,8 @@
         "sendOnBlur": false,
         "className": "",
         "topicType": "str",
-        "x": 160,
-        "y": 520,
+        "x": 220,
+        "y": 560,
         "wires": [
             [
                 "ea19ec062e7e4159",
@@ -1975,8 +2046,8 @@
         "group": "733727e93f750e8c",
         "voice": "",
         "always": true,
-        "x": 1260,
-        "y": 520,
+        "x": 1320,
+        "y": 560,
         "wires": []
     },
     {
@@ -1992,8 +2063,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 900,
-        "y": 520,
+        "x": 960,
+        "y": 560,
         "wires": [
             [
                 "052ac926c77d3b97"
@@ -2007,8 +2078,8 @@
         "g": "c7dcc2fc49c21692",
         "name": "Free Text Messages",
         "info": "",
-        "x": 170,
-        "y": 480,
+        "x": 230,
+        "y": 520,
         "wires": []
     },
     {
@@ -2032,8 +2103,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 170,
-        "y": 700,
+        "x": 230,
+        "y": 740,
         "wires": [
             [
                 "e909d0071736cc14",
@@ -2048,8 +2119,8 @@
         "g": "c7dcc2fc49c21692",
         "name": "Play video overlay",
         "info": "",
-        "x": 170,
-        "y": 660,
+        "x": 230,
+        "y": 700,
         "wires": []
     },
     {
@@ -2059,8 +2130,8 @@
         "g": "c7dcc2fc49c21692",
         "name": "Play audible alert for players",
         "info": "",
-        "x": 1080,
-        "y": 460,
+        "x": 1140,
+        "y": 500,
         "wires": []
     },
     {
@@ -2073,8 +2144,8 @@
         "links": [
             "adcec27242c6e92f"
         ],
-        "x": 605,
-        "y": 700,
+        "x": 665,
+        "y": 740,
         "wires": []
     },
     {
@@ -2101,8 +2172,8 @@
         "links": [
             "adcec27242c6e92f"
         ],
-        "x": 1005,
-        "y": 760,
+        "x": 1065,
+        "y": 800,
         "wires": []
     },
     {
@@ -2112,8 +2183,8 @@
         "g": "c7dcc2fc49c21692",
         "name": "Assign video file",
         "info": "",
-        "x": 420,
-        "y": 680,
+        "x": 480,
+        "y": 720,
         "wires": []
     },
     {
@@ -2123,8 +2194,8 @@
         "g": "c7dcc2fc49c21692",
         "name": "Pause game while video plays",
         "info": "",
-        "x": 460,
-        "y": 760,
+        "x": 520,
+        "y": 800,
         "wires": []
     },
     {
@@ -2134,8 +2205,8 @@
         "g": "c7dcc2fc49c21692",
         "name": "Clear video overlay",
         "info": "",
-        "x": 830,
-        "y": 720,
+        "x": 890,
+        "y": 760,
         "wires": []
     },
     {
@@ -2145,8 +2216,8 @@
         "g": "c7dcc2fc49c21692",
         "name": "Resume game",
         "info": "",
-        "x": 810,
-        "y": 800,
+        "x": 870,
+        "y": 840,
         "wires": []
     },
     {
@@ -2166,8 +2237,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 550,
-        "y": 620,
+        "x": 610,
+        "y": 660,
         "wires": [
             [
                 "63dec63b085ba1e3"
@@ -2186,8 +2257,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 790,
-        "y": 620,
+        "x": 850,
+        "y": 660,
         "wires": [
             [
                 "fa917a9707337a51"
@@ -2204,8 +2275,8 @@
             "fa917a9707337a51"
         ],
         "uncaught": false,
-        "x": 990,
-        "y": 540,
+        "x": 1110,
+        "y": 600,
         "wires": [
             [
                 "8c69ed484ee62459"
@@ -2219,8 +2290,8 @@
         "g": "c7dcc2fc49c21692",
         "name": "If local file not found, download from github",
         "info": "",
-        "x": 600,
-        "y": 560,
+        "x": 660,
+        "y": 600,
         "wires": []
     },
     {
@@ -2405,61 +2476,6 @@
                 "4f0ef3a2.ba712c"
             ]
         ]
-    },
-    {
-        "id": "b1efbe93.6f8ea",
-        "type": "catch",
-        "z": "31a7412f.61a816",
-        "name": "",
-        "scope": null,
-        "uncaught": false,
-        "x": 640,
-        "y": 560,
-        "wires": [
-            [
-                "7ad70abc.0f24a4"
-            ]
-        ]
-    },
-    {
-        "id": "7ad70abc.0f24a4",
-        "type": "debug",
-        "z": "31a7412f.61a816",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 810,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "81de3a97.ce63d8",
-        "type": "complete",
-        "z": "31a7412f.61a816",
-        "name": "",
-        "scope": [],
-        "uncaught": false,
-        "x": 650,
-        "y": 600,
-        "wires": [
-            [
-                "7ad70abc.0f24a4"
-            ]
-        ]
-    },
-    {
-        "id": "a1a518ec.9afe28",
-        "type": "comment",
-        "z": "31a7412f.61a816",
-        "name": "Exception Handling",
-        "info": "",
-        "x": 670,
-        "y": 520,
-        "wires": []
     },
     {
         "id": "92a3d612.7206a",
