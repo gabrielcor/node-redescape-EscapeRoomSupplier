@@ -20,11 +20,13 @@
             "24d6a843c978e09e",
             "689f8b8e61d5ce4b",
             "f0d187d24cc7dfe4",
-            "08655c4748d1efe4"
+            "08655c4748d1efe4",
+            "1f532f6cd8d78c94",
+            "b9d3f521615217fe"
         ],
-        "x": 174,
+        "x": 114,
         "y": 59,
-        "w": 832,
+        "w": 872,
         "h": 142
     },
     {
@@ -43,8 +45,8 @@
             "f19f32137cd18b54",
             "c681e39909b692a7"
         ],
-        "x": 94,
-        "y": 299,
+        "x": 134,
+        "y": 339,
         "w": 1032,
         "h": 222
     },
@@ -70,7 +72,7 @@
         "topic": "",
         "payload": "Hello_from_ERCC",
         "payloadType": "str",
-        "x": 410,
+        "x": 350,
         "y": 160,
         "wires": [
             [
@@ -84,140 +86,16 @@
         "z": "d811a8c07382bd1d",
         "g": "5bbaf42c3527112c",
         "name": "",
-        "addr": "255.255.255.255",
+        "addr": "",
         "iface": "",
         "port": "9811",
         "ipv": "udp4",
         "outport": "",
         "base64": false,
         "multicast": "broad",
-        "x": 860,
+        "x": 880,
         "y": 160,
         "wires": []
-    },
-    {
-        "id": "24b2c5a5f1ea97bc",
-        "type": "udp in",
-        "z": "d811a8c07382bd1d",
-        "g": "4a7dc214459d3ef5",
-        "name": "",
-        "iface": "",
-        "port": "9811",
-        "ipv": "udp4",
-        "multicast": "false",
-        "group": "",
-        "datatype": "buffer",
-        "x": 180,
-        "y": 340,
-        "wires": [
-            [
-                "690d7a9adb894859"
-            ]
-        ]
-    },
-    {
-        "id": "690d7a9adb894859",
-        "type": "function",
-        "z": "d811a8c07382bd1d",
-        "g": "4a7dc214459d3ef5",
-        "name": "Review UDP message",
-        "func": "var b = msg.payload;\nvar result = b.toString();\n\nif (result.length < 9)\n   msg.payload = \"IGNORE\";\nelse\n{\n   var initial = result.substring(0,9);\n   if (initial == \"UNIVERSAL\")\n   {\n       msg.payload = \"DEVICE:\"+result+\"-IP:\"+msg.ip;\n   }\n   else\n   {\n       msg.payload = \"IGNORE\";\n   }\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 400,
-        "y": 340,
-        "wires": [
-            [
-                "b71f76d9390966f5"
-            ]
-        ]
-    },
-    {
-        "id": "b71f76d9390966f5",
-        "type": "switch",
-        "z": "d811a8c07382bd1d",
-        "g": "4a7dc214459d3ef5",
-        "name": "Is a message from a node?",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "IGNORE",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 460,
-        "y": 480,
-        "wires": [
-            [
-                "c681e39909b692a7"
-            ]
-        ]
-    },
-    {
-        "id": "8c2f92306db0fb60",
-        "type": "function",
-        "z": "d811a8c07382bd1d",
-        "g": "4a7dc214459d3ef5",
-        "name": "Update UPC Table",
-        "func": "// Use an array to save all the devices found\nvar tableData = flow.get(\"savedData\") || [];\nvar payload = msg.payload;\nvar init = payload.indexOf(\"_\")+1;\nvar end = payload.indexOf(\"-\");\n// UNIVERSAL_nnnnnnnnnn-\n// 012345678901234567890\n// 9 - 20\n\nvar deviceId = payload.substring(init,end);\nvar ip = msg.ip;\n\ntableData.unshift(\n    {\n        \"#\": tableData.length,\n        \"deviceId\" : deviceId,\n        \"IP\" : ip,\n    }\n);\nmsg.payload = tableData;\nflow.set(\"savedData\",tableData);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 890,
-        "y": 480,
-        "wires": [
-            [
-                "f19f32137cd18b54"
-            ]
-        ]
-    },
-    {
-        "id": "f19f32137cd18b54",
-        "type": "ui_table",
-        "z": "d811a8c07382bd1d",
-        "g": "4a7dc214459d3ef5",
-        "group": "25ed5bac9f0a0e34",
-        "name": "",
-        "order": 0,
-        "width": "6",
-        "height": "17",
-        "columns": [],
-        "outputs": 0,
-        "cts": false,
-        "x": 1050,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "c681e39909b692a7",
-        "type": "rbe",
-        "z": "d811a8c07382bd1d",
-        "g": "4a7dc214459d3ef5",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 690,
-        "y": 480,
-        "wires": [
-            [
-                "8c2f92306db0fb60"
-            ]
-        ]
     },
     {
         "id": "689f8b8e61d5ce4b",
@@ -229,7 +107,7 @@
             "442e7bc38dd4c3b7",
             "758310f9eb5818de"
         ],
-        "x": 215,
+        "x": 155,
         "y": 100,
         "wires": [
             [
@@ -257,7 +135,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 410,
+        "x": 350,
         "y": 100,
         "wires": [
             [
@@ -277,11 +155,175 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
+        "x": 610,
         "y": 160,
         "wires": [
             [
+                "1f532f6cd8d78c94"
+            ]
+        ]
+    },
+    {
+        "id": "1f532f6cd8d78c94",
+        "type": "ip",
+        "z": "d811a8c07382bd1d",
+        "g": "5bbaf42c3527112c",
+        "name": "ip",
+        "https": false,
+        "timeout": "5000",
+        "internalIPv4": true,
+        "internalIPv6": false,
+        "publicIPv4": false,
+        "publicIPv6": false,
+        "x": 650,
+        "y": 100,
+        "wires": [
+            [
+                "b9d3f521615217fe"
+            ]
+        ]
+    },
+    {
+        "id": "b9d3f521615217fe",
+        "type": "function",
+        "z": "d811a8c07382bd1d",
+        "g": "5bbaf42c3527112c",
+        "name": "Get Broadcast address",
+        "func": "var payload = msg.payload.internalIPv4;\nvar broadCastIP  = payload.substring(0,10)+\"255\";\n\nmsg.ip = broadCastIP;\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 100,
+        "wires": [
+            [
                 "24d6a843c978e09e"
+            ]
+        ]
+    },
+    {
+        "id": "24b2c5a5f1ea97bc",
+        "type": "udp in",
+        "z": "d811a8c07382bd1d",
+        "g": "4a7dc214459d3ef5",
+        "name": "",
+        "iface": "",
+        "port": "9811",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "buffer",
+        "x": 220,
+        "y": 380,
+        "wires": [
+            [
+                "690d7a9adb894859"
+            ]
+        ]
+    },
+    {
+        "id": "690d7a9adb894859",
+        "type": "function",
+        "z": "d811a8c07382bd1d",
+        "g": "4a7dc214459d3ef5",
+        "name": "Review UDP message",
+        "func": "var b = msg.payload;\nvar result = b.toString();\n\nif (result.length < 9)\n   msg.payload = \"IGNORE\";\nelse\n{\n   var initial = result.substring(0,9);\n   if (initial == \"UNIVERSAL\")\n   {\n       msg.payload = \"DEVICE:\"+result+\"-IP:\"+msg.ip;\n   }\n   else\n   {\n       msg.payload = \"IGNORE\";\n   }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 440,
+        "wires": [
+            [
+                "b71f76d9390966f5"
+            ]
+        ]
+    },
+    {
+        "id": "b71f76d9390966f5",
+        "type": "switch",
+        "z": "d811a8c07382bd1d",
+        "g": "4a7dc214459d3ef5",
+        "name": "Is a message from a node?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "IGNORE",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 520,
+        "wires": [
+            [
+                "c681e39909b692a7"
+            ]
+        ]
+    },
+    {
+        "id": "8c2f92306db0fb60",
+        "type": "function",
+        "z": "d811a8c07382bd1d",
+        "g": "4a7dc214459d3ef5",
+        "name": "Update UPC Table",
+        "func": "// Use an array to save all the devices found\nvar tableData = flow.get(\"savedData\") || [];\nvar payload = msg.payload;\nvar init = payload.indexOf(\"_\")+1;\nvar end = payload.indexOf(\"-\");\n// UNIVERSAL_nnnnnnnnnn-\n// 012345678901234567890\n// 9 - 20\n\nvar deviceId = payload.substring(init,end);\nvar ip = msg.ip;\n\ntableData.unshift(\n    {\n        \"#\": tableData.length,\n        \"deviceId\" : deviceId,\n        \"IP\" : ip,\n    }\n);\nmsg.payload = tableData;\nflow.set(\"savedData\",tableData);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 520,
+        "wires": [
+            [
+                "f19f32137cd18b54"
+            ]
+        ]
+    },
+    {
+        "id": "f19f32137cd18b54",
+        "type": "ui_table",
+        "z": "d811a8c07382bd1d",
+        "g": "4a7dc214459d3ef5",
+        "group": "25ed5bac9f0a0e34",
+        "name": "",
+        "order": 0,
+        "width": "6",
+        "height": "17",
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 1090,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "c681e39909b692a7",
+        "type": "rbe",
+        "z": "d811a8c07382bd1d",
+        "g": "4a7dc214459d3ef5",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 730,
+        "y": 520,
+        "wires": [
+            [
+                "8c2f92306db0fb60"
             ]
         ]
     },
