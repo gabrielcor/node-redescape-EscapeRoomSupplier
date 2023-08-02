@@ -256,6 +256,21 @@
         ]
     },
     {
+        "id": "9b21d75ed21becaa",
+        "type": "catch",
+        "z": "7cec459b408f9e65",
+        "name": "Ignorar error de llamada a la API",
+        "scope": [
+            "5e28fca11e776c89"
+        ],
+        "uncaught": false,
+        "x": 650,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "487ff8a5c1e2834b",
         "type": "ui_group",
         "name": "ESRS-GC",

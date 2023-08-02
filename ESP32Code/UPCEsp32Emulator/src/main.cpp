@@ -5,11 +5,9 @@
 #include <wifi_config.h>
 
 
-char deviceMacAddress[33]; // MAC address of the device
 
 WiFiServer server(80);
-String macAddress;
-
+char deviceMacAddress[18]; // MAC address of the device
 
 // Variables to emulate UPC
 char* EstadoPuzzle="UNSOLVED";
@@ -27,6 +25,7 @@ WiFiUDP udp;
 const unsigned int udpPort PROGMEM = 9811;
 char packetBuffer[24];  // buffer to hold incoming packet,
 char ReplyBuffer[30]; 
+
 bool UDPReceived = false; // Flag to indicate that a UDP packet has been received and we have to send a reply every 10 seconds
 IPAddress remoteUdpServer; 
 unsigned long lastUDPTime = millis();
@@ -50,16 +49,17 @@ void setup() {
 
   // Get Mac Address and assign it to deviceMacAddress
   Serial.print(F("MAC Address: "));
-  macAddress = WiFi.macAddress();
-  macAddress.toCharArray(deviceMacAddress, 32);
-  deviceMacAddress[32] = '\0';
-
+  sprintf(deviceMacAddress, "%02X:%02X:%02X:%02X:%02X:%02X", WiFi.macAddress()[0], WiFi.macAddress()[1], WiFi.macAddress()[2], WiFi.macAddress()[3], WiFi.macAddress()[4], WiFi.macAddress()[5]);
+  deviceMacAddress[17] = '\0';
   Serial.println(deviceMacAddress);
+  
 
   // Start Udp server
   udp.begin(udpPort);
   Serial.print(F("UDP server started at port "));
   Serial.println(udpPort);
+  ReplyBuffer[30] = '\0';
+
 
   server.begin();
 }
@@ -119,7 +119,9 @@ void sendUdpUpdate()
 {
   // Send a reply to the IP address and port that sent us the packet we received
   udp.beginPacket(remoteUdpServer, udpPort);
-  sprintf(ReplyBuffer, "UNIVERSAL_%s-", macAddress);
+  sprintf(ReplyBuffer, "UNIVERSAL_%s-", deviceMacAddress);
+  Serial.print(F("Enviando paquete UDP: "));
+  Serial.println(ReplyBuffer);
   udp.print(ReplyBuffer);
   udp.endPacket();
 }
@@ -145,11 +147,15 @@ void loop() {
     Serial.println(F("Contents:"));
     Serial.println(packetBuffer);
 
-    // Send a reply to the IP address and port that sent us the packet we received
-    remoteUdpServer  = udp.remoteIP();
-    sendUdpUpdate();
-    UDPReceived = true;
-    lastUDPTime = millis();
+    // Check if the packet contains the string "Hello_from_ERCC"
+    if (strstr(packetBuffer, "Hello_from_ERCC") != nullptr) {
+      // Send a reply to the IP address and port that sent us the packet we received
+      remoteUdpServer  = udp.remoteIP();
+      sendUdpUpdate();
+      UDPReceived = true;
+      lastUDPTime = millis();
+    }
+
   }
 
   
