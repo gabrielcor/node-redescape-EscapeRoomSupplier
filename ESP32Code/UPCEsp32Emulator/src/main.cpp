@@ -1,7 +1,9 @@
 #include <WiFi.h>
+#include <WifiUdp.h>
 #include <WiFiClient.h>
 #include <ArduinoJson.h>
 #include <wifi_config.h>
+
 
 char deviceMacAddress[33]; // MAC address of the device
 
@@ -21,10 +23,13 @@ bool ComandoState = false;
 bool ComandoPost = false;
 
 // Variables to work with UDP
+WiFiUDP udp;
 const unsigned int udpPort PROGMEM = 9811;
 char packetBuffer[24];  // buffer to hold incoming packet,
 char ReplyBuffer[30]; 
-
+bool UDPReceived = false; // Flag to indicate that a UDP packet has been received and we have to send a reply every 10 seconds
+IPAddress remoteUdpServer; 
+unsigned long lastUDPTime = millis();
 
 
 void setup() {
@@ -50,7 +55,12 @@ void setup() {
   deviceMacAddress[32] = '\0';
 
   Serial.println(deviceMacAddress);
-  
+
+  // Start Udp server
+  udp.begin(udpPort);
+  Serial.print(F("UDP server started at port "));
+  Serial.println(udpPort);
+
   server.begin();
 }
 
@@ -105,8 +115,55 @@ void SendMessage2(WiFiClient client)
           }
 }
 
+void sendUdpUpdate()
+{
+  // Send a reply to the IP address and port that sent us the packet we received
+  udp.beginPacket(remoteUdpServer, udpPort);
+  sprintf(ReplyBuffer, "UNIVERSAL_%s-", macAddress);
+  udp.print(ReplyBuffer);
+  udp.endPacket();
+}
+
 void loop() {
 
+  // Check if a UDP packet has been received
+  int packetSize = udp.parsePacket();
+  if (packetSize) {
+    Serial.print(F("Received packet of size "));
+    Serial.println(packetSize);
+    Serial.print(F("From "));
+    IPAddress remoteIp = udp.remoteIP();
+    Serial.print(remoteIp);
+    Serial.print(F(", port "));
+    Serial.println(udp.remotePort());
+
+    // read the packet into packetBufffer
+    int len = udp.read(packetBuffer, 24);
+    if (len > 0) {
+      packetBuffer[len] = 0;
+    }
+    Serial.println(F("Contents:"));
+    Serial.println(packetBuffer);
+
+    // Send a reply to the IP address and port that sent us the packet we received
+    remoteUdpServer  = udp.remoteIP();
+    sendUdpUpdate();
+    UDPReceived = true;
+    lastUDPTime = millis();
+  }
+
+  
+  if (UDPReceived && (millis() - lastUDPTime) > 10000) {
+    // Send a reply to the IP address and port that sent us the packet we received
+    lastUDPTime = millis();
+    sendUdpUpdate();
+  }
+
+    
+
+
+// Listen for incoming clients on port 80
+// Check if a client has connected
  WiFiClient client = server.available();
 
   if (client) {
