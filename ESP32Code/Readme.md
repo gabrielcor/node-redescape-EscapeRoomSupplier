@@ -10,9 +10,11 @@ It emulates two methods and it returns compatible JSON:
 
 For those methods it only returns the "machine state" based on the "Puzzle State" that can be "SOLVED" or "UNSOLVED".
 
+## Discovery
 It also emulates the behavior that allows a server to find the UPC device on the network
 It implements the functionality described at <a href="https://wiki.escaperoomsupplier.com/wiki/Upc-api-v2.0.0#How_to_find_UPC_on_local_network.3F">How to find UPC ERS Wiki</a> it not only replies on discovery but also keeps sending packets to the server every 10 seconds.
 You can test the functionality with <a href="https://packetsender.com/download">Packet sender tool</a> sending a packet to the port 9811 on the broadcast address.
+
 You can see the result below
 !["Packet Sender results"](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/main/Documentation/screenshots/PacketSender.png)
 
