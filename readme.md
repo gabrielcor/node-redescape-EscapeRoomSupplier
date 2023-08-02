@@ -35,6 +35,12 @@ To install Core Flows have this <a href="https://github.com/gabrielcor/node-rede
 ### Flow documentation
 Documentation is at  <a href="https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/tree/main/Flows">Flows</a>
 
+To use a Flow download the json file from the site and import it on  your own Node-RED instance. 
 
-The <a href="">Wiki</a> contains a growing list of "recipes" - examples of different common functionality that you can learn from, copy, and adapt. 
-Choose a recipe from the wiki sidebar and read the notes. To create a flow using that recipe, highlight and copy the JSON file to your clipboard and paste it into the import menu of your own Node-RED instance. 
+## UPC Emulation
+All the samples are based on the API exposed by UPC devices v2 as documented at <a href="https://wiki.escaperoomsupplier.com/wiki/Upc-api-v2.0.0">UPC API v2.0</a>
+
+We implemented two versions of the emulator:
+* ESP32 (recommended): <a href="https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/tree/main/ESP32Code">ESP32 UPC API v2.0 Emulator</a> 
+* Arduino Nano with ENC2860J Shield:  <a href="https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/tree/main/ArduinoCode/NanoEnc2860J">Arduino Nano Enc2860J UPC API v2.0 Emulator</a> 
+
