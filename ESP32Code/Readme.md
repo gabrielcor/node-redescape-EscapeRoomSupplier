@@ -8,7 +8,15 @@ It emulates two methods and it returns compatible JSON:
 * Actual State: <a href="https://wiki.escaperoomsupplier.com/wiki/Upc-api-v2.0.0#Actual_state_info">Actual State ERS Wiki</a>
 * UPC State Change: <a href="https://wiki.escaperoomsupplier.com/wiki/Upc-api-v2.0.0#UPC_state_change">State Change ERS Wiki</a>
 
-For those methods it only returns the "machine state" based on the "Puzzle State" that can be "SOLVED" or "UNSOLVED".
+### 
+Universal State - Input States implementation.
+UPC uses the convention where 0 is triggered and 1 is not triggered (I don't know why is inverted, but that's the way it is)
+Input state is the decimal representation of a 16 bit map for 16 inputs, where 65535 is all 16 1's.
+
+We only implemented 5 inputs for ESP32 board to be on the safe side, but you can add more if it's needed. We used pins 5,16,17,18 and 19 
+as they are deemed safe in <a href="https://randomnerdtutorials.com/esp32-pinout-reference-gpios/">This article</a>
+!["ESP32 GPIOs"](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/main/Documentation/screenshots/ESP32_Gpio_Ports.png)
+
 
 ## Discovery
 It also emulates the behavior that allows a server to find the UPC device on the network
@@ -22,7 +30,4 @@ You can see the result below
 
 If you go to the IP address of the Arduino, it shows a page like the one below where you can interact with the puzzle state
 !["ESP32 webpage"](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/main/Documentation/screenshots/ESP32UPCEmulator.png)
-
-## UPC webhook
-Webhook is in  development 
 

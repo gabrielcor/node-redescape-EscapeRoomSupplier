@@ -5,6 +5,17 @@
 #include <wifi_config.h>
 
 
+// GPIO to check this version will always check 5 pins (5,16,17,18,19)
+// https://randomnerdtutorials.com/esp32-pinout-reference-gpios/
+// or https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/main/Documentation/screenshots/ESP32_Gpio_Ports.png
+
+const byte numSensors = 5;
+const byte sensorPins[numSensors] = {5,16,17,18,19};
+// Create an array to keep track of the last state of the pins
+byte lastState[numSensors] = {0,0,0,0,0};
+// The current state of the all sensors if they were 16 (just to be compatible with ERS UPC)
+byte currentState[16] = {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
+int currentStateDecimal = 65535;
 
 WiFiServer server(80);
 char deviceMacAddress[18]; // MAC address of the device
@@ -53,6 +64,11 @@ void setup() {
   deviceMacAddress[17] = '\0';
   Serial.println(deviceMacAddress);
   
+  // Intitialize the input pins
+  for(int i=0; i<numSensors; i++){
+    pinMode(sensorPins[i], INPUT_PULLUP);
+  }
+
 
   // Start Udp server
   udp.begin(udpPort);
@@ -111,7 +127,9 @@ void SendMessage2(WiFiClient client)
              client.print(machineState);
              client.print(F("\", \"output_state\":\""));
              client.print(outputState);
-             client.println(F("\", \"input_states\":\"65535\", \"overwritten_inputs\":\"0\"}, \"message\":{ \"type\":\"info\", \"content\":\"OK!\"} }"));
+             client.print(F("\", \"input_states\":\""));
+             client.print(currentStateDecimal);
+             client.println(F("\", \"overwritten_inputs\":\"0\"}, \"message\":{ \"type\":\"info\", \"content\":\"OK!\"} }"));
           }
 }
 
@@ -126,9 +144,34 @@ void sendUdpUpdate()
   udp.endPacket();
 }
 
-void loop() {
+void CheckSensors()
+{
+    // Loop over every sensor
+    for(int i=0; i<numSensors; i++){
+        // Read the current value
+        byte currentState = !digitalRead(sensorPins[i]);
+        // Preserve state 
+        lastState[i] = currentState;
+    }
+    // transfer the values from the lastState array to the currentState array switching 1 and 0
+    for(int i=0; i<numSensors; i++){
+        if (lastState[i] == 1) {
+          currentState[i] = 0;
+        } else {
+          currentState[i] = 1;
+        }
+    }
+  // Calculate the decimal value of the currentState array
+  currentStateDecimal = 0;
+  for(int i=0; i<16; i++){
+    currentStateDecimal += currentState[i] * pow(2,i);
+  }
 
-  // Check if a UDP packet has been received
+}
+
+void CheckUdp()
+{
+   // Check if a UDP packet has been received
   int packetSize = udp.parsePacket();
   if (packetSize) {
     Serial.print(F("Received packet of size "));
@@ -164,11 +207,12 @@ void loop() {
     lastUDPTime = millis();
     sendUdpUpdate();
   }
+ 
+}
 
-    
-
-
-// Listen for incoming clients on port 80
+void CheckHttpClients()
+{
+  // Listen for incoming clients on port 80
 // Check if a client has connected
  WiFiClient client = server.available();
 
@@ -255,5 +299,15 @@ void loop() {
     // close the connection:
     client.stop();
   }
+
+}
+void loop() {
+
+   CheckSensors();
+
+   CheckUdp();
+    
+   CheckHttpClients();
+
 }
 
