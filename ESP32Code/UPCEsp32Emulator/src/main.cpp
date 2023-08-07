@@ -15,6 +15,8 @@ const byte sensorPins[numSensors] = {5,16,17,18,19};
 byte lastState[numSensors] = {0,0,0,0,0};
 // The current state of the all sensors if they were 16 (just to be compatible with ERS UPC)
 byte currentState[16] = {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
+byte overridenInputs[16] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+
 int currentStateDecimal = 65535;
 
 WiFiServer server(80);
@@ -129,7 +131,14 @@ void SendMessage2(WiFiClient client)
              client.print(outputState);
              client.print(F("\", \"input_states\":\""));
              client.print(currentStateDecimal);
-             client.println(F("\", \"overwritten_inputs\":\"0\"}, \"message\":{ \"type\":\"info\", \"content\":\"OK!\"} }"));
+             // calculate overriden inputs as decimal
+              int overridenInputsDecimal = 0;
+              for(int i=0; i<16; i++){
+                overridenInputsDecimal += overridenInputs[i] * pow(2,i);
+              }
+              client.print(F("\", \"overriden_inputs\":\""));
+              client.print(overridenInputsDecimal);
+              client.println(F("\"}, \"message\":{ \"type\":\"info\", \"content\":\"OK!\"} }"));
           }
 }
 
@@ -155,10 +164,14 @@ void CheckSensors()
     }
     // transfer the values from the lastState array to the currentState array switching 1 and 0
     for(int i=0; i<numSensors; i++){
-        if (lastState[i] == 1) {
-          currentState[i] = 0;
-        } else {
-          currentState[i] = 1;
+        // only if the input has not been overriden
+        if (overridenInputs[i] == 0)
+          {
+          if (lastState[i] == 1) {
+            currentState[i] = 0;
+          } else {
+            currentState[i] = 1;
+          }
         }
     }
   // Calculate the decimal value of the currentState array
@@ -248,15 +261,61 @@ void CheckHttpClients()
             Serial.print(postReceived);
 
             if (strstr(postReceived, "\"universal_set\":{\"machine_state\":") != nullptr) {
-              Serial.println(F("Comando POST de cambio reconocido"));
               ComandoState = true; // we have to return the JSON
               if (strstr(postReceived, ":2}") != nullptr) {
-                Serial.println(F("Comando SOLVED recibido"));
                 EstadoPuzzle = "SOLVED";
               }
+              // Restart the puzzle
               if (strstr(postReceived, ":0}") != nullptr) {
-                Serial.println(F("Comando UNSOLVED recibido"));
+                // put overrideninputs to 0 and currentState to 1
+                for(int i=0; i<16; i++){
+                  overridenInputs[i] = 0;
+                  currentState[i] = 1;
+                }
                 EstadoPuzzle = "UNSOLVED";
+              }
+            }
+            else
+            {
+              if (strstr(postReceived, "\"universal_set\":{\"input_number\":") != nullptr) {
+                  ComandoState = true; // we have to return the JSON
+                  // we receive a string like the following
+                  // {"id":"70129022401520","command":{"name":"settings"},"universal_set":{"input_number":1,"input_state":1}}
+                  // we have to extract the input_number and input_state
+                  // and put them in variables
+
+                  // extract input inputNumber and inputState making sure postReceived reamins intact
+                  const char* inputNumberKey = "\"input_number\":";
+                  const char* inputStateKey = "\"input_state\":";
+
+                  char* inputNumberPtr = strstr(postReceived, inputNumberKey);
+                  char* inputStatePtr = strstr(postReceived, inputStateKey);
+
+                  int inputNumber = atoi(inputNumberPtr + strlen(inputNumberKey));
+                  int inputState = atoi(inputStatePtr + strlen(inputStateKey));
+
+                  // check that inputNumber is between 1 and 16
+                  if (inputNumber > 0 && inputNumber < 17) {
+                    // check that inputState is 0 or 1
+                    if (inputState == 0 || inputState == 1 || inputState == 2) {
+                      // change the value of the inputNumber in the currentState array
+                      if (inputState == 2) // disable override
+                      {
+                        overridenInputs[inputNumber-1] = 0;
+                        currentState[inputNumber-1] = 1; // un-triggered
+                      }
+                      else
+                      {
+                        currentState[inputNumber-1] = inputState;
+                        overridenInputs[inputNumber-1] = 1;
+                      }
+                      // Calculate the decimal value of the currentState array
+                      currentStateDecimal = 0;
+                      for(int i=0; i<16; i++){
+                        currentStateDecimal += currentState[i] * pow(2,i);
+                      }
+                    }
+                  }
               }
             }
           }
@@ -301,6 +360,9 @@ void CheckHttpClients()
   }
 
 }
+
+
+
 void loop() {
 
    CheckSensors();
