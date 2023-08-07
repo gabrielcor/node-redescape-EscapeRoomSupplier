@@ -153,6 +153,16 @@ void sendUdpUpdate()
   udp.endPacket();
 }
 
+void CalculateCurrentStateDecimal()
+{
+  // Calculate the decimal value of the currentState array
+  currentStateDecimal = 0;
+  for(int i=0; i<16; i++){
+    currentStateDecimal += currentState[i] * pow(2,i);
+  }
+}
+
+
 void CheckSensors()
 {
     // Loop over every sensor
@@ -178,14 +188,6 @@ void CheckSensors()
 
 }
 
-void CalculateCurrentStateDecimal()
-{
-  // Calculate the decimal value of the currentState array
-  currentStateDecimal = 0;
-  for(int i=0; i<16; i++){
-    currentStateDecimal += currentState[i] * pow(2,i);
-  }
-}
 void CheckUdp()
 {
    // Check if a UDP packet has been received
