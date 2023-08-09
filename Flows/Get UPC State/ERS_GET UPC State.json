@@ -1,6 +1,6 @@
 [
     {
-        "id": "7cec459b408f9e65",
+        "id": "f5262a52945eb598",
         "type": "tab",
         "label": "GET_UPC_State",
         "disabled": false,
@@ -8,9 +8,9 @@
         "env": []
     },
     {
-        "id": "0ebb81d8a4618708",
+        "id": "a85d49f603fb7fdc",
         "type": "link in",
-        "z": "7cec459b408f9e65",
+        "z": "f5262a52945eb598",
         "name": "link in 1",
         "links": [
             "c7c4685c94a69e6f"
@@ -19,14 +19,14 @@
         "y": 320,
         "wires": [
             [
-                "8138e05905f687ac"
+                "927099632467fc4d"
             ]
         ]
     },
     {
-        "id": "5e28fca11e776c89",
+        "id": "49397b3931cd4a49",
         "type": "http request",
-        "z": "7cec459b408f9e65",
+        "z": "f5262a52945eb598",
         "name": "Call API on UPC device",
         "method": "GET",
         "ret": "txt",
@@ -43,14 +43,14 @@
         "y": 320,
         "wires": [
             [
-                "d21b02c71b5bd77a"
+                "cf213e42e0132403"
             ]
         ]
     },
     {
-        "id": "d21b02c71b5bd77a",
+        "id": "cf213e42e0132403",
         "type": "rbe",
-        "z": "7cec459b408f9e65",
+        "z": "f5262a52945eb598",
         "name": "",
         "func": "rbe",
         "gap": "",
@@ -63,14 +63,14 @@
         "y": 320,
         "wires": [
             [
-                "3d92135786d31413"
+                "15553aeb1e9ebd23"
             ]
         ]
     },
     {
-        "id": "8138e05905f687ac",
+        "id": "927099632467fc4d",
         "type": "change",
-        "z": "7cec459b408f9e65",
+        "z": "f5262a52945eb598",
         "name": "set msg request",
         "rules": [
             {
@@ -90,14 +90,14 @@
         "y": 320,
         "wires": [
             [
-                "5e28fca11e776c89"
+                "49397b3931cd4a49"
             ]
         ]
     },
     {
-        "id": "df3c1dacf6fb708e",
+        "id": "7e26ff55c2c5854d",
         "type": "function",
-        "z": "7cec459b408f9e65",
+        "z": "f5262a52945eb598",
         "name": "Assign values to display panel",
         "func": "var payload = msg.payload; //get payload\nvar id = msg.payload.id; // comes from the device\n\npayload.deviceName = flow.get(\"deviceName\");\npayload.description = flow.get(\"description\");\n\nvar inputStatesString = msg.payload.universal_state.input_states;\nvar decimalValue = parseInt(inputStatesString, 10);\nvar binaryValue = decimalValue.toString(2).padStart(16, '0');\n\npayload.binaryValue = binaryValue;\n\nvar d= new Date();\npayload.time = d.toLocaleTimeString();\nmsg.payload = payload;\n\n\nreturn msg;",
         "outputs": 1,
@@ -109,14 +109,15 @@
         "y": 500,
         "wires": [
             [
-                "cd2152a91feb61e1"
+                "0618d03cf5d85083",
+                "46146027ce098772"
             ]
         ]
     },
     {
-        "id": "3d92135786d31413",
+        "id": "15553aeb1e9ebd23",
         "type": "json",
-        "z": "7cec459b408f9e65",
+        "z": "f5262a52945eb598",
         "name": "",
         "property": "payload",
         "action": "obj",
@@ -125,14 +126,14 @@
         "y": 320,
         "wires": [
             [
-                "df3c1dacf6fb708e"
+                "7e26ff55c2c5854d"
             ]
         ]
     },
     {
-        "id": "434e2fc9d9c1a0b4",
+        "id": "4653cd44abc0b299",
         "type": "comment",
-        "z": "7cec459b408f9e65",
+        "z": "f5262a52945eb598",
         "name": "Every tick",
         "info": "",
         "x": 140,
@@ -140,9 +141,9 @@
         "wires": []
     },
     {
-        "id": "2b373cf7867a5518",
+        "id": "9ac50b7a84f0a17f",
         "type": "link in",
-        "z": "7cec459b408f9e65",
+        "z": "f5262a52945eb598",
         "name": "link in 4",
         "links": [
             "442e7bc38dd4c3b7",
@@ -152,35 +153,35 @@
         "y": 100,
         "wires": [
             [
-                "17f3273489c1790b"
+                "9c4ee58623de4087"
             ]
         ]
     },
     {
-        "id": "17f3273489c1790b",
+        "id": "9c4ee58623de4087",
         "type": "change",
-        "z": "7cec459b408f9e65",
+        "z": "f5262a52945eb598",
         "name": "Initialize target URL & device data",
         "rules": [
             {
                 "t": "set",
                 "p": "deviceUrl",
                 "pt": "flow",
-                "to": "http://192.168.5.185?command=state",
+                "to": "http://192.168.1.124?command=state",
                 "tot": "str"
             },
             {
                 "t": "set",
                 "p": "deviceName",
                 "pt": "flow",
-                "to": "ESP32-UPC-EMUL01",
+                "to": "REAL UPC",
                 "tot": "str"
             },
             {
                 "t": "set",
                 "p": "description",
                 "pt": "flow",
-                "to": "Magnet Sensor",
+                "to": "Magnet Sensor 2",
                 "tot": "str"
             }
         ],
@@ -193,14 +194,14 @@
         "y": 100,
         "wires": [
             [
-                "b4079d6a2dca0996"
+                "94901b7e08556112"
             ]
         ]
     },
     {
-        "id": "f989d7222c119b8d",
+        "id": "34614755af8a50dc",
         "type": "comment",
-        "z": "7cec459b408f9e65",
+        "z": "f5262a52945eb598",
         "name": "Always initialize to: http://nnn.nnn.nnn.nnn?command=state // where nnn.... is IP address of UPC device",
         "info": "",
         "x": 770,
@@ -208,9 +209,9 @@
         "wires": []
     },
     {
-        "id": "b4079d6a2dca0996",
+        "id": "94901b7e08556112",
         "type": "change",
-        "z": "7cec459b408f9e65",
+        "z": "f5262a52945eb598",
         "name": "",
         "rules": [
             {
@@ -230,17 +231,17 @@
         "y": 100,
         "wires": [
             [
-                "df3c1dacf6fb708e"
+                "7e26ff55c2c5854d"
             ]
         ]
     },
     {
-        "id": "9b21d75ed21becaa",
+        "id": "53df238b8fd57e4f",
         "type": "catch",
-        "z": "7cec459b408f9e65",
+        "z": "f5262a52945eb598",
         "name": "Ignorar error de llamada a la API",
         "scope": [
-            "5e28fca11e776c89"
+            "49397b3931cd4a49"
         ],
         "uncaught": false,
         "x": 650,
@@ -250,22 +251,61 @@
         ]
     },
     {
-        "id": "cd2152a91feb61e1",
+        "id": "0618d03cf5d85083",
+        "type": "debug",
+        "z": "f5262a52945eb598",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "46146027ce098772",
         "type": "ui_template",
-        "z": "7cec459b408f9e65",
+        "z": "f5262a52945eb598",
         "group": "487ff8a5c1e2834b",
         "name": "",
-        "order": 11,
+        "order": 12,
         "width": 0,
         "height": 0,
-        "format": "<style>\n    .led-indicator {\n        width: 10px;\n        height: 10px;\n        border-radius: 50%;\n        margin: 3px;\n    }\n\n    .green {\n        background-color: green;\n    }\n\n    .gray {\n        background-color: gray;\n    }\n    .led-numbers {\n    display: flex;\n    justify-content: space-between;\n    font-size: 9px;\n    margin-top: 3px;\n    margin: 3px;\n    }\n</style>\n<md-card-title>\n    <md-card-title-text>\n        <p class=\"md-headline\">{{msg.payload.deviceName}}</p>\n    </md-card-title-text>\n    <span ng-class=\"msg.payload.universal_state.machine_state=='2' ? 'fa fa-unlock fa-2x' : 'fa fa-lock fa-2x'\"></span>\n</md-card-title>\n\n<md-card-content>\n    <div\n        ng-style=\"{width:'100%',height:'8px','background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\">\n    </div>\n    <p>\n        {{msg.payload.description?msg.payload.description:'Unknown'}}\n        <br>\n                {{msg.payload.id?msg.payload.id:'Unknown'}}\n                - {{msg.payload.time?msg.payload.time:'Unknown'}}\n        <br>\n    </p>\n    \n    <div style=\"display: flex; justify-content: center;\">\n        <div id=\"led-container\" style=\"display: flex; justify-content: center;\"></div>\n    </div>\n    <div class=\"led-numbers\">\n        <span>1</span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span>16</span>\n    </div>\n    <script>\n    ;(function(scope) {\n    \n    // watch msg object from Node-RED\n    scope.$watch('msg', function(msg) {\n        // new message received\n        var ledContainer = document.getElementById('led-container');\n        ledContainer.innerHTML = '';\n        var binaryValue =  msg.payload.binaryValue;\n        for (var i = binaryValue.length-1; i >=0 ; i--) \n        { var led=document.createElement('div');\n              led.classList.add('led-indicator'); \n              if (binaryValue[i]==='0' )\n                 { led.classList.add('green'); } \n              else \n                 { led.classList.add('gray'); } \n            ledContainer.appendChild(led); \n        }\n    });\n    })(scope);\n    </script>\n</md-card-content>",
-        "storeOutMessages": false,
-        "fwdInMessages": false,
+        "format": "<style>\n    .led-indicator {\n        width: 10px;\n        height: 10px;\n        border-radius: 50%;\n        margin: 3px;\n    }\n\n    .green {\n        background-color: green;\n    }\n\n    .gray {\n        background-color: gray;\n    }\n\n    .led-numbers {\n        display: flex;\n        justify-content: space-between;\n        font-size: 9px;\n        margin-top: 3px;\n        margin: 3px;\n    }\n</style>\n<md-card-title>\n    <md-card-title-text>\n        <p class=\"md-headline\">{{msg.payload.deviceName}}</p>\n    </md-card-title-text>\n    <span ng-class=\"msg.payload.universal_state.machine_state=='2' ? 'fa fa-unlock fa-2x' : 'fa fa-lock fa-2x'\"></span>\n</md-card-title>\n\n<md-card-content>\n    <div\n        ng-style=\"{width:'100%',height:'8px','background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\">\n    </div>\n    <p>\n        {{msg.payload.description?msg.payload.description:'Unknown'}}\n        <br>\n                {{msg.payload.id?msg.payload.id:'Unknown'}}\n                - {{msg.payload.time?msg.payload.time:'Unknown'}}\n        <br>\n    </p>\n        <br>{{msg.payload.binaryValue}}<br>\n    <div style=\"display: flex; justify-content: center;\">\n        <div id=\"{{msg.payload.id}}\" style=\"display: flex; justify-content: center;\"></div>\n    </div>\n    <div class=\"led-numbers\">\n        <span>1</span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span>16</span>\n    </div>\n\n</md-card-content>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 960,
-        "y": 500,
+        "x": 860,
+        "y": 560,
+        "wires": [
+            [
+                "e2c8ccbf9f4dd6ad"
+            ]
+        ]
+    },
+    {
+        "id": "e2c8ccbf9f4dd6ad",
+        "type": "ui_template",
+        "z": "f5262a52945eb598",
+        "group": "487ff8a5c1e2834b",
+        "name": "",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "format": "<md-card-content>\n    <script>\n        ;(function(scope) {\n    \n    // watch msg object from Node-RED\n    scope.$watch('msg', function(msg) {\n        // new message received\n        var ledContainer = document.getElementById(msg.payload.id);\n        ledContainer.innerHTML = '';\n        var binaryValue =  msg.payload.binaryValue;\n        for (var i = binaryValue.length-1; i >=0 ; i--) \n        { var led=document.createElement('div');\n              led.classList.add('led-indicator'); \n              if (binaryValue[i]==='0' )\n                 { led.classList.add('green'); } \n              else \n                 { led.classList.add('gray'); } \n            ledContainer.appendChild(led); \n        }\n    });\n    })(scope);\n    </script>\n</md-card-content>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 920,
+        "y": 660,
         "wires": [
             []
         ]
