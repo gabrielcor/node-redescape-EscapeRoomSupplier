@@ -1,11 +1,9 @@
 # Get Universal Puzzle Controller State
 ## Official documentation 
 
-The official documentation is at <a href="https://wiki.escaperoomsupplier.com/wiki/Universal_Puzzle_Controller_API_v1.0.0">Escape Room Supplier documentation API</a>. Problem is that the documentation for the most part of the invocation is wrong. 
-Nevertheless, at least for the "Actual state info","UPC state change",  the values of the response are accurate.
-Please note that the "input states" value is a bit operation of the binary version of the actual input states, and it actually suggests to use <a href=" https://www.rapidtables.com/convert/number/decimal-to-binary.html">this calculus</a> to get the actual state.
+The official documentation is at <a href="https://wiki.escaperoomsupplier.com/wiki/Upc-api-v2.0.0#Actual_state_info">Escape Room Supplier documentation API</a>. 
 
-Also there is an "UPC input override" method that is not documented and that we have detected using Wireshark and the Escape Room Supplier software.
+Please note that the "input states" value is a bit operation of the binary version of the actual input states, and it actually suggests to use <a href=" https://www.rapidtables.com/convert/number/decimal-to-binary.html">this calculus</a> to get the actual state.
 
 There is a POSTMAN collection in this folder, that you can use to control an UPC device if you have one connected to the network.
 This postman collection is tested with hv=5, sv=01.01.06 of the UPC controllers
@@ -31,6 +29,6 @@ Basically what it does is:
 * Convert the JSON to an object
 * Parse the JSON and send it to display in the dashboard.
 
-Note: it only displays the state of the UPC controller, not each individual input state
+It displays the state of the UPC controller and each individual input state as a green/gray dot
 
 !["Dashboard"](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/main/Documentation/screenshots/GetUPCState02.png)
