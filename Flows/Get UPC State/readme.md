@@ -32,3 +32,5 @@ Basically what it does is:
 It displays the state of the UPC controller and each individual input state as a green/gray dot
 
 !["Dashboard"](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/main/Documentation/screenshots/GetUPCState02.png)
+
+## ---
