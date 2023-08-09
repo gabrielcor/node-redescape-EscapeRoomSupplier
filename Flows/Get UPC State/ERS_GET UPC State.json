@@ -109,7 +109,6 @@
         "y": 500,
         "wires": [
             [
-                "0618d03cf5d85083",
                 "46146027ce098772"
             ]
         ]
@@ -251,22 +250,6 @@
         ]
     },
     {
-        "id": "0618d03cf5d85083",
-        "type": "debug",
-        "z": "f5262a52945eb598",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 980,
-        "y": 400,
-        "wires": []
-    },
-    {
         "id": "46146027ce098772",
         "type": "ui_template",
         "z": "f5262a52945eb598",
@@ -275,7 +258,7 @@
         "order": 12,
         "width": 0,
         "height": 0,
-        "format": "<style>\n    .led-indicator {\n        width: 10px;\n        height: 10px;\n        border-radius: 50%;\n        margin: 3px;\n    }\n\n    .green {\n        background-color: green;\n    }\n\n    .gray {\n        background-color: gray;\n    }\n\n    .led-numbers {\n        display: flex;\n        justify-content: space-between;\n        font-size: 9px;\n        margin-top: 3px;\n        margin: 3px;\n    }\n</style>\n<md-card-title>\n    <md-card-title-text>\n        <p class=\"md-headline\">{{msg.payload.deviceName}}</p>\n    </md-card-title-text>\n    <span ng-class=\"msg.payload.universal_state.machine_state=='2' ? 'fa fa-unlock fa-2x' : 'fa fa-lock fa-2x'\"></span>\n</md-card-title>\n\n<md-card-content>\n    <div\n        ng-style=\"{width:'100%',height:'8px','background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\">\n    </div>\n    <p>\n        {{msg.payload.description?msg.payload.description:'Unknown'}}\n        <br>\n                {{msg.payload.id?msg.payload.id:'Unknown'}}\n                - {{msg.payload.time?msg.payload.time:'Unknown'}}\n        <br>\n    </p>\n        <br>{{msg.payload.binaryValue}}<br>\n    <div style=\"display: flex; justify-content: center;\">\n        <div id=\"{{msg.payload.id}}\" style=\"display: flex; justify-content: center;\"></div>\n    </div>\n    <div class=\"led-numbers\">\n        <span>1</span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span>16</span>\n    </div>\n\n</md-card-content>",
+        "format": "<style>\n    .led-indicator {\n        width: 10px;\n        height: 10px;\n        border-radius: 50%;\n        margin: 3px;\n    }\n\n    .green {\n        background-color: green;\n    }\n\n    .gray {\n        background-color: gray;\n    }\n\n    .led-numbers {\n        display: flex;\n        justify-content: space-between;\n        font-size: 9px;\n        margin-top: 3px;\n        margin: 3px;\n    }\n</style>\n<md-card-title>\n    <md-card-title-text>\n        <p class=\"md-headline\">{{msg.payload.deviceName}}</p>\n    </md-card-title-text>\n    <span ng-class=\"msg.payload.universal_state.machine_state=='2' ? 'fa fa-unlock fa-2x' : 'fa fa-lock fa-2x'\"></span>\n</md-card-title>\n\n<md-card-content>\n    <div\n        ng-style=\"{width:'100%',height:'8px','background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\">\n    </div>\n    <p>\n        {{msg.payload.description?msg.payload.description:'Unknown'}}\n        <br>\n                {{msg.payload.id?msg.payload.id:'Unknown'}}\n                - {{msg.payload.time?msg.payload.time:'Unknown'}}\n        <br>\n    </p>\n    <div style=\"display: flex; justify-content: center;\">\n        <div id=\"{{msg.payload.id}}\" style=\"display: flex; justify-content: center;\"></div>\n    </div>\n    <div class=\"led-numbers\">\n        <span>1</span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span>16</span>\n    </div>\n\n</md-card-content>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
