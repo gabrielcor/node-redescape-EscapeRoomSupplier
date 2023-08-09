@@ -95,42 +95,21 @@
         ]
     },
     {
-        "id": "3b1c032c3fcaeff5",
-        "type": "ui_template",
-        "z": "7cec459b408f9e65",
-        "group": "487ff8a5c1e2834b",
-        "name": "Button Panel",
-        "order": 1,
-        "width": "6",
-        "height": "4",
-        "format": "<md-card-title>\n    <md-card-title-text>\n        <p class=\"md-headline\">{{msg.payload.deviceName}}</p>\n    </md-card-title-text>\n    <span ng-class=\"msg.payload.universal_state.machine_state=='2' ? 'fa fa-unlock fa-2x' : 'fa fa-lock fa-2x'\"></span>\n</md-card-title>\n<md-card-content>\n    <div ng-style=\"{width:'100%',height:'8px','background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\" ></div>\n    <p>\n        {{msg.payload.description?msg.payload.description:'Unknown'}}\n<br>\n        {{msg.payload.id?msg.payload.id:'Unknown'}}\n        - {{msg.payload.time?msg.payload.time:'Unknown'}}\n<br>\n        {{msg.payload.universal_state.input_states?universal_state.input_states:'Unknown'}}\n    </p>\n    <div style=\"text-align:center\">\n        <span style=\"font-size: 2em;\">&nbsp;</span>\n    </div>\n</md-card-content>",
-        "storeOutMessages": false,
-        "fwdInMessages": false,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 990,
-        "y": 540,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "df3c1dacf6fb708e",
         "type": "function",
         "z": "7cec459b408f9e65",
-        "name": "Assign values to display",
-        "func": "var payload = msg.payload; //get payload\nvar id = msg.payload.id; // comes from the device\n\npayload.deviceName = flow.get(\"deviceName\");\npayload.description = flow.get(\"description\");\n\nvar d= new Date();\npayload.time = d.toLocaleTimeString();\nmsg.payload = payload;\n\n\nreturn msg;",
+        "name": "Assign values to display panel",
+        "func": "var payload = msg.payload; //get payload\nvar id = msg.payload.id; // comes from the device\n\npayload.deviceName = flow.get(\"deviceName\");\npayload.description = flow.get(\"description\");\n\nvar inputStatesString = msg.payload.universal_state.input_states;\nvar decimalValue = parseInt(inputStatesString, 10);\nvar binaryValue = decimalValue.toString(2).padStart(16, '0');\n\npayload.binaryValue = binaryValue;\n\nvar d= new Date();\npayload.time = d.toLocaleTimeString();\nmsg.payload = payload;\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 790,
-        "y": 540,
+        "x": 710,
+        "y": 500,
         "wires": [
             [
-                "3b1c032c3fcaeff5"
+                "cd2152a91feb61e1"
             ]
         ]
     },
@@ -187,21 +166,21 @@
                 "t": "set",
                 "p": "deviceUrl",
                 "pt": "flow",
-                "to": "http://192.168.1.124?command=state",
+                "to": "http://192.168.5.185?command=state",
                 "tot": "str"
             },
             {
                 "t": "set",
                 "p": "deviceName",
                 "pt": "flow",
-                "to": "ESRS-TEST01",
+                "to": "ESP32-UPC-EMUL01",
                 "tot": "str"
             },
             {
                 "t": "set",
                 "p": "description",
                 "pt": "flow",
-                "to": "Contact & Hall Sensor",
+                "to": "Magnet Sensor",
                 "tot": "str"
             }
         ],
@@ -266,6 +245,27 @@
         "uncaught": false,
         "x": 650,
         "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cd2152a91feb61e1",
+        "type": "ui_template",
+        "z": "7cec459b408f9e65",
+        "group": "487ff8a5c1e2834b",
+        "name": "",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    .led-indicator {\n        width: 10px;\n        height: 10px;\n        border-radius: 50%;\n        margin: 3px;\n    }\n\n    .green {\n        background-color: green;\n    }\n\n    .gray {\n        background-color: gray;\n    }\n    .led-numbers {\n    display: flex;\n    justify-content: space-between;\n    font-size: 9px;\n    margin-top: 3px;\n    margin: 3px;\n    }\n</style>\n<md-card-title>\n    <md-card-title-text>\n        <p class=\"md-headline\">{{msg.payload.deviceName}}</p>\n    </md-card-title-text>\n    <span ng-class=\"msg.payload.universal_state.machine_state=='2' ? 'fa fa-unlock fa-2x' : 'fa fa-lock fa-2x'\"></span>\n</md-card-title>\n\n<md-card-content>\n    <div\n        ng-style=\"{width:'100%',height:'8px','background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\">\n    </div>\n    <p>\n        {{msg.payload.description?msg.payload.description:'Unknown'}}\n        <br>\n                {{msg.payload.id?msg.payload.id:'Unknown'}}\n                - {{msg.payload.time?msg.payload.time:'Unknown'}}\n        <br>\n    </p>\n    \n    <div style=\"display: flex; justify-content: center;\">\n        <div id=\"led-container\" style=\"display: flex; justify-content: center;\"></div>\n    </div>\n    <div class=\"led-numbers\">\n        <span>1</span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span></span>\n        <span>16</span>\n    </div>\n    <script>\n    ;(function(scope) {\n    \n    // watch msg object from Node-RED\n    scope.$watch('msg', function(msg) {\n        // new message received\n        var ledContainer = document.getElementById('led-container');\n        ledContainer.innerHTML = '';\n        var binaryValue =  msg.payload.binaryValue;\n        for (var i = binaryValue.length-1; i >=0 ; i--) \n        { var led=document.createElement('div');\n              led.classList.add('led-indicator'); \n              if (binaryValue[i]==='0' )\n                 { led.classList.add('green'); } \n              else \n                 { led.classList.add('gray'); } \n            ledContainer.appendChild(led); \n        }\n    });\n    })(scope);\n    </script>\n</md-card-content>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 960,
+        "y": 500,
         "wires": [
             []
         ]
