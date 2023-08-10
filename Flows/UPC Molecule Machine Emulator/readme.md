@@ -3,7 +3,8 @@
 This flow is an emulator with 16 buttons and 4 gauges which, once the molecule composition is guessed correctly, increase their value and change color to indicate that the combination worked and the puzzle is solved.    
 
 ## Emulator View on Dashboard 
-![Emulator View on Dashboard ]()
+
+![Emulator View on Dashboard ](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/moleculeMachine0.png)
 
 ## How to Solve the Puzzle
 
@@ -11,22 +12,23 @@ The user must arrange 'H2 - N - C2 - H2,' starting from left to right, selecting
 
 Once the combination is guessed correctly, the gauges change as follows:
 
-![Emulators showing green gauges]()
+![Emulators showing green gauges](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/moleculeMachine1.png)
 
 ## Flow Variables Established by the Emulator
-![Flow Variables Established by the Emulator]()
+
+![Flow Variables Established by the Emulator](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/moleculeMachine2.png)
 
 
 ## How Does the Emulator Works
 
-![Buttons]()
+![Buttons](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/moleculeMachine3.png)
 
 First step, set the value of the flow variables 'simbolNN.'. Every time the user clicks on one of the buttons, the payload of the button is sent to the 'set flow.simbolNN' node, which sets it as a flow variable sent by any of the four connected buttons.
 
 
-Second step, use the flow variables
+Second step, use the flow variables:
 
-![flow valitation]()
+![flow valitation](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/moleculeMachine4.png)
 
 
 The "timestamp" node injects flow every second.
@@ -71,13 +73,13 @@ if(element1 == "H2" && element2 == "N" && element3 == "C2" && element4 == "H2"){
 ```
 
 ## Reset Button
-![Reset button]()
+![Reset button](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/moleculeMachine5.png)
 
 For this emulator, I added a "change" node to the reset button so that when the emulator is reset, the global variables "simbolNN" have their values modified, causing the gauges to return to their original measurements.
 
 
 ## Full Flow View 
-![Full Flow View]()
+![Full Flow View](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/moleculeMachine6.png)
 
 
 ### CSS Styles
