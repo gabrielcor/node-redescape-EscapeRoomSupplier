@@ -4,7 +4,7 @@ This flow is a piano emulator, where to solve the puzzle, the user has to perfor
 
 ## Emulator View on Dashboard
 
-![Emulator View on Dashboard]()
+![Emulator View on Dashboard](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/pianoEmulator0.png)
 
 ## Puzzle solving method
 
@@ -29,26 +29,26 @@ If successful, the word 'CORRECTO!' will appear below the piano; otherwise, it w
 The concept of obtaining the keys from a story or poem can be modified or expanded to add more difficulty. I also thought about playing music that users can listen to and try to replicate the order using the keys. There seem to be numerous possibilities for puzzle-solving involving a piano.
 
 ## Full Flow View 
-![Full Flow View ]()
+![Full Flow View ](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/pianoEmulator1.png)
 
 
 
 # IMPORTANT --> Play Audio Node.
 Firstly, in order for it to work, you need to install the "Play Audio" node for the palette, that receives a sound and plays it.
 
-![Play Audio Node ]()
+![Play Audio Node ](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/pianoEmulator2.png)
 
 ## How Does the Emulator Works
 
 
-![Buttons and get file ]()
+![Buttons and get file ](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/pianoEmulator3.png)
 First, there are the buttons that send their payloads to two places simultaneously.
 
 Let me explain the 'read file' node first. This node is configured to search for the sound corresponding to each key. In this case, I downloaded the sounds to my computer, and for the node to locate them, you need to provide the absolute path to the file.
 
 This path is loaded into the 'filename,' and also in the 'output,' you need to select the option as shown.
 
-![get file config ]()
+![get file config ](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/pianoEmulator4.png)
 
 After finding the file, this node sends it to the 'play sound' node and plays it for the user to hear.
 
@@ -88,7 +88,7 @@ The 'function' node is connected to three 'Switch' nodes. The top one evaluates 
 
 The remaining two 'Switch' nodes serve the purpose of sending the received payload to the 'input text' node, allowing the user to see it on the screen
 
-![switch]()
+![switch](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/pianoEmulator5.png)
 
 ### CSS
 CSS style is inside the node template identified as "piano emulator style".
