@@ -3,7 +3,7 @@
 his flow is an emulator of 6 sliders that, when placed in the correct position, modifies the flow variable 'deviceState' to 2.
 
 ## Emulator View on Dashboard
-![Emulator view on dashboard](Documentation/screenshots/SliderEmulator1.png)
+![Emulator view on dashboard](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/SliderEmulator1.png)
 
 ## Emulator View on Node Red
 ![Emulator view on node red](Documentation/screenshots/sliderEmulator2.png)
