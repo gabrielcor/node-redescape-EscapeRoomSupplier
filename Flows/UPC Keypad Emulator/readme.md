@@ -1,8 +1,9 @@
 # Keypad Emulator
 
-This flow is a keypad emulator with buttons from 1 to 9, Clear, and Evaluate. Below the keypad, there is a text input that informs whether the user entered the password correctly after clicking the evaluate button
+This flow is a keypad emulator with buttons from 1 to 9, Clear, and Evaluate. Below the keypad, there is a text input that informs whether the user entered the password correctly after clicking the evaluate button.
 
 ## Emulator View on Dashboard 
+
 ![Emulator View on Dashboard](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/Keypad0.png)
 
 ### How to Solve The Puzzle
