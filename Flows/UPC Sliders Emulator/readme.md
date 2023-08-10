@@ -26,6 +26,19 @@ The "Switch" node evaluates whether it's the correct message and proceeds to the
 
 The code inside the node function for validation is written in JavaScript.
 
+```javascript
+let slider1 = flow.get("sliderNumber1")
+let slider2 = flow.get("sliderNumber2")
+let slider3 = flow.get("sliderNumber3")
+let slider4 = flow.get("sliderNumber4")
+let slider5 = flow.get("sliderNumber5")
+let slider6 = flow.get("sliderNumber6")
+
+
+msg.payload = (slider1 == 2 && slider2 == 4 && slider3 == 1 && slider4 == 0 && slider5 == 9 && slider6 == 1) ? "resolved" : "wrong";
+return msg
+```
+
 ### Correct Position of Sliders
 ![Correct position of sliders](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/sliderEmulator5.png)
 
