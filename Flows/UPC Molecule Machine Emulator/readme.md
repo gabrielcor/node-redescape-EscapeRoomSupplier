@@ -6,7 +6,7 @@ This flow is an emulator with 16 buttons and 4 gauges which, once the molecule c
 
 ![Emulator View on Dashboard ](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/moleculeMachine0.png)
 
-## How to Solve the Puzzle
+## How to Solve the Puzzle
 
 The user must arrange 'H2 - N - C2 - H2,' starting from left to right, selecting the correct option in each group of four buttons.
 
