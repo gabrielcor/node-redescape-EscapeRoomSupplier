@@ -856,9 +856,9 @@
     {
         "id": "4f349049de3d568f",
         "type": "ui_group",
-        "name": "Slider ",
+        "name": "Room 1",
         "tab": "7d66f574.b154cc",
-        "order": 3,
+        "order": 1,
         "disp": true,
         "width": "6",
         "collapse": false,
