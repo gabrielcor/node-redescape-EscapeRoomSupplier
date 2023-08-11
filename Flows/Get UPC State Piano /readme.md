@@ -1,9 +1,9 @@
-# Get UPC State of Molecule Machine
+# Get UPC State of Piano
 
-This flow gets the UPC state of the Keypad Emulator and shows the result in a Devices Tab in the Dashboard.
+This flow gets the UPC state of the Piano Emulator and shows the result in a Devices Tab in the Dashboard.
 
 
-![Get UPC State Keypad](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/GetKeypad0.png)
+![Get UPC State Piano](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/GetPiano0.png)
 
 
 To acomplish that, we initialize the following flow variables
@@ -11,11 +11,11 @@ To acomplish that, we initialize the following flow variables
 
 * IMPORTANT! Take into account that the IP address should be changed if necessary.
 
-###  deviceName: the name that we want to show for the device, ESRS-TEST06.
+###  deviceName: the name that we want to show for the device, ESRS-TEST07.
 
 ###  description: Keypad.
 
-![Initialize target URL & device data flow properties](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/GetKeypad1.png)
+![Initialize target URL & device data flow properties](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/GetPiano1.png)
 
 
 The rest of the flow is pretty straightforward and you don't have to modify it unless you want specific behavior for the dashboard.
@@ -29,6 +29,6 @@ The rest of the flow is pretty straightforward and you don't have to modify it u
 5) Parse the JSON and send it to display in the dashboard.
 
 
-![View on dashboard](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/GetKeypad2.png)
+![View on dashboard](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/GetPiano2.png)
 
 ### In the last screenshot, you can see the newly added reset and solve buttons, which allow interaction with the UPS from the dashboard where its status is displayed.
