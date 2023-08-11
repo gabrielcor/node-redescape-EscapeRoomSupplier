@@ -1,4 +1,4 @@
-# Get UPC State of Sliders Emulator
+# Get UPC State of Sliders
 
 This flow gets the UPC state of the slider emulator and shows the result in a Devices Tab in the Dashboard.
 

@@ -1,4 +1,4 @@
-# Get UPC State of Molecule Machine
+# Get UPC State of Keypad
 
 This flow gets the UPC state of the Keypad Emulator and shows the result in a Devices Tab in the Dashboard.
 
