@@ -8,9 +8,42 @@
         "env": []
     },
     {
+        "id": "d4871bfe5fddca28",
+        "type": "group",
+        "z": "9503fbbadfb8c6cc",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "79ae374e9a12518a",
+            "d359a3a5633699f4",
+            "41c72e2c65cbfaa8",
+            "6b299daad1cc6964",
+            "c9a02669d79db186",
+            "4996b96136bbbda2",
+            "8d4d8789f7422c53",
+            "2451fa2a5e934240",
+            "94c96a8dea2b8a72",
+            "e66d08dfd6ce5ffd",
+            "81045d548852eb94",
+            "754c65c61aac621c"
+        ],
+        "x": 54,
+        "y": 19,
+        "w": 1102,
+        "h": 562
+    },
+    {
         "id": "79ae374e9a12518a",
         "type": "link in",
         "z": "9503fbbadfb8c6cc",
+        "g": "d4871bfe5fddca28",
         "name": "link in 5",
         "links": [
             "c7c4685c94a69e6f"
@@ -27,6 +60,7 @@
         "id": "d359a3a5633699f4",
         "type": "http request",
         "z": "9503fbbadfb8c6cc",
+        "g": "d4871bfe5fddca28",
         "name": "Call API on UPC device",
         "method": "GET",
         "ret": "txt",
@@ -51,6 +85,7 @@
         "id": "41c72e2c65cbfaa8",
         "type": "rbe",
         "z": "9503fbbadfb8c6cc",
+        "g": "d4871bfe5fddca28",
         "name": "",
         "func": "rbe",
         "gap": "",
@@ -71,6 +106,7 @@
         "id": "6b299daad1cc6964",
         "type": "change",
         "z": "9503fbbadfb8c6cc",
+        "g": "d4871bfe5fddca28",
         "name": "set msg request",
         "rules": [
             {
@@ -98,6 +134,7 @@
         "id": "c9a02669d79db186",
         "type": "ui_template",
         "z": "9503fbbadfb8c6cc",
+        "g": "d4871bfe5fddca28",
         "group": "4f349049de3d568f",
         "name": "Slider",
         "order": 1,
@@ -119,6 +156,7 @@
         "id": "4996b96136bbbda2",
         "type": "function",
         "z": "9503fbbadfb8c6cc",
+        "g": "d4871bfe5fddca28",
         "name": "Assign values to display",
         "func": "let payload = msg.payload; //get payload\nlet id = msg.payload.id; // comes from the device\n\npayload.deviceName = flow.get(\"deviceName\");\npayload.description = flow.get(\"description\");\n\nlet d= new Date();\npayload.time = d.toLocaleTimeString();\nmsg.payload = payload;\n\n\nreturn msg;",
         "outputs": 1,
@@ -138,6 +176,7 @@
         "id": "8d4d8789f7422c53",
         "type": "json",
         "z": "9503fbbadfb8c6cc",
+        "g": "d4871bfe5fddca28",
         "name": "",
         "property": "payload",
         "action": "obj",
@@ -154,6 +193,7 @@
         "id": "2451fa2a5e934240",
         "type": "comment",
         "z": "9503fbbadfb8c6cc",
+        "g": "d4871bfe5fddca28",
         "name": "Every tick",
         "info": "",
         "x": 140,
@@ -164,6 +204,7 @@
         "id": "94c96a8dea2b8a72",
         "type": "link in",
         "z": "9503fbbadfb8c6cc",
+        "g": "d4871bfe5fddca28",
         "name": "link in 6",
         "links": [
             "442e7bc38dd4c3b7",
@@ -181,6 +222,7 @@
         "id": "e66d08dfd6ce5ffd",
         "type": "change",
         "z": "9503fbbadfb8c6cc",
+        "g": "d4871bfe5fddca28",
         "name": "Initialize target URL & device data",
         "rules": [
             {
@@ -201,7 +243,7 @@
                 "t": "set",
                 "p": "description",
                 "pt": "flow",
-                "to": "Slide Sensor",
+                "to": "Slider Sensor",
                 "tot": "str"
             }
         ],
@@ -222,6 +264,7 @@
         "id": "81045d548852eb94",
         "type": "comment",
         "z": "9503fbbadfb8c6cc",
+        "g": "d4871bfe5fddca28",
         "name": "Always initialize to: http://nnn.nnn.nnn.nnn?command=state // where nnn.... is IP address of UPC device",
         "info": "",
         "x": 770,
@@ -232,6 +275,7 @@
         "id": "754c65c61aac621c",
         "type": "change",
         "z": "9503fbbadfb8c6cc",
+        "g": "d4871bfe5fddca28",
         "name": "",
         "rules": [
             {
@@ -258,9 +302,9 @@
     {
         "id": "4f349049de3d568f",
         "type": "ui_group",
-        "name": "Slider ",
+        "name": "Room 1",
         "tab": "7d66f574.b154cc",
-        "order": 3,
+        "order": 1,
         "disp": true,
         "width": "6",
         "collapse": false,
