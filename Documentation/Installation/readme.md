@@ -17,3 +17,16 @@ you add the nodes
 
 ### as shown below
 !["Add nodes "](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/main/Documentation/screenshots/ManagePallete02.png)
+
+## Change the settings.js file
+Include the following json in Context Storage section of the settings.js file.
+
+```
+	contextStorage: {
+		default: "memoryOnly",
+		memoryOnly: { module: 'memory' },
+		file: { module: 'localfilesystem' }
+	},	
+```
+You can see where the settings file is located at the command prompt where you run node-red
+!["Add nodes "](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/main/Documentation/screenshots/NodeRedScreen.png)

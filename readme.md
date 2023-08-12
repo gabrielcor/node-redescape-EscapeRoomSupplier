@@ -30,7 +30,7 @@ This "base" flows will take care of handling common operations and ensure that a
 To install node-red and basic palette we have this <a href="https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/tree/main/Documentation/Installation">Tutorial</a>
 
 ### Install Core Flows 
-To install Core Flows have this <a href="https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/tree/main/Documentation/Installation/CoreFlows">Tutorial</a>
+To install Core Flows follow this <a href="https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/tree/main/Documentation/Installation/CoreFlows">Tutorial</a>
 
 ### Flow documentation
 Documentation is at  <a href="https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/tree/main/Flows">Flows</a>

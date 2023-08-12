@@ -1,40 +1,40 @@
 [
     {
-        "id": "350f3f1be5bf834e",
+        "id": "a7a28dcbcb6cfc4a",
         "type": "tab",
         "label": "Main",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "afb330bff5dc84a7",
+        "id": "77c3c0b976c12fb4",
         "type": "tab",
         "label": "In-Game Display",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "31a7412f.61a816",
+        "id": "46b5fdb2e4905102",
         "type": "tab",
         "label": "ERS_Logging",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "063501cbf8d4d96b",
+        "id": "9a635245d1d7b19a",
         "type": "group",
-        "z": "350f3f1be5bf834e",
+        "z": "a7a28dcbcb6cfc4a",
         "name": "System Events",
         "style": {
             "label": true
         },
         "nodes": [
-            "aa84b0b3f6f24d4c",
-            "e2d366190836429a",
-            "758310f9eb5818de",
-            "c7c4685c94a69e6f",
-            "34e41184596a8cc2",
-            "87d09c692b8687fc"
+            "e8d2e61e386647c8",
+            "f371cdbbe81e3876",
+            "972e87fc83299cbc",
+            "9825a13baed8c3fb",
+            "a51efdded34de5bf",
+            "c4a7f7a6f98d05cf"
         ],
         "x": 34,
         "y": 79,
@@ -42,16 +42,16 @@
         "h": 202
     },
     {
-        "id": "88186d2d626ead90",
+        "id": "fe830464edf04655",
         "type": "group",
-        "z": "350f3f1be5bf834e",
+        "z": "a7a28dcbcb6cfc4a",
         "name": "Configuration",
         "style": {
             "label": true
         },
         "nodes": [
-            "c60ade8d2522e8b4",
-            "42d9fcf53b80577d"
+            "e91bb31a438d275b",
+            "6c0b0a39d7d9c025"
         ],
         "x": 374,
         "y": 39,
@@ -59,28 +59,28 @@
         "h": 82
     },
     {
-        "id": "1d39f27b3d601c72",
+        "id": "7963fc80be25b354",
         "type": "group",
-        "z": "350f3f1be5bf834e",
+        "z": "a7a28dcbcb6cfc4a",
         "name": "Game State",
         "style": {
             "label": true
         },
         "nodes": [
-            "197160bd5c9b62c4",
-            "0deb9fba3b6f3c48",
-            "c1d322a0a9c2b4ac",
-            "4a56258a14858018",
-            "d2bfa31323cf7730",
-            "98ab54042d4213d0",
-            "342f119e8f4998e2",
-            "890f86205d47ef77",
-            "ef582930fa6e08ef",
-            "4e6a3fb6ac8e60de",
-            "4a863b19c2050c0a",
-            "4f3e8b2d7209c3c4",
-            "442e7bc38dd4c3b7",
-            "06ef4faf69df41d0"
+            "2bb63a0d132537e2",
+            "dc0aa973e62002db",
+            "00d4b43b55903720",
+            "1aae219bc5d68362",
+            "6be3f94b5023fed5",
+            "d5ce6179247fb6d4",
+            "f7040b721a435aa6",
+            "47f17285e0b948d5",
+            "f41cc5ada430a03e",
+            "2934cf85318abc7f",
+            "cf0e7850cb00dfe6",
+            "40d9373120e1c5a9",
+            "c50489a8ac6327ef",
+            "cf40039386448a19"
         ],
         "x": 34,
         "y": 319,
@@ -88,30 +88,30 @@
         "h": 202
     },
     {
-        "id": "c870415b6658eca9",
+        "id": "60d7a2df45d3ca32",
         "type": "group",
-        "z": "350f3f1be5bf834e",
+        "z": "a7a28dcbcb6cfc4a",
         "name": "Timer",
         "style": {
             "label": true
         },
         "nodes": [
-            "4a9c0dfb1f0b9b85",
-            "c8fb5887561b01d3",
-            "39e77fdf6d2e5543",
-            "75a596869f308dab",
-            "e7252fb6a4819ecf",
-            "f457b1998a5d01b9",
-            "2ce811328a35a524",
-            "a98c2ab0de57b58a",
-            "32180624627a2049",
-            "f93150b86a48dd2b",
-            "0c9d3ef3bf7c7bc0",
-            "465e64fa2453bb6a",
-            "6e87bf8ee8b2ac47",
-            "f020309c907b1b75",
-            "59b3354d12a64752",
-            "65c75d67cdeec25c"
+            "d05591cd0b56c203",
+            "0e78db2a30d9326e",
+            "2f882acb1a5f0168",
+            "4595b67f747fb777",
+            "5f5dd91fb0d98c9c",
+            "2a157970687c13fc",
+            "8ca101eedc65f388",
+            "27e33d76b67c0c72",
+            "a213c34292093199",
+            "c86051aa14c3f6cf",
+            "b641a26c2cdea311",
+            "a851ddd5a82b5c97",
+            "fbb76cff413cca97",
+            "f5eacf735a62ea49",
+            "c0381109cd0de14f",
+            "c3c11b9d940b507c"
         ],
         "x": 34,
         "y": 559,
@@ -119,21 +119,21 @@
         "h": 342
     },
     {
-        "id": "47d60ff77941c25c",
+        "id": "a8f5894f9a6f4628",
         "type": "group",
-        "z": "afb330bff5dc84a7",
+        "z": "77c3c0b976c12fb4",
         "name": "Game Time",
         "style": {
             "label": true
         },
         "nodes": [
-            "70a659a67372af64",
-            "9f0c68ee4276f87e",
-            "94b5a3763386897c",
-            "ac3ad590e26f333f",
-            "6cf1d2f79751a8b0",
-            "3a1ec7c1638755d8",
-            "f2db8f5068ba4191"
+            "3eb9d58248ac192e",
+            "0a45d77e3fdceb2c",
+            "d1d33fc5a3a6f764",
+            "f370327d143131af",
+            "1895b1bff4f5ea18",
+            "8478580a26db84ed",
+            "f1dead188fc46e1f"
         ],
         "x": 74,
         "y": 79,
@@ -141,78 +141,68 @@
         "h": 122
     },
     {
-        "id": "c7dcc2fc49c21692",
+        "id": "6fe73218c562971c",
         "type": "group",
-        "z": "afb330bff5dc84a7",
+        "z": "77c3c0b976c12fb4",
         "name": "Dynamic Content",
         "style": {
             "label": true
         },
         "nodes": [
-            "ea19ec062e7e4159",
-            "302f16b7c2a5c97b",
-            "6a663176539f0793",
-            "b51417164a598683",
-            "e909d0071736cc14",
-            "a40603e3d65ccdeb",
-            "706a33616645a67c",
-            "73c45ad08b4e9499",
-            "0398a245bbe55224",
-            "fe7b087d178d348e",
-            "a946d0a5944b42fb",
-            "225cb9f7e1af5b2a",
-            "5348983174bfaf74",
-            "052ac926c77d3b97",
-            "fa917a9707337a51",
-            "07327a27269d85ec",
-            "0212febe1009858f",
-            "71b8dcdba0275b88",
-            "2be43f7e12a70a86",
-            "92a539e41b6f6f51",
-            "3ca3ba2c7f7323e4",
-            "f061f1d08ccfa70b",
-            "2dd8f81706ee5d4e",
-            "78c810e8f365f5af",
-            "4acf023205a8cfc3",
-            "8c69ed484ee62459",
-            "63dec63b085ba1e3",
-            "54d37284765e710e",
-            "d5dc4f5d0fa7cd13"
+            "e3044aad6c1913f3",
+            "d9289818e2cfabf6",
+            "b1df2f6a3f3dbcd7",
+            "950bb82e336f21e9",
+            "a6fcbf071d9dfc09",
+            "18a40a2047361f06",
+            "70ab8d88810e3176",
+            "aa8cf0b46180bacc",
+            "6ad44ee2b7da5173",
+            "6f9b5ffd4ed16659",
+            "ea0b18db2b1b4290",
+            "7cc54138b5e5f81b",
+            "05d159debf306c85",
+            "5e2069b17f3f7b54",
+            "0e382e2f59d9cc6d",
+            "5473b2666b98035d",
+            "656f5141f338c127",
+            "064e0f743f1134e2",
+            "46267313b989836d",
+            "cf0d4685a1049fca",
+            "b676a20af598d1c9",
+            "95078f756e6a46fd",
+            "e3fea949085d8937",
+            "91abbf9cc31fc232",
+            "134bace5f7a8ec13",
+            "e9374b61d3a58eb9",
+            "0b84b5020ab1e7ac",
+            "e40494f47fb28c91",
+            "16bf9dac159ff1cb"
         ],
         "x": 114,
-        "y": 379,
+        "y": 399,
         "w": 1292,
         "h": 562
     },
     {
-        "id": "7f1936f0fa1668a9",
+        "id": "e2481daedaefe458",
         "type": "group",
-        "z": "afb330bff5dc84a7",
+        "z": "77c3c0b976c12fb4",
         "name": "Send to display",
         "style": {
             "label": true
         },
         "nodes": [
-            "a8ae982f4dd8e565",
-            "a9a439c85dccd776",
-            "19e7511e6497230b",
-            "63deb92b07742d73",
-            "adcec27242c6e92f"
+            "29fcc25b7cce5bed",
+            "3b01e473aadffa16",
+            "acd825f501e439a4",
+            "1239fd86e1112e48",
+            "ce6fabcd9792a1dc"
         ],
         "x": 914,
         "y": 79,
         "w": 492,
         "h": 122
-    },
-    {
-        "id": "45013fdfd43f76cb",
-        "type": "ui_spacer",
-        "z": "350f3f1be5bf834e",
-        "name": "spacer",
-        "group": "f08ba3d0ec182a89",
-        "order": 6,
-        "width": "6",
-        "height": "1"
     },
     {
         "id": "f08ba3d0ec182a89",
@@ -332,7 +322,53 @@
         }
     },
     {
-        "id": "eed1a8a6.8d8878",
+        "id": "b9a603a9.4c8c9",
+        "type": "ui_tab",
+        "name": "Logging",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7f2947c85d1fbc50",
+        "type": "ui_tab",
+        "name": "UPC Emulators",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ad0d7f51f9ebbad1",
+        "type": "ui_tab",
+        "name": "UPC Devices",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7d66f574.b154cc",
+        "type": "ui_tab",
+        "name": "Devices",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d69253c32fa39861",
+        "type": "ui_spacer",
+        "z": "a7a28dcbcb6cfc4a",
+        "name": "spacer",
+        "group": "f08ba3d0ec182a89",
+        "order": 6,
+        "width": "6",
+        "height": "1"
+    },
+    {
+        "id": "b977110e3978794d",
         "type": "ui_group",
         "name": "Default",
         "tab": "b9a603a9.4c8c9",
@@ -342,10 +378,10 @@
         "collapse": false
     },
     {
-        "id": "125f6c81.60151b",
+        "id": "947951ea1f0569ac",
         "type": "mqtt-broker",
         "name": "MQTT Server",
-        "broker": "192.168.5.160",
+        "broker": "localhost",
         "port": "1883",
         "tls": "",
         "clientid": "",
@@ -370,16 +406,7 @@
         "sessionExpiry": ""
     },
     {
-        "id": "b9a603a9.4c8c9",
-        "type": "ui_tab",
-        "name": "Logging",
-        "icon": "dashboard",
-        "order": 2,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "733727e93f750e8c",
+        "id": "7f709df3588dcc39",
         "type": "ui_group",
         "name": "In-Game Display",
         "tab": "a38c3d325d960343",
@@ -390,7 +417,7 @@
         "className": ""
     },
     {
-        "id": "f1caa4f5e2c54ed0",
+        "id": "69c378e67b30ae44",
         "type": "ui_group",
         "name": "Hall Sensor 01",
         "tab": "7f2947c85d1fbc50",
@@ -401,16 +428,7 @@
         "className": ""
     },
     {
-        "id": "7f2947c85d1fbc50",
-        "type": "ui_tab",
-        "name": "UPC Emulators",
-        "icon": "dashboard",
-        "order": 5,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "487ff8a5c1e2834b",
+        "id": "5c7b8d885c732a2b",
         "type": "ui_group",
         "name": "ESRS-GC",
         "tab": "7d66f574.b154cc",
@@ -421,16 +439,7 @@
         "className": ""
     },
     {
-        "id": "7d66f574.b154cc",
-        "type": "ui_tab",
-        "name": "Devices",
-        "icon": "dashboard",
-        "order": 3,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "25ed5bac9f0a0e34",
+        "id": "10df1f3914558b70",
         "type": "ui_group",
         "name": "Devices",
         "tab": "ad0d7f51f9ebbad1",
@@ -441,19 +450,10 @@
         "className": ""
     },
     {
-        "id": "ad0d7f51f9ebbad1",
-        "type": "ui_tab",
-        "name": "UPC Devices",
-        "icon": "dashboard",
-        "order": 4,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "197160bd5c9b62c4",
+        "id": "2bb63a0d132537e2",
         "type": "ui_button",
-        "z": "350f3f1be5bf834e",
-        "g": "1d39f27b3d601c72",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "7963fc80be25b354",
         "name": "",
         "group": "f08ba3d0ec182a89",
         "order": 5,
@@ -474,16 +474,16 @@
         "y": 360,
         "wires": [
             [
-                "98ab54042d4213d0",
-                "93a13174ceac2dc5"
+                "d5ce6179247fb6d4",
+                "8b3c0dc2f4ab5c17"
             ]
         ]
     },
     {
-        "id": "0deb9fba3b6f3c48",
+        "id": "dc0aa973e62002db",
         "type": "ui_button",
-        "z": "350f3f1be5bf834e",
-        "g": "1d39f27b3d601c72",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "7963fc80be25b354",
         "name": "",
         "group": "f08ba3d0ec182a89",
         "order": 3,
@@ -504,15 +504,15 @@
         "y": 420,
         "wires": [
             [
-                "342f119e8f4998e2"
+                "f7040b721a435aa6"
             ]
         ]
     },
     {
-        "id": "c1d322a0a9c2b4ac",
+        "id": "00d4b43b55903720",
         "type": "ui_button",
-        "z": "350f3f1be5bf834e",
-        "g": "1d39f27b3d601c72",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "7963fc80be25b354",
         "name": "",
         "group": "f08ba3d0ec182a89",
         "order": 4,
@@ -533,15 +533,15 @@
         "y": 480,
         "wires": [
             [
-                "890f86205d47ef77"
+                "47f17285e0b948d5"
             ]
         ]
     },
     {
-        "id": "4a56258a14858018",
+        "id": "1aae219bc5d68362",
         "type": "change",
-        "z": "350f3f1be5bf834e",
-        "g": "1d39f27b3d601c72",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "7963fc80be25b354",
         "name": "",
         "rules": [
             {
@@ -568,15 +568,15 @@
         "y": 360,
         "wires": [
             [
-                "ef582930fa6e08ef"
+                "f41cc5ada430a03e"
             ]
         ]
     },
     {
-        "id": "d2bfa31323cf7730",
+        "id": "6be3f94b5023fed5",
         "type": "change",
-        "z": "350f3f1be5bf834e",
-        "g": "1d39f27b3d601c72",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "7963fc80be25b354",
         "name": "",
         "rules": [
             {
@@ -603,15 +603,15 @@
         "y": 420,
         "wires": [
             [
-                "4a863b19c2050c0a"
+                "cf0e7850cb00dfe6"
             ]
         ]
     },
     {
-        "id": "98ab54042d4213d0",
+        "id": "d5ce6179247fb6d4",
         "type": "switch",
-        "z": "350f3f1be5bf834e",
-        "g": "1d39f27b3d601c72",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "7963fc80be25b354",
         "name": "",
         "property": "gameState",
         "propertyType": "global",
@@ -629,15 +629,15 @@
         "y": 360,
         "wires": [
             [
-                "4a56258a14858018"
+                "1aae219bc5d68362"
             ]
         ]
     },
     {
-        "id": "342f119e8f4998e2",
+        "id": "f7040b721a435aa6",
         "type": "switch",
-        "z": "350f3f1be5bf834e",
-        "g": "1d39f27b3d601c72",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "7963fc80be25b354",
         "name": "",
         "property": "gameState",
         "propertyType": "global",
@@ -655,15 +655,15 @@
         "y": 420,
         "wires": [
             [
-                "d2bfa31323cf7730"
+                "6be3f94b5023fed5"
             ]
         ]
     },
     {
-        "id": "890f86205d47ef77",
+        "id": "47f17285e0b948d5",
         "type": "change",
-        "z": "350f3f1be5bf834e",
-        "g": "1d39f27b3d601c72",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "7963fc80be25b354",
         "name": "",
         "rules": [
             {
@@ -704,15 +704,15 @@
         "y": 480,
         "wires": [
             [
-                "442e7bc38dd4c3b7"
+                "c50489a8ac6327ef"
             ]
         ]
     },
     {
-        "id": "c60ade8d2522e8b4",
+        "id": "e91bb31a438d275b",
         "type": "function",
-        "z": "350f3f1be5bf834e",
-        "g": "88186d2d626ead90",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "fe830464edf04655",
         "name": "Initialize Global Vars",
         "func": "global.set(\"gameState\", \"stopped\");\nglobal.set(\"gameDuration\", 3600000);\nglobal.set(\"elapsedTimeDelta\", 0);\nglobal.set(\"timeElapsed\", 0);\nglobal.set(\"timeRemaining\", 3600000);\nreturn msg;",
         "outputs": 1,
@@ -724,37 +724,37 @@
         "y": 80,
         "wires": [
             [
-                "cd9c79c0f7ca4c12"
+                "affe6ad93365615a"
             ]
         ]
     },
     {
-        "id": "42d9fcf53b80577d",
+        "id": "6c0b0a39d7d9c025",
         "type": "link in",
-        "z": "350f3f1be5bf834e",
-        "g": "88186d2d626ead90",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "fe830464edf04655",
         "name": "",
         "links": [
-            "758310f9eb5818de"
+            "972e87fc83299cbc"
         ],
         "x": 415,
         "y": 80,
         "wires": [
             [
-                "c60ade8d2522e8b4"
+                "e91bb31a438d275b"
             ]
         ]
     },
     {
-        "id": "ef582930fa6e08ef",
+        "id": "f41cc5ada430a03e",
         "type": "link out",
-        "z": "350f3f1be5bf834e",
-        "g": "1d39f27b3d601c72",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "7963fc80be25b354",
         "name": "On Game Start",
         "links": [
             "65781ff6.32997",
-            "f64afdb2.ae6738",
-            "75a596869f308dab",
+            "82b51bd97bd88d3c",
+            "4595b67f747fb777",
             "fde61d47216f1287"
         ],
         "x": 495,
@@ -762,10 +762,10 @@
         "wires": []
     },
     {
-        "id": "4e6a3fb6ac8e60de",
+        "id": "2934cf85318abc7f",
         "type": "comment",
-        "z": "350f3f1be5bf834e",
-        "g": "1d39f27b3d601c72",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "7963fc80be25b354",
         "name": "On Game Start",
         "info": "",
         "x": 600,
@@ -773,15 +773,15 @@
         "wires": []
     },
     {
-        "id": "4a863b19c2050c0a",
+        "id": "cf0e7850cb00dfe6",
         "type": "link out",
-        "z": "350f3f1be5bf834e",
-        "g": "1d39f27b3d601c72",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "7963fc80be25b354",
         "name": "On Game Stop",
         "links": [
             "b6c64fbb.744e7",
-            "f64afdb2.ae6738",
-            "75a596869f308dab",
+            "82b51bd97bd88d3c",
+            "4595b67f747fb777",
             "fde61d47216f1287"
         ],
         "x": 495,
@@ -789,10 +789,10 @@
         "wires": []
     },
     {
-        "id": "4f3e8b2d7209c3c4",
+        "id": "40d9373120e1c5a9",
         "type": "comment",
-        "z": "350f3f1be5bf834e",
-        "g": "1d39f27b3d601c72",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "7963fc80be25b354",
         "name": "On Game Stop",
         "info": "",
         "x": 600,
@@ -800,10 +800,10 @@
         "wires": []
     },
     {
-        "id": "442e7bc38dd4c3b7",
+        "id": "c50489a8ac6327ef",
         "type": "link out",
-        "z": "350f3f1be5bf834e",
-        "g": "1d39f27b3d601c72",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "7963fc80be25b354",
         "name": "On Game Reset",
         "links": [
             "b72df54c.54dbc8",
@@ -812,11 +812,11 @@
             "5051fca6f0fc24ce",
             "771ef7315cbeaed4",
             "6aa55bc0969c2645",
-            "f64afdb2.ae6738",
+            "82b51bd97bd88d3c",
             "27a13ceb38ba3113",
             "b24d6dd76f244e1c",
             "561c4af966865974",
-            "75a596869f308dab",
+            "4595b67f747fb777",
             "fde61d47216f1287",
             "35e08daeabc5fa71",
             "af0afab53c87e0ad",
@@ -830,9 +830,9 @@
         "wires": []
     },
     {
-        "id": "05b37843628a96bf",
+        "id": "889d9aa32852c7f4",
         "type": "comment",
-        "z": "350f3f1be5bf834e",
+        "z": "a7a28dcbcb6cfc4a",
         "name": "Main Flow",
         "info": "This flow contains nodes that define the overall configuration and monitor state of the system.\n",
         "x": 100,
@@ -840,10 +840,10 @@
         "wires": []
     },
     {
-        "id": "aa84b0b3f6f24d4c",
+        "id": "e8d2e61e386647c8",
         "type": "inject",
-        "z": "350f3f1be5bf834e",
-        "g": "063501cbf8d4d96b",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "9a635245d1d7b19a",
         "name": "Every second",
         "props": [
             {
@@ -865,15 +865,15 @@
         "y": 180,
         "wires": [
             [
-                "c7c4685c94a69e6f"
+                "9825a13baed8c3fb"
             ]
         ]
     },
     {
-        "id": "e2d366190836429a",
+        "id": "f371cdbbe81e3876",
         "type": "inject",
-        "z": "350f3f1be5bf834e",
-        "g": "063501cbf8d4d96b",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "9a635245d1d7b19a",
         "name": "On Initialization",
         "props": [
             {
@@ -895,20 +895,20 @@
         "y": 120,
         "wires": [
             [
-                "758310f9eb5818de"
+                "972e87fc83299cbc"
             ]
         ]
     },
     {
-        "id": "758310f9eb5818de",
+        "id": "972e87fc83299cbc",
         "type": "link out",
-        "z": "350f3f1be5bf834e",
-        "g": "063501cbf8d4d96b",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "9a635245d1d7b19a",
         "name": "On System Start",
         "links": [
             "ce5e1241.adb708",
             "891fa554.e2eb",
-            "42d9fcf53b80577d",
+            "6c0b0a39d7d9c025",
             "a42117f2.e7b908",
             "b382fdf1.42dfd",
             "753e49af.e1fbf8",
@@ -920,7 +920,7 @@
             "91f5a57b8686c80a",
             "46aaa4960e9ac869",
             "e4bbd5899d3b356e",
-            "f64afdb2.ae6738",
+            "82b51bd97bd88d3c",
             "7fd4506cfed2714b",
             "c4a8de8b032253c9",
             "d22e738b256cdec6",
@@ -936,14 +936,14 @@
         "wires": []
     },
     {
-        "id": "c7c4685c94a69e6f",
+        "id": "9825a13baed8c3fb",
         "type": "link out",
-        "z": "350f3f1be5bf834e",
-        "g": "063501cbf8d4d96b",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "9a635245d1d7b19a",
         "name": "On Tick",
         "mode": "link",
         "links": [
-            "75a596869f308dab",
+            "4595b67f747fb777",
             "0ebb81d8a4618708",
             "518590794501de1b",
             "a534313d858cdb4b"
@@ -953,25 +953,25 @@
         "wires": []
     },
     {
-        "id": "34e41184596a8cc2",
+        "id": "a51efdded34de5bf",
         "type": "ui_ui_control",
-        "z": "350f3f1be5bf834e",
-        "g": "063501cbf8d4d96b",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "9a635245d1d7b19a",
         "name": "On Browser Refresh",
         "events": "all",
         "x": 160,
         "y": 240,
         "wires": [
             [
-                "87d09c692b8687fc"
+                "c4a7f7a6f98d05cf"
             ]
         ]
     },
     {
-        "id": "87d09c692b8687fc",
+        "id": "c4a7f7a6f98d05cf",
         "type": "link out",
-        "z": "350f3f1be5bf834e",
-        "g": "063501cbf8d4d96b",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "9a635245d1d7b19a",
         "name": "On Browser Refresh",
         "links": [
             "91bbad40.53273"
@@ -981,9 +981,9 @@
         "wires": []
     },
     {
-        "id": "0b46b07651aabd95",
+        "id": "3794d4a4ce17b111",
         "type": "ui_template",
-        "z": "350f3f1be5bf834e",
+        "z": "a7a28dcbcb6cfc4a",
         "group": "f08ba3d0ec182a89",
         "name": "CSS-style overrides",
         "order": 1,
@@ -1003,9 +1003,9 @@
         "info": "CSS Style overrides to the Node-RED Dark theme.\n\nFrom the Dashboard node information panel (View->Dashboard), select\n - Site: Options -> Node-RED theme everywhere\n - Theme: Style -> Dark"
     },
     {
-        "id": "e364bd8ab15e99bb",
+        "id": "67fd160422724afb",
         "type": "comment",
-        "z": "350f3f1be5bf834e",
+        "z": "a7a28dcbcb6cfc4a",
         "name": "Dashboard Styling",
         "info": "",
         "x": 990,
@@ -1013,9 +1013,9 @@
         "wires": []
     },
     {
-        "id": "a16e88a8d5c65b16",
+        "id": "c181cfa50f474bbf",
         "type": "catch",
-        "z": "350f3f1be5bf834e",
+        "z": "a7a28dcbcb6cfc4a",
         "name": "",
         "scope": null,
         "uncaught": true,
@@ -1023,14 +1023,14 @@
         "y": 260,
         "wires": [
             [
-                "c02c1b80ce61d7d7"
+                "2822ec8b955ee1e4"
             ]
         ]
     },
     {
-        "id": "c02c1b80ce61d7d7",
+        "id": "2822ec8b955ee1e4",
         "type": "debug",
-        "z": "350f3f1be5bf834e",
+        "z": "a7a28dcbcb6cfc4a",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -1045,9 +1045,9 @@
         "wires": []
     },
     {
-        "id": "a4e1b2d5ee32da8d",
+        "id": "d1e0917184ecf7f1",
         "type": "complete",
-        "z": "350f3f1be5bf834e",
+        "z": "a7a28dcbcb6cfc4a",
         "name": "",
         "scope": [],
         "uncaught": false,
@@ -1055,14 +1055,14 @@
         "y": 320,
         "wires": [
             [
-                "c02c1b80ce61d7d7"
+                "2822ec8b955ee1e4"
             ]
         ]
     },
     {
-        "id": "21156e9a382b1245",
+        "id": "4a9646504c1a3767",
         "type": "comment",
-        "z": "350f3f1be5bf834e",
+        "z": "a7a28dcbcb6cfc4a",
         "name": "Exception Handling",
         "info": "",
         "x": 990,
@@ -1070,23 +1070,23 @@
         "wires": []
     },
     {
-        "id": "cd9c79c0f7ca4c12",
+        "id": "affe6ad93365615a",
         "type": "link out",
-        "z": "350f3f1be5bf834e",
+        "z": "a7a28dcbcb6cfc4a",
         "name": "Init Global Vars",
         "mode": "link",
         "links": [
-            "75a596869f308dab"
+            "4595b67f747fb777"
         ],
         "x": 745,
         "y": 120,
         "wires": []
     },
     {
-        "id": "06ef4faf69df41d0",
+        "id": "cf40039386448a19",
         "type": "comment",
-        "z": "350f3f1be5bf834e",
-        "g": "1d39f27b3d601c72",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "7963fc80be25b354",
         "name": "On Game Reset",
         "info": "",
         "x": 600,
@@ -1094,10 +1094,10 @@
         "wires": []
     },
     {
-        "id": "4a9c0dfb1f0b9b85",
+        "id": "d05591cd0b56c203",
         "type": "function",
-        "z": "350f3f1be5bf834e",
-        "g": "c870415b6658eca9",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "60d7a2df45d3ca32",
         "name": "Update Timer",
         "func": "// Retrieve current state of global timer variables\nvar gameState = global.get(\"gameState\") || 'playing';\nvar gameDuration = global.get(\"gameDuration\") || 0;\nvar elapsedTimeDelta = global.get(\"elapsedTimeDelta\") || 0;\n// Total time elapsed is duration since the start button was last pressed, + any adjustments\nvar timeElapsed = global.get(\"timeElapsed\") || 0;\nvar startTime = flow.get(\"startTime\") || 0;\n\n// If the game is active, update the time elapsed\nif(gameState == \"playing\") {\n\n    // Total time elapsed is duration since the start button was last pressed, + any adjustments\n    timeElapsed = (Date.now() - startTime);\n\n    // Update the global variable\n    global.set(\"timeElapsed\", timeElapsed);\n}\n\n// We update these even if gameState is not playing, to allow for\n// adjustments to gameDuration or timeElapsed made when game is stopped\nvar timeElapsedAfterAdjustments = timeElapsed += elapsedTimeDelta;\nvar timeRemaining = gameDuration - timeElapsed;\n\nglobal.set(\"timeRemaining\", timeRemaining);\n\nnode.status({ fill: \"green\", shape: \"dot\", text: timeRemaining });\n\n// Update the msg to carry string\nmsg.timeElapsed = timeElapsedAfterAdjustments;        \nmsg.timeRemaining = timeRemaining;\n\n// Only need to update UI if timeRemaining has changed\nreturn msg;",
         "outputs": 1,
@@ -1109,15 +1109,15 @@
         "y": 600,
         "wires": [
             [
-                "39e77fdf6d2e5543"
+                "2f882acb1a5f0168"
             ]
         ]
     },
     {
-        "id": "c8fb5887561b01d3",
+        "id": "0e78db2a30d9326e",
         "type": "ui_template",
-        "z": "350f3f1be5bf834e",
-        "g": "c870415b6658eca9",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "60d7a2df45d3ca32",
         "group": "f08ba3d0ec182a89",
         "name": "Time Remaining",
         "order": 2,
@@ -1136,10 +1136,10 @@
         ]
     },
     {
-        "id": "39e77fdf6d2e5543",
+        "id": "2f882acb1a5f0168",
         "type": "function",
-        "z": "350f3f1be5bf834e",
-        "g": "c870415b6658eca9",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "60d7a2df45d3ca32",
         "name": "Format Time for Dashboard Display",
         "func": "// Create formattedTime in hh:mm:ss\nvar t = msg.timeElapsed / 1000; //ms\nvar h = Math.floor(t / 3600);\nvar m = Math.floor(t % 3600 / 60);\nvar s = Math.floor(t % 3600 % 60);\nmsg.formattedTimeElapsed = (\"0\" + h).slice(-2) + \":\" + (\"0\" + m).slice(-2) + \":\" + (\"0\" + s).slice(-2);\n\nvar t2 = msg.timeRemaining / 1000; //ms\nvar h2 = Math.floor(t2 / 3600);\nvar m2 = Math.floor(t2 % 3600 / 60);\nvar s2 = Math.floor(t2 % 3600 % 60);\nmsg.formattedTimeRemaining = (\"0\" + h2).slice(-2) + \":\" + (\"0\" + m2).slice(-2) + \":\" + (\"0\" + s2).slice(-2);\n\nvar t3 = global.get(\"gameDuration\") / 1000; //ms\nvar h3 = Math.floor(t3 / 3600);\nvar m3 = Math.floor(t3 % 3600 / 60);\nvar s3 = Math.floor(t3 % 3600 % 60);\nmsg.formattedGameDuration = (\"0\" + h3).slice(-2) + \":\" + (\"0\" + m3).slice(-2) + \":\" + (\"0\" + s3).slice(-2);\n\n// Set timeColour depending on current gamestate and time remaining\nvar gameState = global.get(\"gameState\");\nif (gameState == \"playing\") {\n    if (msg.timeRemaining < 60000) { msg.timeColour = \"red\"; }\n    else { msg.timeColour = \"green\"; }\n}\nelse { msg.timeColour = \"white\"; }\n\n// Update the editor node\nnode.status({ fill: msg.timeColour, shape:\"dot\", text:msg.formattedTimeRemaining});\n\n// Forward the message along the flow\nreturn msg;",
         "outputs": 1,
@@ -1151,39 +1151,39 @@
         "y": 600,
         "wires": [
             [
-                "c8fb5887561b01d3",
-                "f93150b86a48dd2b",
-                "59b3354d12a64752"
+                "0e78db2a30d9326e",
+                "c86051aa14c3f6cf",
+                "c0381109cd0de14f"
             ]
         ]
     },
     {
-        "id": "75a596869f308dab",
+        "id": "4595b67f747fb777",
         "type": "link in",
-        "z": "350f3f1be5bf834e",
-        "g": "c870415b6658eca9",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "60d7a2df45d3ca32",
         "name": "UpdateTimerLinkIn",
         "links": [
-            "32180624627a2049",
-            "442e7bc38dd4c3b7",
-            "4a863b19c2050c0a",
-            "c7c4685c94a69e6f",
-            "cd9c79c0f7ca4c12",
-            "ef582930fa6e08ef"
+            "a213c34292093199",
+            "c50489a8ac6327ef",
+            "cf0e7850cb00dfe6",
+            "9825a13baed8c3fb",
+            "affe6ad93365615a",
+            "f41cc5ada430a03e"
         ],
         "x": 85,
         "y": 600,
         "wires": [
             [
-                "4a9c0dfb1f0b9b85"
+                "d05591cd0b56c203"
             ]
         ]
     },
     {
-        "id": "e7252fb6a4819ecf",
+        "id": "5f5dd91fb0d98c9c",
         "type": "ui_button",
-        "z": "350f3f1be5bf834e",
-        "g": "c870415b6658eca9",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "60d7a2df45d3ca32",
         "name": "",
         "group": "f08ba3d0ec182a89",
         "order": 9,
@@ -1204,15 +1204,15 @@
         "y": 740,
         "wires": [
             [
-                "2ce811328a35a524"
+                "8ca101eedc65f388"
             ]
         ]
     },
     {
-        "id": "f457b1998a5d01b9",
+        "id": "2a157970687c13fc",
         "type": "ui_button",
-        "z": "350f3f1be5bf834e",
-        "g": "c870415b6658eca9",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "60d7a2df45d3ca32",
         "name": "",
         "group": "f08ba3d0ec182a89",
         "order": 7,
@@ -1233,15 +1233,15 @@
         "y": 780,
         "wires": [
             [
-                "a98c2ab0de57b58a"
+                "27e33d76b67c0c72"
             ]
         ]
     },
     {
-        "id": "2ce811328a35a524",
+        "id": "8ca101eedc65f388",
         "type": "change",
-        "z": "350f3f1be5bf834e",
-        "g": "c870415b6658eca9",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "60d7a2df45d3ca32",
         "name": "",
         "rules": [
             {
@@ -1261,15 +1261,15 @@
         "y": 740,
         "wires": [
             [
-                "32180624627a2049"
+                "a213c34292093199"
             ]
         ]
     },
     {
-        "id": "a98c2ab0de57b58a",
+        "id": "27e33d76b67c0c72",
         "type": "change",
-        "z": "350f3f1be5bf834e",
-        "g": "c870415b6658eca9",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "60d7a2df45d3ca32",
         "name": "",
         "rules": [
             {
@@ -1289,29 +1289,29 @@
         "y": 780,
         "wires": [
             [
-                "32180624627a2049"
+                "a213c34292093199"
             ]
         ]
     },
     {
-        "id": "32180624627a2049",
+        "id": "a213c34292093199",
         "type": "link out",
-        "z": "350f3f1be5bf834e",
-        "g": "c870415b6658eca9",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "60d7a2df45d3ca32",
         "name": "On Time Adjust",
         "mode": "link",
         "links": [
-            "75a596869f308dab"
+            "4595b67f747fb777"
         ],
         "x": 535,
         "y": 800,
         "wires": []
     },
     {
-        "id": "f93150b86a48dd2b",
+        "id": "c86051aa14c3f6cf",
         "type": "ui_text",
-        "z": "350f3f1be5bf834e",
-        "g": "c870415b6658eca9",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "60d7a2df45d3ca32",
         "group": "f08ba3d0ec182a89",
         "order": 8,
         "width": "2",
@@ -1326,10 +1326,10 @@
         "wires": []
     },
     {
-        "id": "465e64fa2453bb6a",
+        "id": "a851ddd5a82b5c97",
         "type": "ui_button",
-        "z": "350f3f1be5bf834e",
-        "g": "c870415b6658eca9",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "60d7a2df45d3ca32",
         "name": "",
         "group": "f08ba3d0ec182a89",
         "order": 12,
@@ -1350,15 +1350,15 @@
         "y": 820,
         "wires": [
             [
-                "0c9d3ef3bf7c7bc0"
+                "b641a26c2cdea311"
             ]
         ]
     },
     {
-        "id": "f020309c907b1b75",
+        "id": "f5eacf735a62ea49",
         "type": "ui_button",
-        "z": "350f3f1be5bf834e",
-        "g": "c870415b6658eca9",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "60d7a2df45d3ca32",
         "name": "",
         "group": "f08ba3d0ec182a89",
         "order": 10,
@@ -1379,15 +1379,15 @@
         "y": 860,
         "wires": [
             [
-                "6e87bf8ee8b2ac47"
+                "fbb76cff413cca97"
             ]
         ]
     },
     {
-        "id": "0c9d3ef3bf7c7bc0",
+        "id": "b641a26c2cdea311",
         "type": "change",
-        "z": "350f3f1be5bf834e",
-        "g": "c870415b6658eca9",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "60d7a2df45d3ca32",
         "name": "",
         "rules": [
             {
@@ -1407,15 +1407,15 @@
         "y": 820,
         "wires": [
             [
-                "32180624627a2049"
+                "a213c34292093199"
             ]
         ]
     },
     {
-        "id": "6e87bf8ee8b2ac47",
+        "id": "fbb76cff413cca97",
         "type": "change",
-        "z": "350f3f1be5bf834e",
-        "g": "c870415b6658eca9",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "60d7a2df45d3ca32",
         "name": "",
         "rules": [
             {
@@ -1435,15 +1435,15 @@
         "y": 860,
         "wires": [
             [
-                "32180624627a2049"
+                "a213c34292093199"
             ]
         ]
     },
     {
-        "id": "59b3354d12a64752",
+        "id": "c0381109cd0de14f",
         "type": "ui_text",
-        "z": "350f3f1be5bf834e",
-        "g": "c870415b6658eca9",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "60d7a2df45d3ca32",
         "group": "f08ba3d0ec182a89",
         "order": 11,
         "width": "2",
@@ -1458,10 +1458,10 @@
         "wires": []
     },
     {
-        "id": "65c75d67cdeec25c",
+        "id": "c3c11b9d940b507c",
         "type": "comment",
-        "z": "350f3f1be5bf834e",
-        "g": "c870415b6658eca9",
+        "z": "a7a28dcbcb6cfc4a",
+        "g": "60d7a2df45d3ca32",
         "name": "Adjustments to game duration or time taken",
         "info": "",
         "x": 230,
@@ -1469,9 +1469,9 @@
         "wires": []
     },
     {
-        "id": "189d4048132db79d",
+        "id": "5b9fc63e595c7e43",
         "type": "aedes broker",
-        "z": "350f3f1be5bf834e",
+        "z": "a7a28dcbcb6cfc4a",
         "name": "mqtt broker",
         "mqtt_port": 1883,
         "mqtt_ws_bind": "port",
@@ -1492,9 +1492,9 @@
         ]
     },
     {
-        "id": "a42e696a12382ae5",
+        "id": "96edda1a55164ec7",
         "type": "comment",
-        "z": "350f3f1be5bf834e",
+        "z": "a7a28dcbcb6cfc4a",
         "name": "MQTT Server",
         "info": "",
         "x": 1110,
@@ -1502,9 +1502,9 @@
         "wires": []
     },
     {
-        "id": "93a13174ceac2dc5",
+        "id": "8b3c0dc2f4ab5c17",
         "type": "mqtt out",
-        "z": "350f3f1be5bf834e",
+        "z": "a7a28dcbcb6cfc4a",
         "name": "",
         "topic": "/game",
         "qos": "",
@@ -1514,16 +1514,16 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "125f6c81.60151b",
+        "broker": "947951ea1f0569ac",
         "x": 550,
         "y": 280,
         "wires": []
     },
     {
-        "id": "70a659a67372af64",
+        "id": "3eb9d58248ac192e",
         "type": "comment",
-        "z": "afb330bff5dc84a7",
-        "g": "47d60ff77941c25c",
+        "z": "77c3c0b976c12fb4",
+        "g": "a8f5894f9a6f4628",
         "name": "Format into hh:mm:ss",
         "info": "",
         "x": 660,
@@ -1531,10 +1531,10 @@
         "wires": []
     },
     {
-        "id": "9f0c68ee4276f87e",
+        "id": "0a45d77e3fdceb2c",
         "type": "comment",
-        "z": "afb330bff5dc84a7",
-        "g": "47d60ff77941c25c",
+        "z": "77c3c0b976c12fb4",
+        "g": "a8f5894f9a6f4628",
         "name": "Retrieve global game time",
         "info": "",
         "x": 410,
@@ -1543,10 +1543,10 @@
         "icon": "node-red/parser-html.svg"
     },
     {
-        "id": "94b5a3763386897c",
+        "id": "d1d33fc5a3a6f764",
         "type": "inject",
-        "z": "afb330bff5dc84a7",
-        "g": "47d60ff77941c25c",
+        "z": "77c3c0b976c12fb4",
+        "g": "a8f5894f9a6f4628",
         "name": "Every 1 sec",
         "props": [
             {
@@ -1568,15 +1568,15 @@
         "y": 160,
         "wires": [
             [
-                "6cf1d2f79751a8b0"
+                "1895b1bff4f5ea18"
             ]
         ]
     },
     {
-        "id": "ac3ad590e26f333f",
+        "id": "f370327d143131af",
         "type": "comment",
-        "z": "afb330bff5dc84a7",
-        "g": "47d60ff77941c25c",
+        "z": "77c3c0b976c12fb4",
+        "g": "a8f5894f9a6f4628",
         "name": "Timer",
         "info": "",
         "x": 190,
@@ -1585,10 +1585,10 @@
         "icon": "node-red/parser-html.svg"
     },
     {
-        "id": "6cf1d2f79751a8b0",
+        "id": "1895b1bff4f5ea18",
         "type": "function",
-        "z": "afb330bff5dc84a7",
-        "g": "47d60ff77941c25c",
+        "z": "77c3c0b976c12fb4",
+        "g": "a8f5894f9a6f4628",
         "name": "Update Game Timer",
         "func": "\n// Retrieve the global time remaining counter\nmsg.timeRemaining = global.get(\"timeRemaining\") || 0;\n\n// Display value in the editor\nnode.status({ fill: \"green\", shape: \"dot\", text: msg.timeRemaining});\n\n// Pass value along the flow\nreturn msg;",
         "outputs": 1,
@@ -1600,15 +1600,15 @@
         "y": 160,
         "wires": [
             [
-                "3a1ec7c1638755d8"
+                "8478580a26db84ed"
             ]
         ]
     },
     {
-        "id": "3a1ec7c1638755d8",
+        "id": "8478580a26db84ed",
         "type": "function",
-        "z": "afb330bff5dc84a7",
-        "g": "47d60ff77941c25c",
+        "z": "77c3c0b976c12fb4",
+        "g": "a8f5894f9a6f4628",
         "name": "Format Time As HH:MM:SS",
         "func": "// msg.timeRemaining is in milliseconds\nvar t = msg.timeRemaining / 1000;\nvar h = Math.floor(t / 3600);\nvar m = Math.floor(t % 3600 / 60);\nvar s = Math.floor(t % 3600 % 60);\n\n// Format into hh:mm:ss\nmsg.timerText = (\"0\" + h).slice(-2) + \":\" + (\"0\" + m).slice(-2) + \":\" + (\"0\" + s).slice(-2);\n\n// Update the editor node\nnode.status({fill:\"green\", shape:\"dot\", text:msg.timerText});\n\n// Forward the message along the flow\nreturn msg;",
         "outputs": 1,
@@ -1620,15 +1620,15 @@
         "y": 160,
         "wires": [
             [
-                "f2db8f5068ba4191"
+                "f1dead188fc46e1f"
             ]
         ]
     },
     {
-        "id": "ea19ec062e7e4159",
+        "id": "e3044aad6c1913f3",
         "type": "trigger",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "",
         "op1": "",
         "op2": " ",
@@ -1643,18 +1643,18 @@
         "topic": "topic",
         "outputs": 1,
         "x": 480,
-        "y": 460,
+        "y": 480,
         "wires": [
             [
-                "302f16b7c2a5c97b"
+                "d9289818e2cfabf6"
             ]
         ]
     },
     {
-        "id": "302f16b7c2a5c97b",
+        "id": "d9289818e2cfabf6",
         "type": "change",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "",
         "rules": [
             {
@@ -1671,18 +1671,18 @@
         "to": "",
         "reg": false,
         "x": 720,
-        "y": 460,
+        "y": 480,
         "wires": [
             [
-                "fe7b087d178d348e"
+                "6f9b5ffd4ed16659"
             ]
         ]
     },
     {
-        "id": "a8ae982f4dd8e565",
+        "id": "29fcc25b7cce5bed",
         "type": "join",
-        "z": "afb330bff5dc84a7",
-        "g": "7f1936f0fa1668a9",
+        "z": "77c3c0b976c12fb4",
+        "g": "e2481daedaefe458",
         "name": "",
         "mode": "custom",
         "build": "merged",
@@ -1703,26 +1703,26 @@
         "y": 160,
         "wires": [
             [
-                "19e7511e6497230b"
+                "acd825f501e439a4"
             ]
         ]
     },
     {
-        "id": "6a663176539f0793",
+        "id": "b1df2f6a3f3dbcd7",
         "type": "comment",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "Duration before clearing",
         "info": "",
         "x": 480,
-        "y": 420,
+        "y": 440,
         "wires": []
     },
     {
-        "id": "a9a439c85dccd776",
+        "id": "3b01e473aadffa16",
         "type": "comment",
-        "z": "afb330bff5dc84a7",
-        "g": "7f1936f0fa1668a9",
+        "z": "77c3c0b976c12fb4",
+        "g": "e2481daedaefe458",
         "name": "Combine time + clue + video",
         "info": "",
         "x": 1063,
@@ -1730,21 +1730,21 @@
         "wires": []
     },
     {
-        "id": "b51417164a598683",
+        "id": "950bb82e336f21e9",
         "type": "comment",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "Set msg variable from payload",
         "info": "",
         "x": 750,
-        "y": 420,
+        "y": 440,
         "wires": []
     },
     {
-        "id": "19e7511e6497230b",
+        "id": "acd825f501e439a4",
         "type": "uibuilder",
-        "z": "afb330bff5dc84a7",
-        "g": "7f1936f0fa1668a9",
+        "z": "77c3c0b976c12fb4",
+        "g": "e2481daedaefe458",
         "name": "",
         "topic": "",
         "url": "room_display",
@@ -1767,10 +1767,10 @@
         ]
     },
     {
-        "id": "63deb92b07742d73",
+        "id": "1239fd86e1112e48",
         "type": "comment",
-        "z": "afb330bff5dc84a7",
-        "g": "7f1936f0fa1668a9",
+        "z": "77c3c0b976c12fb4",
+        "g": "e2481daedaefe458",
         "name": "Send to display",
         "info": "",
         "x": 1287,
@@ -1778,10 +1778,10 @@
         "wires": []
     },
     {
-        "id": "e909d0071736cc14",
+        "id": "a6fcbf071d9dfc09",
         "type": "change",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "",
         "rules": [
             {
@@ -1798,18 +1798,18 @@
         "to": "",
         "reg": false,
         "x": 510,
-        "y": 760,
+        "y": 780,
         "wires": [
             [
-                "92a539e41b6f6f51"
+                "cf0d4685a1049fca"
             ]
         ]
     },
     {
-        "id": "a40603e3d65ccdeb",
+        "id": "18a40a2047361f06",
         "type": "trigger",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "",
         "op1": "",
         "op2": " ",
@@ -1824,19 +1824,19 @@
         "topic": "topic",
         "outputs": 1,
         "x": 680,
-        "y": 840,
+        "y": 860,
         "wires": [
             [
-                "73c45ad08b4e9499",
-                "0398a245bbe55224"
+                "aa8cf0b46180bacc",
+                "6ad44ee2b7da5173"
             ]
         ]
     },
     {
-        "id": "706a33616645a67c",
+        "id": "70ab8d88810e3176",
         "type": "change",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "",
         "rules": [
             {
@@ -1853,18 +1853,18 @@
         "to": "",
         "reg": false,
         "x": 500,
-        "y": 840,
+        "y": 860,
         "wires": [
             [
-                "a40603e3d65ccdeb"
+                "18a40a2047361f06"
             ]
         ]
     },
     {
-        "id": "73c45ad08b4e9499",
+        "id": "aa8cf0b46180bacc",
         "type": "change",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "",
         "rules": [
             {
@@ -1881,16 +1881,16 @@
         "to": "",
         "reg": false,
         "x": 900,
-        "y": 900,
+        "y": 920,
         "wires": [
             []
         ]
     },
     {
-        "id": "0398a245bbe55224",
+        "id": "6ad44ee2b7da5173",
         "type": "change",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "",
         "rules": [
             {
@@ -1907,26 +1907,26 @@
         "to": "",
         "reg": false,
         "x": 910,
-        "y": 800,
+        "y": 820,
         "wires": [
             [
-                "3ca3ba2c7f7323e4"
+                "b676a20af598d1c9"
             ]
         ]
     },
     {
-        "id": "adcec27242c6e92f",
+        "id": "ce6fabcd9792a1dc",
         "type": "link in",
-        "z": "afb330bff5dc84a7",
-        "g": "7f1936f0fa1668a9",
+        "z": "77c3c0b976c12fb4",
+        "g": "e2481daedaefe458",
         "name": "In-Game Text Display",
         "links": [
-            "fe7b087d178d348e",
+            "6f9b5ffd4ed16659",
             "96a0b122060445a5",
             "ed5d099e0b8c1424",
-            "92a539e41b6f6f51",
-            "f2db8f5068ba4191",
-            "3ca3ba2c7f7323e4",
+            "cf0d4685a1049fca",
+            "f1dead188fc46e1f",
+            "b676a20af598d1c9",
             "4586a515dd11f3a4",
             "cff28163790bb4b6",
             "d1ddfac3b8f1e655"
@@ -1935,34 +1935,34 @@
         "y": 160,
         "wires": [
             [
-                "a8ae982f4dd8e565"
+                "29fcc25b7cce5bed"
             ]
         ]
     },
     {
-        "id": "fe7b087d178d348e",
+        "id": "6f9b5ffd4ed16659",
         "type": "link out",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "In-Game Text Display Out",
         "mode": "link",
         "links": [
-            "adcec27242c6e92f"
+            "ce6fabcd9792a1dc"
         ],
         "x": 865,
-        "y": 460,
+        "y": 480,
         "wires": []
     },
     {
-        "id": "a946d0a5944b42fb",
+        "id": "ea0b18db2b1b4290",
         "type": "ui_dropdown",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "",
         "label": "",
         "tooltip": "",
         "place": "Select option",
-        "group": "733727e93f750e8c",
+        "group": "7f709df3588dcc39",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -1990,34 +1990,34 @@
         "topicType": "str",
         "className": "",
         "x": 230,
-        "y": 460,
+        "y": 480,
         "wires": [
             [
-                "ea19ec062e7e4159",
-                "fa917a9707337a51"
+                "e3044aad6c1913f3",
+                "0e382e2f59d9cc6d"
             ]
         ]
     },
     {
-        "id": "225cb9f7e1af5b2a",
+        "id": "7cc54138b5e5f81b",
         "type": "comment",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "Predefined Messages",
         "info": "",
         "x": 240,
-        "y": 420,
+        "y": 440,
         "wires": []
     },
     {
-        "id": "5348983174bfaf74",
+        "id": "05d159debf306c85",
         "type": "ui_text_input",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "",
         "label": "",
         "tooltip": "",
-        "group": "733727e93f750e8c",
+        "group": "7f709df3588dcc39",
         "order": 2,
         "width": 0,
         "height": 0,
@@ -2029,32 +2029,32 @@
         "className": "",
         "topicType": "str",
         "x": 220,
-        "y": 560,
+        "y": 580,
         "wires": [
             [
-                "ea19ec062e7e4159",
-                "fa917a9707337a51"
+                "e3044aad6c1913f3",
+                "0e382e2f59d9cc6d"
             ]
         ]
     },
     {
-        "id": "052ac926c77d3b97",
+        "id": "5e2069b17f3f7b54",
         "type": "ui_audio",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "",
-        "group": "733727e93f750e8c",
+        "group": "7f709df3588dcc39",
         "voice": "",
         "always": true,
         "x": 1320,
-        "y": 560,
+        "y": 580,
         "wires": []
     },
     {
-        "id": "fa917a9707337a51",
+        "id": "0e382e2f59d9cc6d",
         "type": "file in",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "getfilewithSound",
         "filename": "c:/temp/soundGameDisplay.mp3",
         "filenameType": "str",
@@ -2064,31 +2064,31 @@
         "encoding": "none",
         "allProps": false,
         "x": 960,
-        "y": 560,
+        "y": 580,
         "wires": [
             [
-                "052ac926c77d3b97"
+                "5e2069b17f3f7b54"
             ]
         ]
     },
     {
-        "id": "07327a27269d85ec",
+        "id": "5473b2666b98035d",
         "type": "comment",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "Free Text Messages",
         "info": "",
         "x": 230,
-        "y": 520,
+        "y": 540,
         "wires": []
     },
     {
-        "id": "0212febe1009858f",
+        "id": "656f5141f338c127",
         "type": "ui_button",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "",
-        "group": "733727e93f750e8c",
+        "group": "7f709df3588dcc39",
         "order": 3,
         "width": 0,
         "height": 0,
@@ -2104,127 +2104,127 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 230,
-        "y": 740,
+        "y": 760,
         "wires": [
             [
-                "e909d0071736cc14",
-                "706a33616645a67c"
+                "a6fcbf071d9dfc09",
+                "70ab8d88810e3176"
             ]
         ]
     },
     {
-        "id": "71b8dcdba0275b88",
+        "id": "064e0f743f1134e2",
         "type": "comment",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "Play video overlay",
         "info": "",
         "x": 230,
-        "y": 700,
+        "y": 720,
         "wires": []
     },
     {
-        "id": "2be43f7e12a70a86",
+        "id": "46267313b989836d",
         "type": "comment",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "Play audible alert for players",
         "info": "",
         "x": 1140,
-        "y": 500,
+        "y": 520,
         "wires": []
     },
     {
-        "id": "92a539e41b6f6f51",
+        "id": "cf0d4685a1049fca",
         "type": "link out",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "In-Game Text Display Out",
         "mode": "link",
         "links": [
-            "adcec27242c6e92f"
+            "ce6fabcd9792a1dc"
         ],
         "x": 665,
-        "y": 740,
+        "y": 760,
         "wires": []
     },
     {
-        "id": "f2db8f5068ba4191",
+        "id": "f1dead188fc46e1f",
         "type": "link out",
-        "z": "afb330bff5dc84a7",
-        "g": "47d60ff77941c25c",
+        "z": "77c3c0b976c12fb4",
+        "g": "a8f5894f9a6f4628",
         "name": "In-Game Text Display Out",
         "mode": "link",
         "links": [
-            "adcec27242c6e92f"
+            "ce6fabcd9792a1dc"
         ],
         "x": 825,
         "y": 160,
         "wires": []
     },
     {
-        "id": "3ca3ba2c7f7323e4",
+        "id": "b676a20af598d1c9",
         "type": "link out",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "In-Game Text Display Out",
         "mode": "link",
         "links": [
-            "adcec27242c6e92f"
+            "ce6fabcd9792a1dc"
         ],
         "x": 1065,
-        "y": 800,
+        "y": 820,
         "wires": []
     },
     {
-        "id": "f061f1d08ccfa70b",
+        "id": "95078f756e6a46fd",
         "type": "comment",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "Assign video file",
         "info": "",
         "x": 480,
-        "y": 720,
+        "y": 740,
         "wires": []
     },
     {
-        "id": "2dd8f81706ee5d4e",
+        "id": "e3fea949085d8937",
         "type": "comment",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "Pause game while video plays",
         "info": "",
         "x": 520,
-        "y": 800,
+        "y": 820,
         "wires": []
     },
     {
-        "id": "78c810e8f365f5af",
+        "id": "91abbf9cc31fc232",
         "type": "comment",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "Clear video overlay",
         "info": "",
         "x": 890,
-        "y": 760,
+        "y": 780,
         "wires": []
     },
     {
-        "id": "4acf023205a8cfc3",
+        "id": "134bace5f7a8ec13",
         "type": "comment",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "Resume game",
         "info": "",
         "x": 870,
-        "y": 840,
+        "y": 860,
         "wires": []
     },
     {
-        "id": "8c69ed484ee62459",
+        "id": "e9374b61d3a58eb9",
         "type": "http request",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "",
         "method": "GET",
         "ret": "bin",
@@ -2238,18 +2238,18 @@
         "senderr": false,
         "headers": [],
         "x": 610,
-        "y": 660,
+        "y": 680,
         "wires": [
             [
-                "63dec63b085ba1e3"
+                "0b84b5020ab1e7ac"
             ]
         ]
     },
     {
-        "id": "63dec63b085ba1e3",
+        "id": "0b84b5020ab1e7ac",
         "type": "file",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "",
         "filename": "c:/temp/soundGameDisplay.mp3",
         "filenameType": "str",
@@ -2258,46 +2258,46 @@
         "overwriteFile": "true",
         "encoding": "none",
         "x": 850,
-        "y": 660,
+        "y": 680,
         "wires": [
             [
-                "fa917a9707337a51"
+                "0e382e2f59d9cc6d"
             ]
         ]
     },
     {
-        "id": "54d37284765e710e",
+        "id": "e40494f47fb28c91",
         "type": "catch",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "",
         "scope": [
-            "fa917a9707337a51"
+            "0e382e2f59d9cc6d"
         ],
         "uncaught": false,
         "x": 1110,
-        "y": 600,
+        "y": 620,
         "wires": [
             [
-                "8c69ed484ee62459"
+                "e9374b61d3a58eb9"
             ]
         ]
     },
     {
-        "id": "d5dc4f5d0fa7cd13",
+        "id": "16bf9dac159ff1cb",
         "type": "comment",
-        "z": "afb330bff5dc84a7",
-        "g": "c7dcc2fc49c21692",
+        "z": "77c3c0b976c12fb4",
+        "g": "6fe73218c562971c",
         "name": "If local file not found, download from github",
         "info": "",
         "x": 660,
-        "y": 600,
+        "y": 620,
         "wires": []
     },
     {
-        "id": "d36489b9.a97398",
+        "id": "851adb32a2c54d68",
         "type": "file",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "Append to Log File",
         "filename": "filename",
         "filenameType": "msg",
@@ -2312,13 +2312,13 @@
         ]
     },
     {
-        "id": "c371def0.c41d4",
+        "id": "c7d232acd89739f2",
         "type": "ui_switch",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "",
         "label": "Logging",
         "tooltip": "",
-        "group": "eed1a8a6.8d8878",
+        "group": "b977110e3978794d",
         "order": 4,
         "width": 4,
         "height": 1,
@@ -2341,14 +2341,14 @@
         "y": 100,
         "wires": [
             [
-                "8ab5d029.5fa83"
+                "1b45918ffdd632c2"
             ]
         ]
     },
     {
-        "id": "8ab5d029.5fa83",
+        "id": "1b45918ffdd632c2",
         "type": "change",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "",
         "rules": [
             {
@@ -2371,9 +2371,9 @@
         ]
     },
     {
-        "id": "4f0ef3a2.ba712c",
+        "id": "d2b93d29535607fa",
         "type": "switch",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "",
         "property": "logging",
         "propertyType": "global",
@@ -2391,14 +2391,14 @@
         "y": 340,
         "wires": [
             [
-                "511b6d84.e268c4"
+                "a54ef364ad1bbd25"
             ]
         ]
     },
     {
-        "id": "511b6d84.e268c4",
+        "id": "a54ef364ad1bbd25",
         "type": "function",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "Create Log Entry",
         "func": "// Define a payload object with the fields required\n// for the log entry\nvar log_entry = {\n    \"time\": new Date(),\n    \"topic\": msg.topic,\n    \"payload\": msg.payload\n};\nmsg.payload = log_entry;\n\n// Specify the log file\nmsg.filename = \"/Node-REDscape/log.txt\";\n\n// Show the log entry below the editor node\nnode.status({fill:\"green\", shape:\"dot\", text:JSON.stringify(log_entry)});\n\nreturn msg;",
         "outputs": 1,
@@ -2407,15 +2407,15 @@
         "y": 340,
         "wires": [
             [
-                "445cf6fe.4d8078",
-                "7831a90e10f09e75"
+                "e12cb5b8a7beeba4",
+                "bf34d7b9b98761c7"
             ]
         ]
     },
     {
-        "id": "d1a37b5c.759ed",
+        "id": "f19561bb66e3cc20",
         "type": "comment",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "Toggle Logging On/Off",
         "info": "",
         "x": 600,
@@ -2423,10 +2423,10 @@
         "wires": []
     },
     {
-        "id": "c2f79075.e3d64",
+        "id": "c7cd4c92b11eba68",
         "type": "ui_template",
-        "z": "31a7412f.61a816",
-        "group": "eed1a8a6.8d8878",
+        "z": "46b5fdb2e4905102",
+        "group": "b977110e3978794d",
         "name": "Dashboard Log",
         "order": 3,
         "width": "30",
@@ -2434,7 +2434,9 @@
         "format": "<div ng-repeat=\"line in msg.payload track by $index\">\n  <div ng-style=\"{'margin-bottom':'1em'}\">{{line}}</div>\n</div>",
         "storeOutMessages": false,
         "fwdInMessages": false,
+        "resendOnRefresh": false,
         "templateScope": "local",
+        "className": "",
         "x": 1240,
         "y": 280,
         "wires": [
@@ -2442,9 +2444,9 @@
         ]
     },
     {
-        "id": "445cf6fe.4d8078",
+        "id": "e12cb5b8a7beeba4",
         "type": "function",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "Update Log Display",
         "func": "// Retrieve the existing log display\nvar logDisplay = flow.get(\"logDisplay\") || [];\n\n// Add the new log entry to the top \nlogDisplay.unshift(msg.payload);\n\n// Cap maximum size of the log display\nif(logDisplay.length > 100) {\n    // Remove the last element\n    logDisplay.pop();\n}\n\n// Save the updated log of entries\nflow.set(\"logDisplay\", logDisplay);\n\n// Pass the display along the flow\nmsg.payload = logDisplay;\n\nreturn msg;",
         "outputs": 1,
@@ -2453,36 +2455,36 @@
         "y": 280,
         "wires": [
             [
-                "c2f79075.e3d64"
+                "c7cd4c92b11eba68"
             ]
         ]
     },
     {
-        "id": "f64afdb2.ae6738",
+        "id": "82b51bd97bd88d3c",
         "type": "link in",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "Log",
         "links": [
-            "442e7bc38dd4c3b7",
-            "4a863b19c2050c0a",
-            "758310f9eb5818de",
-            "e70201fd67e55953",
-            "ef582930fa6e08ef"
+            "c50489a8ac6327ef",
+            "cf0e7850cb00dfe6",
+            "972e87fc83299cbc",
+            "4732b270422034b9",
+            "f41cc5ada430a03e"
         ],
         "x": 255,
         "y": 340,
         "wires": [
             [
-                "4f0ef3a2.ba712c"
+                "d2b93d29535607fa"
             ]
         ]
     },
     {
-        "id": "92a3d612.7206a",
+        "id": "8a6fa72056fe0960",
         "type": "ui_button",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "",
-        "group": "eed1a8a6.8d8878",
+        "group": "b977110e3978794d",
         "order": 1,
         "width": 4,
         "height": 1,
@@ -2499,14 +2501,14 @@
         "y": 220,
         "wires": [
             [
-                "bf085b.4d65d7a8"
+                "d591a988a0e2b3d7"
             ]
         ]
     },
     {
-        "id": "bf085b.4d65d7a8",
+        "id": "d591a988a0e2b3d7",
         "type": "change",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "",
         "rules": [
             {
@@ -2526,14 +2528,14 @@
         "y": 220,
         "wires": [
             [
-                "445cf6fe.4d8078"
+                "e12cb5b8a7beeba4"
             ]
         ]
     },
     {
-        "id": "75358499.0d6b64",
+        "id": "bb1b2fbc9810cf79",
         "type": "comment",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "Clear the Log Display",
         "info": "",
         "x": 600,
@@ -2541,9 +2543,9 @@
         "wires": []
     },
     {
-        "id": "9593409f.b9608",
+        "id": "9dcf6e2ca85ceaa6",
         "type": "comment",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "Log event",
         "info": "",
         "x": 260,
@@ -2551,9 +2553,9 @@
         "wires": []
     },
     {
-        "id": "e4d4ff91.d3441",
+        "id": "ce41541094824009",
         "type": "comment",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "Only continue if logging enabled",
         "info": "",
         "x": 490,
@@ -2561,9 +2563,9 @@
         "wires": []
     },
     {
-        "id": "3cf3cc1a.468f24",
+        "id": "2d4f2cae5ed34d44",
         "type": "comment",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "Specify fields to log",
         "info": "",
         "x": 750,
@@ -2571,9 +2573,9 @@
         "wires": []
     },
     {
-        "id": "1052466c.ae07d2",
+        "id": "5b24660ca316fc7b",
         "type": "comment",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "Send Log to Dashboard",
         "info": "",
         "x": 1050,
@@ -2581,9 +2583,9 @@
         "wires": []
     },
     {
-        "id": "a9e1b02b.620a08",
+        "id": "a5d5955b02a9eaa5",
         "type": "comment",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "Send Log to File",
         "info": "",
         "x": 1180,
@@ -2591,13 +2593,13 @@
         "wires": []
     },
     {
-        "id": "9d634736069dcc14",
+        "id": "f93a3cf772e710de",
         "type": "ui_switch",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "",
         "label": "Save to Logfile",
         "tooltip": "",
-        "group": "eed1a8a6.8d8878",
+        "group": "b977110e3978794d",
         "order": 4,
         "width": 4,
         "height": 1,
@@ -2620,14 +2622,14 @@
         "y": 100,
         "wires": [
             [
-                "8b08d1338508da81"
+                "0e5e687edfbf1509"
             ]
         ]
     },
     {
-        "id": "7831a90e10f09e75",
+        "id": "bf34d7b9b98761c7",
         "type": "switch",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "",
         "property": "useLogfile",
         "propertyType": "global",
@@ -2645,14 +2647,14 @@
         "y": 440,
         "wires": [
             [
-                "d36489b9.a97398"
+                "851adb32a2c54d68"
             ]
         ]
     },
     {
-        "id": "8b08d1338508da81",
+        "id": "0e5e687edfbf1509",
         "type": "change",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "",
         "rules": [
             {
@@ -2675,14 +2677,14 @@
         ]
     },
     {
-        "id": "1052553f8c848d66",
+        "id": "6e3b8c7c1509ffe2",
         "type": "mqtt in",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "",
         "topic": "#",
         "qos": "2",
         "datatype": "auto-detect",
-        "broker": "125f6c81.60151b",
+        "broker": "947951ea1f0569ac",
         "nl": false,
         "rap": true,
         "rh": 0,
@@ -2691,27 +2693,27 @@
         "y": 560,
         "wires": [
             [
-                "f427b94e9af56013"
+                "66b63a5f246a4508"
             ]
         ]
     },
     {
-        "id": "e70201fd67e55953",
+        "id": "4732b270422034b9",
         "type": "link out",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "Log MQTT traffic",
         "mode": "link",
         "links": [
-            "f64afdb2.ae6738"
+            "82b51bd97bd88d3c"
         ],
         "x": 485,
         "y": 560,
         "wires": []
     },
     {
-        "id": "92140a2795cba5bb",
+        "id": "ba6f2e4cc483002d",
         "type": "comment",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "MQTT traffic",
         "info": "",
         "x": 250,
@@ -2719,9 +2721,9 @@
         "wires": []
     },
     {
-        "id": "ad8d062aaf3ea55f",
+        "id": "6cbca01d17d32891",
         "type": "comment",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "Save log to file",
         "info": "",
         "x": 1000,
@@ -2729,13 +2731,13 @@
         "wires": []
     },
     {
-        "id": "f2326bee1c92e33d",
+        "id": "ce8a12cf685cbfec",
         "type": "ui_switch",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "",
         "label": "MQTT Log",
         "tooltip": "",
-        "group": "eed1a8a6.8d8878",
+        "group": "b977110e3978794d",
         "order": 4,
         "width": 4,
         "height": 1,
@@ -2758,14 +2760,14 @@
         "y": 100,
         "wires": [
             [
-                "f47db3260e733c2b"
+                "a1a199361b42eda9"
             ]
         ]
     },
     {
-        "id": "f47db3260e733c2b",
+        "id": "a1a199361b42eda9",
         "type": "change",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "",
         "rules": [
             {
@@ -2788,9 +2790,9 @@
         ]
     },
     {
-        "id": "7a538c32a0d8567a",
+        "id": "7bb335d304894053",
         "type": "comment",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "Toggle MQTT Log",
         "info": "",
         "x": 230,
@@ -2798,9 +2800,9 @@
         "wires": []
     },
     {
-        "id": "f427b94e9af56013",
+        "id": "66b63a5f246a4508",
         "type": "switch",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "",
         "property": "mqttlog",
         "propertyType": "global",
@@ -2818,14 +2820,14 @@
         "y": 560,
         "wires": [
             [
-                "e70201fd67e55953"
+                "4732b270422034b9"
             ]
         ]
     },
     {
-        "id": "be95a8ccdfebdf1c",
+        "id": "8024db31b2b8fe7e",
         "type": "comment",
-        "z": "31a7412f.61a816",
+        "z": "46b5fdb2e4905102",
         "name": "MQTT log enabled",
         "info": "",
         "x": 410,
