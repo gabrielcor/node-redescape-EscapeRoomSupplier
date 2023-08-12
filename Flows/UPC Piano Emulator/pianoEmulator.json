@@ -1,0 +1,1295 @@
+[
+    {
+        "id": "07aa7f8b9b7c7cc6",
+        "type": "tab",
+        "label": "UPC_Emulator_Piano",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5d5969d3772df55d",
+        "type": "group",
+        "z": "07aa7f8b9b7c7cc6",
+        "name": "Emulate UPC API",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "7b109e2cf6330bcf",
+            "2c8da970782f3ab5",
+            "0dafa4b865429a39",
+            "2fa98413406f99b9"
+        ],
+        "x": 514,
+        "y": 139,
+        "w": 832,
+        "h": 82
+    },
+    {
+        "id": "3e8a4c1a153681ad",
+        "type": "group",
+        "z": "07aa7f8b9b7c7cc6",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "9bc648bd7de5b15c",
+            "b9449742b78240f9",
+            "72522f156a709278",
+            "94e2c06239ae5006",
+            "6eaa5562a614dbb1",
+            "85033cebfeef715f",
+            "817fddaadce7d511",
+            "4e926306675913e1",
+            "8b10db1cf42c35a1"
+        ],
+        "x": 34,
+        "y": 99,
+        "w": 452,
+        "h": 322
+    },
+    {
+        "id": "c621b7ae75b6c9d6",
+        "type": "group",
+        "z": "07aa7f8b9b7c7cc6",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "07b30a226e54a626",
+            "ab702454b0bc20bb"
+        ],
+        "x": 794,
+        "y": 259,
+        "w": 432,
+        "h": 122
+    },
+    {
+        "id": "cc206845e87c6693",
+        "type": "group",
+        "z": "07aa7f8b9b7c7cc6",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "3e72e3fbed0e8e11",
+            "24269140cb88811c"
+        ],
+        "x": 514,
+        "y": 259,
+        "w": 252,
+        "h": 122
+    },
+    {
+        "id": "0ee3c8a1ed91fbfc",
+        "type": "group",
+        "z": "07aa7f8b9b7c7cc6",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "c0c201984c878cb0",
+            "8170cd1b7e9eb046",
+            "24e49ad02033e577",
+            "dd985a7d7976b172",
+            "961edb1c416b507c",
+            "6701a878b067dfc2",
+            "0f8a1ff687c4b412",
+            "0336ebc374796ca8",
+            "9771aeb76ae6e52e",
+            "5302b1582013e5c1",
+            "bf3e90834ab2d249",
+            "545c0c2d9445895c",
+            "a81323c8c230aa82",
+            "f89f2484822fac71",
+            "d67cf78f8dfe316d",
+            "2124e5460f419998",
+            "8dc8499ca7be43b7",
+            "a447d568aaa2880e",
+            "9485d692ec197694",
+            "8afc15e8595812ee",
+            "b09947dae2e6f3a2",
+            "bbe5d778566027f4",
+            "27a77a025ec8f29c",
+            "aea1420d3d6ff7e8",
+            "f446ccbad9e4ece4"
+        ],
+        "x": 34,
+        "y": 459,
+        "w": 892,
+        "h": 522
+    },
+    {
+        "id": "7b109e2cf6330bcf",
+        "type": "http in",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "5d5969d3772df55d",
+        "name": "UPC API",
+        "url": "/upc/mock/99129022401007",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 600,
+        "y": 180,
+        "wires": [
+            [
+                "2c8da970782f3ab5"
+            ]
+        ]
+    },
+    {
+        "id": "2c8da970782f3ab5",
+        "type": "change",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "5d5969d3772df55d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"id\":\"\",\"sv\":\"01.01.06\",\"hv\":\"5\",\"puzzle_state\":{\"number_of_steps\":\"10\",\"current_step\":\"10\",\"attempt_number\":\"0\"},\"universal_state\":{\"machine_state\":\"2\",\"output_state\":\"1\",\"input_states\":\"65534\",\"overwritten_inputs\":\"0\"},\"message\":{\"type\":\"info\",\"content\":\"OK!\"}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 800,
+        "y": 180,
+        "wires": [
+            [
+                "2fa98413406f99b9"
+            ]
+        ]
+    },
+    {
+        "id": "0dafa4b865429a39",
+        "type": "http response",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "5d5969d3772df55d",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1270,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "2fa98413406f99b9",
+        "type": "function",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "5d5969d3772df55d",
+        "name": "Update payload with UPC state",
+        "func": "let payload = msg.payload; //get payload\npayload.universal_state.machine_state = flow.get(\"deviceState\");\npayload.id = flow.get(\"deviceId\");\nmsg.payload = payload;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 180,
+        "wires": [
+            [
+                "0dafa4b865429a39"
+            ]
+        ]
+    },
+    {
+        "id": "9bc648bd7de5b15c",
+        "type": "link in",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "3e8a4c1a153681ad",
+        "name": "link in 21",
+        "links": [
+            "442e7bc38dd4c3b7",
+            "758310f9eb5818de"
+        ],
+        "x": 95,
+        "y": 140,
+        "wires": [
+            [
+                "b9449742b78240f9"
+            ]
+        ]
+    },
+    {
+        "id": "b9449742b78240f9",
+        "type": "change",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "3e8a4c1a153681ad",
+        "name": "Initialize Device",
+        "rules": [
+            {
+                "t": "set",
+                "p": "deviceState",
+                "pt": "flow",
+                "to": "0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "deviceId",
+                "pt": "flow",
+                "to": "99129022401007",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "72522f156a709278",
+        "type": "ui_button",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "3e8a4c1a153681ad",
+        "name": "",
+        "group": "77259b327d01b18e",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "RESET",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 260,
+        "wires": [
+            [
+                "b9449742b78240f9",
+                "85033cebfeef715f",
+                "817fddaadce7d511"
+            ]
+        ]
+    },
+    {
+        "id": "94e2c06239ae5006",
+        "type": "change",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "3e8a4c1a153681ad",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "deviceState",
+                "pt": "flow",
+                "to": "2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6eaa5562a614dbb1",
+        "type": "ui_button",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "3e8a4c1a153681ad",
+        "name": "",
+        "group": "77259b327d01b18e",
+        "order": 3,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "SOLVE",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 380,
+        "wires": [
+            [
+                "94e2c06239ae5006"
+            ]
+        ]
+    },
+    {
+        "id": "c0c201984c878cb0",
+        "type": "play audio",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "",
+        "voice": "20",
+        "x": 670,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "8170cd1b7e9eb046",
+        "type": "ui_button",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "",
+        "group": "f268a0f245c5bd35",
+        "order": 4,
+        "width": 1,
+        "height": 2,
+        "passthru": false,
+        "label": "si",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "si",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 540,
+        "wires": [
+            [
+                "24e49ad02033e577",
+                "2124e5460f419998"
+            ]
+        ]
+    },
+    {
+        "id": "24e49ad02033e577",
+        "type": "file in",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "si",
+        "filename": "/Users/rodrigoalsogaray/Desktop/pianoSounds/si.wav",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 330,
+        "y": 540,
+        "wires": [
+            [
+                "c0c201984c878cb0"
+            ]
+        ]
+    },
+    {
+        "id": "dd985a7d7976b172",
+        "type": "ui_button",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "do",
+        "group": "f268a0f245c5bd35",
+        "order": 5,
+        "width": 1,
+        "height": 2,
+        "passthru": false,
+        "label": "do",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "do",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 580,
+        "wires": [
+            [
+                "6701a878b067dfc2",
+                "2124e5460f419998"
+            ]
+        ]
+    },
+    {
+        "id": "961edb1c416b507c",
+        "type": "ui_button",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "",
+        "group": "f268a0f245c5bd35",
+        "order": 6,
+        "width": 1,
+        "height": 2,
+        "passthru": false,
+        "label": "fa",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "fa",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 620,
+        "wires": [
+            [
+                "0f8a1ff687c4b412",
+                "2124e5460f419998"
+            ]
+        ]
+    },
+    {
+        "id": "6701a878b067dfc2",
+        "type": "file in",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "do",
+        "filename": "/Users/rodrigoalsogaray/Desktop/pianoSounds/do.wav",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 330,
+        "y": 580,
+        "wires": [
+            [
+                "c0c201984c878cb0"
+            ]
+        ]
+    },
+    {
+        "id": "0f8a1ff687c4b412",
+        "type": "file in",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "fa",
+        "filename": "/Users/rodrigoalsogaray/Desktop/pianoSounds/fa.wav",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 330,
+        "y": 620,
+        "wires": [
+            [
+                "c0c201984c878cb0"
+            ]
+        ]
+    },
+    {
+        "id": "0336ebc374796ca8",
+        "type": "ui_button",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "",
+        "group": "f268a0f245c5bd35",
+        "order": 7,
+        "width": 1,
+        "height": 2,
+        "passthru": false,
+        "label": "la",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "la",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 660,
+        "wires": [
+            [
+                "545c0c2d9445895c",
+                "2124e5460f419998"
+            ]
+        ]
+    },
+    {
+        "id": "9771aeb76ae6e52e",
+        "type": "ui_button",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "",
+        "group": "f268a0f245c5bd35",
+        "order": 8,
+        "width": 1,
+        "height": 2,
+        "passthru": false,
+        "label": " mi",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "mi",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 700,
+        "wires": [
+            [
+                "a81323c8c230aa82",
+                "2124e5460f419998"
+            ]
+        ]
+    },
+    {
+        "id": "5302b1582013e5c1",
+        "type": "ui_button",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "",
+        "group": "f268a0f245c5bd35",
+        "order": 9,
+        "width": 1,
+        "height": 2,
+        "passthru": false,
+        "label": "re",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "re",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 740,
+        "wires": [
+            [
+                "f89f2484822fac71",
+                "2124e5460f419998"
+            ]
+        ]
+    },
+    {
+        "id": "bf3e90834ab2d249",
+        "type": "ui_button",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "",
+        "group": "f268a0f245c5bd35",
+        "order": 3,
+        "width": 1,
+        "height": 2,
+        "passthru": false,
+        "label": "sol",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "sol",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 780,
+        "wires": [
+            [
+                "d67cf78f8dfe316d",
+                "2124e5460f419998"
+            ]
+        ]
+    },
+    {
+        "id": "545c0c2d9445895c",
+        "type": "file in",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "la",
+        "filename": "/Users/rodrigoalsogaray/Desktop/pianoSounds/la.wav",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 330,
+        "y": 660,
+        "wires": [
+            [
+                "c0c201984c878cb0"
+            ]
+        ]
+    },
+    {
+        "id": "a81323c8c230aa82",
+        "type": "file in",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "mi",
+        "filename": "/Users/rodrigoalsogaray/Desktop/pianoSounds/mi.wav",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 330,
+        "y": 700,
+        "wires": [
+            [
+                "c0c201984c878cb0"
+            ]
+        ]
+    },
+    {
+        "id": "f89f2484822fac71",
+        "type": "file in",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "re",
+        "filename": "/Users/rodrigoalsogaray/Desktop/pianoSounds/re.wav",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 330,
+        "y": 740,
+        "wires": [
+            [
+                "c0c201984c878cb0"
+            ]
+        ]
+    },
+    {
+        "id": "d67cf78f8dfe316d",
+        "type": "file in",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "sol",
+        "filename": "/Users/rodrigoalsogaray/Desktop/pianoSounds/sol.wav",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 330,
+        "y": 780,
+        "wires": [
+            [
+                "c0c201984c878cb0"
+            ]
+        ]
+    },
+    {
+        "id": "2124e5460f419998",
+        "type": "function",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "function 3",
+        "func": "let pianoCombination = \"doremifasol\"\n\nlet enteredPiano = (flow.get(\"enteredPiano\") || \"\") + msg.payload;\nflow.set(\"enteredPiano\", enteredPiano);\n\nif(enteredPiano.length == 11){\n    if (enteredPiano == \"doremifasol\"){\n        msg.payload = \"CORRECT!\"\n        flow.set(\"enteredPiano\", \"\")\n        return msg\n    } else {\n        msg.payload = \"INCORRECT!\"\n        flow.set(\"enteredPiano\", \"\")\n        return msg\n    }\n}\n\nif (enteredPiano.length > 11){\n    flow.set(\"enteredPiano\", \"\")\n    msg.payload = \"exceso arreglado\"\n    return msg\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 880,
+        "wires": [
+            [
+                "8dc8499ca7be43b7",
+                "8afc15e8595812ee",
+                "b09947dae2e6f3a2"
+            ]
+        ]
+    },
+    {
+        "id": "8dc8499ca7be43b7",
+        "type": "switch",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "CORRECT!",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 530,
+        "y": 840,
+        "wires": [
+            [
+                "a447d568aaa2880e"
+            ]
+        ]
+    },
+    {
+        "id": "a447d568aaa2880e",
+        "type": "change",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "deviceState",
+                "pt": "flow",
+                "to": "2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "85033cebfeef715f",
+        "type": "change",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "3e8a4c1a153681ad",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enteredPiano",
+                "pt": "flow",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3e72e3fbed0e8e11",
+        "type": "ui_template",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "cc206845e87c6693",
+        "group": "f08ba3d0ec182a89",
+        "name": "piano emulator styles",
+        "order": 15,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n\n#UPC_Emulators_-_Room_2_Piano_cards button{\n    background: whitesmoke;\n    color: gray;\n    box-shadow: -1px 4px 0px 0px rgba(250,238,238,0.75);\n    -webkit-box-shadow: -1px 4px 0px 0px rgba(250,238,238,0.75);\n    -moz-box-shadow: -1px 4px 0px 0px rgba(250,238,238,0.75);\n}\n\n#UPC_Emulators_-_Room_2_Piano_cards md-card{\n    background: url(data:image/jpeg;base64,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);\n    background-size: cover; \n    color: whitesmoke;\n    font-weight: bold;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n#UPC_Emulators_-_Room_2_Piano_cards{\nbackground: url(data:image/jpeg;base64,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);\nbackground-size: cover;\n}\n\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "className": "",
+        "x": 640,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "07b30a226e54a626",
+        "type": "ui_template",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "c621b7ae75b6c9d6",
+        "group": "f268a0f245c5bd35",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<div ng-bind-html=\"\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 880,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9485d692ec197694",
+        "type": "ui_text",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "group": "f268a0f245c5bd35",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 710,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "8afc15e8595812ee",
+        "type": "switch",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "CORRECT!",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 530,
+        "y": 880,
+        "wires": [
+            [
+                "9485d692ec197694"
+            ]
+        ]
+    },
+    {
+        "id": "b09947dae2e6f3a2",
+        "type": "switch",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "INCORRECT!",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 530,
+        "y": 920,
+        "wires": [
+            [
+                "9485d692ec197694"
+            ]
+        ]
+    },
+    {
+        "id": "817fddaadce7d511",
+        "type": "change",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "3e8a4c1a153681ad",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 280,
+        "wires": [
+            [
+                "9485d692ec197694"
+            ]
+        ]
+    },
+    {
+        "id": "24269140cb88811c",
+        "type": "comment",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "cc206845e87c6693",
+        "name": "piano emulator styles",
+        "info": "",
+        "x": 640,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "ab702454b0bc20bb",
+        "type": "comment",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "c621b7ae75b6c9d6",
+        "name": "this template is only for making space on dashboard",
+        "info": "",
+        "x": 1010,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "bbe5d778566027f4",
+        "type": "comment",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "plays the key sounds",
+        "info": "",
+        "x": 700,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "27a77a025ec8f29c",
+        "type": "comment",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "node tha read files and gets the sound",
+        "info": "",
+        "x": 350,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "aea1420d3d6ff7e8",
+        "type": "comment",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "validation",
+        "info": "",
+        "x": 340,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "f446ccbad9e4ece4",
+        "type": "comment",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "0ee3c8a1ed91fbfc",
+        "name": "shows payload on dashboard",
+        "info": "",
+        "x": 780,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "4e926306675913e1",
+        "type": "comment",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "3e8a4c1a153681ad",
+        "name": "set enteredPiano to 0 ",
+        "info": "",
+        "x": 360,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "8b10db1cf42c35a1",
+        "type": "comment",
+        "z": "07aa7f8b9b7c7cc6",
+        "g": "3e8a4c1a153681ad",
+        "name": "cleans text input",
+        "info": "",
+        "x": 340,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "908a60a7c7c935eb",
+        "type": "ui_spacer",
+        "z": "07aa7f8b9b7c7cc6",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8b2c37fd4dd17242",
+        "type": "ui_spacer",
+        "z": "07aa7f8b9b7c7cc6",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "85308c64f682fdfd",
+        "type": "ui_spacer",
+        "z": "07aa7f8b9b7c7cc6",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "9a30dbaf8c491b52",
+        "type": "ui_spacer",
+        "z": "07aa7f8b9b7c7cc6",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d6fb853c318fa7aa",
+        "type": "ui_spacer",
+        "z": "07aa7f8b9b7c7cc6",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "0844ddb7d8b97052",
+        "type": "ui_spacer",
+        "z": "07aa7f8b9b7c7cc6",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 9,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "7a368b1590fb1dd1",
+        "type": "ui_spacer",
+        "z": "07aa7f8b9b7c7cc6",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 10,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "1ca05be580126a5f",
+        "type": "ui_spacer",
+        "z": "07aa7f8b9b7c7cc6",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 11,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "e85599760bb0f25b",
+        "type": "ui_spacer",
+        "z": "07aa7f8b9b7c7cc6",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 12,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8fa30c84f18bfdca",
+        "type": "ui_spacer",
+        "z": "07aa7f8b9b7c7cc6",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 14,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "ca14dd0208307f61",
+        "type": "ui_spacer",
+        "z": "07aa7f8b9b7c7cc6",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 15,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "ea76d9c6be455649",
+        "type": "ui_spacer",
+        "z": "07aa7f8b9b7c7cc6",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 16,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "f943497263d95dc7",
+        "type": "ui_spacer",
+        "z": "07aa7f8b9b7c7cc6",
+        "name": "spacer",
+        "group": "f268a0f245c5bd35",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2be0af071f19b4bb",
+        "type": "ui_spacer",
+        "z": "07aa7f8b9b7c7cc6",
+        "name": "spacer",
+        "group": "f268a0f245c5bd35",
+        "order": 10,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2bc07b77c18cecf2",
+        "type": "ui_spacer",
+        "z": "07aa7f8b9b7c7cc6",
+        "name": "spacer",
+        "group": "f268a0f245c5bd35",
+        "order": 11,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "6afb2e4ffb2a491c",
+        "type": "ui_spacer",
+        "z": "07aa7f8b9b7c7cc6",
+        "name": "spacer",
+        "group": "f268a0f245c5bd35",
+        "order": 12,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "77259b327d01b18e",
+        "type": "ui_group",
+        "name": "Room 2",
+        "tab": "7d66f574.b154cc",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f268a0f245c5bd35",
+        "type": "ui_group",
+        "name": "Piano",
+        "tab": "bd31580a976dc3b4",
+        "order": 2,
+        "disp": true,
+        "width": 9,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f08ba3d0ec182a89",
+        "type": "ui_group",
+        "name": "Game Control",
+        "tab": "a38c3d325d960343",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9154f43a07fe01ef",
+        "type": "ui_group",
+        "name": "Guillotine",
+        "tab": "bd31580a976dc3b4",
+        "order": 1,
+        "disp": true,
+        "width": 5,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7d66f574.b154cc",
+        "type": "ui_tab",
+        "name": "Devices",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "bd31580a976dc3b4",
+        "type": "ui_tab",
+        "name": "UPC Emulators - Room 2",
+        "icon": "dashboard",
+        "order": 7,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a38c3d325d960343",
+        "type": "ui_tab",
+        "name": "Main",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]

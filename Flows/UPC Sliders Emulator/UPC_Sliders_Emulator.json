@@ -1,0 +1,916 @@
+[
+    {
+        "id": "636d7eef98bb8ce6",
+        "type": "tab",
+        "label": "UPC_Emulator_Slider_Sensor",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3190008a623fe582",
+        "type": "group",
+        "z": "636d7eef98bb8ce6",
+        "name": "Emulate UPC API",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ddfe4dbeec59a94c",
+            "0474866c2c4360d2",
+            "11e7040d54910e89",
+            "8d1b2dd3ccc33043"
+        ],
+        "x": 694,
+        "y": 139,
+        "w": 832,
+        "h": 82
+    },
+    {
+        "id": "73a0431de850df1b",
+        "type": "group",
+        "z": "636d7eef98bb8ce6",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "08db9b44f896b5d7",
+            "7920b9272d59c3e2",
+            "fe078a2d0d74bb71",
+            "9d785bed375c7a21",
+            "b20f0722b0241768",
+            "ac5a425823bf45d5",
+            "ed8f51dbe8c0830f",
+            "f7890be38ebee52d",
+            "cb7f8a8e42e7bdcf",
+            "064aae5e9199f70f",
+            "2b939f09b1351ad1",
+            "5bfff010382fc9fb",
+            "a842ea26b21f408c",
+            "254abecf6caf0293",
+            "f338f9d0b5c22673",
+            "48929d5f497be8aa",
+            "85b5256420b44c0f",
+            "d02bec05771f204a",
+            "92f36842a3348dfe",
+            "b1638f95f568648f",
+            "b80afd20ecf203b1",
+            "fa0dcfce4f8f3a57",
+            "634c963c5a2710b1"
+        ],
+        "x": 54,
+        "y": 259,
+        "w": 772,
+        "h": 782
+    },
+    {
+        "id": "99d4205c961989be",
+        "type": "link in",
+        "z": "636d7eef98bb8ce6",
+        "name": "link in 7",
+        "links": [
+            "442e7bc38dd4c3b7",
+            "758310f9eb5818de"
+        ],
+        "x": 125,
+        "y": 60,
+        "wires": [
+            [
+                "b3716ad82ec3535e"
+            ]
+        ]
+    },
+    {
+        "id": "b3716ad82ec3535e",
+        "type": "change",
+        "z": "636d7eef98bb8ce6",
+        "name": "Initialize Device",
+        "rules": [
+            {
+                "t": "set",
+                "p": "deviceState",
+                "pt": "flow",
+                "to": "0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "deviceId",
+                "pt": "flow",
+                "to": "99129022401002",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "86123bac6e37819e",
+        "type": "ui_button",
+        "z": "636d7eef98bb8ce6",
+        "name": "",
+        "group": "4f349049de3d568f",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "RESET",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 180,
+        "wires": [
+            [
+                "b3716ad82ec3535e",
+                "01f086ad56f1c387"
+            ]
+        ]
+    },
+    {
+        "id": "e4e3943663c82668",
+        "type": "change",
+        "z": "636d7eef98bb8ce6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "deviceState",
+                "pt": "flow",
+                "to": "2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4838e664a3aa185c",
+        "type": "ui_button",
+        "z": "636d7eef98bb8ce6",
+        "name": "",
+        "group": "4f349049de3d568f",
+        "order": 3,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "SOLVE",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 370,
+        "y": 40,
+        "wires": [
+            [
+                "e4e3943663c82668"
+            ]
+        ]
+    },
+    {
+        "id": "ddfe4dbeec59a94c",
+        "type": "http in",
+        "z": "636d7eef98bb8ce6",
+        "g": "3190008a623fe582",
+        "name": "UPC API",
+        "url": "/upc/mock/99129022401002",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 780,
+        "y": 180,
+        "wires": [
+            [
+                "0474866c2c4360d2"
+            ]
+        ]
+    },
+    {
+        "id": "0474866c2c4360d2",
+        "type": "change",
+        "z": "636d7eef98bb8ce6",
+        "g": "3190008a623fe582",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"id\":\"\",\"sv\":\"01.01.06\",\"hv\":\"5\",\"puzzle_state\":{\"number_of_steps\":\"10\",\"current_step\":\"10\",\"attempt_number\":\"0\"},\"universal_state\":{\"machine_state\":\"2\",\"output_state\":\"1\",\"input_states\":\"65534\",\"overwritten_inputs\":\"0\"},\"message\":{\"type\":\"info\",\"content\":\"OK!\"}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 180,
+        "wires": [
+            [
+                "8d1b2dd3ccc33043"
+            ]
+        ]
+    },
+    {
+        "id": "11e7040d54910e89",
+        "type": "http response",
+        "z": "636d7eef98bb8ce6",
+        "g": "3190008a623fe582",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1450,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "8d1b2dd3ccc33043",
+        "type": "function",
+        "z": "636d7eef98bb8ce6",
+        "g": "3190008a623fe582",
+        "name": "Update payload with UPC state",
+        "func": "let payload = msg.payload; //get payload\npayload.universal_state.machine_state = flow.get(\"deviceState\");\npayload.id = flow.get(\"deviceId\");\nmsg.payload = payload;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 180,
+        "wires": [
+            [
+                "11e7040d54910e89"
+            ]
+        ]
+    },
+    {
+        "id": "08db9b44f896b5d7",
+        "type": "ui_slider",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "",
+        "label": "S1",
+        "tooltip": "",
+        "group": "f3029da3e83b317f",
+        "order": 1,
+        "width": 1,
+        "height": 5,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 310,
+        "y": 340,
+        "wires": [
+            [
+                "7920b9272d59c3e2"
+            ]
+        ]
+    },
+    {
+        "id": "7920b9272d59c3e2",
+        "type": "change",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sliderNumber1",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fe078a2d0d74bb71",
+        "type": "inject",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 330,
+        "y": 880,
+        "wires": [
+            [
+                "9d785bed375c7a21"
+            ]
+        ]
+    },
+    {
+        "id": "9d785bed375c7a21",
+        "type": "function",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "validation",
+        "func": "let slider1 = flow.get(\"sliderNumber1\")\nlet slider2 = flow.get(\"sliderNumber2\")\nlet slider3 = flow.get(\"sliderNumber3\")\nlet slider4 = flow.get(\"sliderNumber4\")\nlet slider5 = flow.get(\"sliderNumber5\")\nlet slider6 = flow.get(\"sliderNumber6\")\n\n\nmsg.payload = (slider1 == 2 && slider2 == 4 && slider3 == 1 && slider4 == 0 && slider5 == 9 && slider6 == 1) ? \"resolved\" : \"wrong\";\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 880,
+        "wires": [
+            [
+                "cb7f8a8e42e7bdcf"
+            ]
+        ]
+    },
+    {
+        "id": "b20f0722b0241768",
+        "type": "ui_slider",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "",
+        "label": "S2",
+        "tooltip": "",
+        "group": "f3029da3e83b317f",
+        "order": 2,
+        "width": 1,
+        "height": 5,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 310,
+        "y": 400,
+        "wires": [
+            [
+                "ac5a425823bf45d5"
+            ]
+        ]
+    },
+    {
+        "id": "ac5a425823bf45d5",
+        "type": "change",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sliderNumber2",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ed8f51dbe8c0830f",
+        "type": "ui_slider",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "",
+        "label": "S3",
+        "tooltip": "",
+        "group": "f3029da3e83b317f",
+        "order": 3,
+        "width": 1,
+        "height": 5,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 310,
+        "y": 460,
+        "wires": [
+            [
+                "f7890be38ebee52d"
+            ]
+        ]
+    },
+    {
+        "id": "f7890be38ebee52d",
+        "type": "change",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sliderNumber3",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cb7f8a8e42e7bdcf",
+        "type": "switch",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "resolved",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 960,
+        "wires": [
+            [
+                "064aae5e9199f70f"
+            ]
+        ]
+    },
+    {
+        "id": "064aae5e9199f70f",
+        "type": "change",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "deviceState",
+                "pt": "flow",
+                "to": "2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b939f09b1351ad1",
+        "type": "ui_slider",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "",
+        "label": "S4",
+        "tooltip": "",
+        "group": "f3029da3e83b317f",
+        "order": 4,
+        "width": 1,
+        "height": 5,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 310,
+        "y": 520,
+        "wires": [
+            [
+                "254abecf6caf0293"
+            ]
+        ]
+    },
+    {
+        "id": "5bfff010382fc9fb",
+        "type": "ui_slider",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "",
+        "label": "S5",
+        "tooltip": "",
+        "group": "f3029da3e83b317f",
+        "order": 5,
+        "width": 1,
+        "height": 5,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 310,
+        "y": 580,
+        "wires": [
+            [
+                "f338f9d0b5c22673"
+            ]
+        ]
+    },
+    {
+        "id": "a842ea26b21f408c",
+        "type": "ui_slider",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "",
+        "label": "S6",
+        "tooltip": "",
+        "group": "f3029da3e83b317f",
+        "order": 6,
+        "width": 1,
+        "height": 5,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 310,
+        "y": 640,
+        "wires": [
+            [
+                "48929d5f497be8aa"
+            ]
+        ]
+    },
+    {
+        "id": "254abecf6caf0293",
+        "type": "change",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sliderNumber4",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f338f9d0b5c22673",
+        "type": "change",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sliderNumber5",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "48929d5f497be8aa",
+        "type": "change",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sliderNumber6",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "85b5256420b44c0f",
+        "type": "ui_template",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "group": "f08ba3d0ec182a89",
+        "name": "STYLE SLIDER EMULATOR",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n\n   /* */\n.nr-dashboard-cardtitle{\n    text-align: center;\n}\n\n.nr-dashboard-theme .nr-dashboard-slider md-slider .md-track-ticks{\n    background: #3a3a3a;\n    width: 3px;\n    border-radius: 14%;\n}\n\n\n\n.nr-dashboard-theme .nr-dashboard-slider .md-focus-ring {\nbackground-color: #ffed09;\ntransform: scale(0.4);\nborder: solid 2px black;\n}\n\n\n#UPC_Emulators_Slider_Sensor_cards{\n    background:\n    url(https:encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR4t3xp9VfXEIp9HEhmMIC_Bd5OkrS4F-6A6IcraoYMDIC7BzjuOm6A-0setYpujvijeI&usqp=CAU);\n}\n\n#UPC_Emulators_Slider_Sensor_cards div p {\n    color: grey;\n}\n.md-slider-wrapper{\ntouch-action: pan-x;\nbackground-color: #80808047;\nborder-radius: 30%;\nmargin-top: 5px;\nwidth: 14px;\nmargin: auto;\n}\n\n.nr-dashboard-cardcontainer > .visible {\nbackground-color: transparent;\n}\n\n#UPC_Emulators_Slider_Sensor{\nbackground: rgba(240,233,215,255);\nbox-shadow: rgba(0,0,0,0.35) 0px 5px 15px;\n}\n\n#UPC_Emulators_Slider_Sensor_cards{\n    border-top: 1px dotted grey;\n}\n\n.nr-dashboard-theme .nr-dashboard-slider .md-min[md-discrete] .md-sign {\nbackground: #928f8fc7;\n}\n\n.nr-dashboard-cardtitle{\n    color: #959494;\n    font-size: 22px;\n}\n   \n.label-v{\n    color: dimgray;\n    font-weight: bold;\n}\n\n    \n\n\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "className": "",
+        "x": 420,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d02bec05771f204a",
+        "type": "comment",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "setting flow variables with the values of the sliders",
+        "info": "",
+        "x": 450,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "92f36842a3348dfe",
+        "type": "comment",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "injets every 1 second",
+        "info": "",
+        "x": 320,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "b1638f95f568648f",
+        "type": "comment",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "validation of flow variables",
+        "info": "",
+        "x": 590,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "b80afd20ecf203b1",
+        "type": "comment",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "changing flow.deviceState to 2",
+        "info": "",
+        "x": 670,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "fa0dcfce4f8f3a57",
+        "type": "comment",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "checking if msg.payload == resolved",
+        "info": "",
+        "x": 340,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "01f086ad56f1c387",
+        "type": "change",
+        "z": "636d7eef98bb8ce6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 180,
+        "wires": [
+            [
+                "3903504463f0e78e"
+            ]
+        ]
+    },
+    {
+        "id": "3903504463f0e78e",
+        "type": "link out",
+        "z": "636d7eef98bb8ce6",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "634c963c5a2710b1"
+        ],
+        "x": 535,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "634c963c5a2710b1",
+        "type": "link in",
+        "z": "636d7eef98bb8ce6",
+        "g": "73a0431de850df1b",
+        "name": "link in 20",
+        "links": [
+            "3903504463f0e78e"
+        ],
+        "x": 95,
+        "y": 480,
+        "wires": [
+            [
+                "08db9b44f896b5d7",
+                "b20f0722b0241768",
+                "ed8f51dbe8c0830f",
+                "2b939f09b1351ad1",
+                "5bfff010382fc9fb",
+                "a842ea26b21f408c"
+            ]
+        ]
+    },
+    {
+        "id": "bfa5cf95d1e15213",
+        "type": "comment",
+        "z": "636d7eef98bb8ce6",
+        "name": "sets sliders and sliderNumberNN to 0",
+        "info": "",
+        "x": 370,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "4f349049de3d568f",
+        "type": "ui_group",
+        "name": "Room 1",
+        "tab": "7d66f574.b154cc",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f3029da3e83b317f",
+        "type": "ui_group",
+        "name": "Slider Sensor",
+        "tab": "7f2947c85d1fbc50",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f08ba3d0ec182a89",
+        "type": "ui_group",
+        "name": "Game Control",
+        "tab": "a38c3d325d960343",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7d66f574.b154cc",
+        "type": "ui_tab",
+        "name": "Devices",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7f2947c85d1fbc50",
+        "type": "ui_tab",
+        "name": "UPC Emulators",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a38c3d325d960343",
+        "type": "ui_tab",
+        "name": "Main",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
