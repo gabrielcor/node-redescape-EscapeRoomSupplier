@@ -1,7 +1,7 @@
 # Get UPC State of Molecule Machine
 
-This flow gets the UPC state of the Molecule Machine Emulator and shows the result in a Devices Tab in the Dashboard.
-
+This flow gets the UPC state of the Molecule Machine Emulator and shows the result in a "Devices Dashboard" tab in the Dashboard. 
+It also shows the result in the old dashboard "Devices - Beta"
 
 ![Get UPC State Molecule Machine](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/GetMoleculeMachine0.png)
 
