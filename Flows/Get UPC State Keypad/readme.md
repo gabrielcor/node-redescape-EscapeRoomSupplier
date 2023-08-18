@@ -1,6 +1,7 @@
 # Get UPC State of Keypad
 
-This flow gets the UPC state of the Keypad Emulator and shows the result in a Devices Tab in the Dashboard.
+This flow gets the UPC state of the Keypad Emulator and shows the result in a "Devices Dashboard" tab in the Dashboard. 
+It also shows the result in the old dashboard "Devices - Beta"
 
 
 ![Get UPC State Keypad](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/GetKeypad0.png)

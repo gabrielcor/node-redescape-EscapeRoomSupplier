@@ -32,12 +32,36 @@
             "3b0bc2707d02d065",
             "71ad163314174cf7",
             "b1ba8f12990199b9",
-            "9f0e824c3912eabf"
+            "9f0e824c3912eabf",
+            "3fd8681d9a9f1459"
         ],
-        "x": 74,
-        "y": 59,
-        "w": 1102,
+        "x": 44,
+        "y": 39,
+        "w": 1288,
         "h": 562
+    },
+    {
+        "id": "3fd8681d9a9f1459",
+        "type": "group",
+        "z": "82bca98606cd74a6",
+        "g": "4d3bd4a85d43e50a",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "d2274598b27b193f",
+            "d010b513fe24478d"
+        ],
+        "x": 954,
+        "y": 399,
+        "w": 352,
+        "h": 122
     },
     {
         "id": "e56ffad3246f3029",
@@ -48,8 +72,8 @@
         "links": [
             "c7c4685c94a69e6f"
         ],
-        "x": 185,
-        "y": 360,
+        "x": 155,
+        "y": 340,
         "wires": [
             [
                 "603f5e54876a8e55"
@@ -73,8 +97,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 550,
-        "y": 360,
+        "x": 520,
+        "y": 340,
         "wires": [
             [
                 "462e9408ea3a0ddb"
@@ -94,8 +118,8 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 750,
-        "y": 360,
+        "x": 720,
+        "y": 340,
         "wires": [
             [
                 "44ef8f5531fb085f"
@@ -122,8 +146,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 320,
-        "y": 360,
+        "x": 290,
+        "y": 340,
         "wires": [
             [
                 "82f8ca747169711a"
@@ -142,11 +166,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 810,
-        "y": 580,
+        "x": 780,
+        "y": 560,
         "wires": [
             [
-                "9f0e824c3912eabf"
+                "9f0e824c3912eabf",
+                "d2274598b27b193f"
             ]
         ]
     },
@@ -159,8 +184,8 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 890,
-        "y": 360,
+        "x": 860,
+        "y": 340,
         "wires": [
             [
                 "647ce7a13353bbe2"
@@ -174,8 +199,8 @@
         "g": "4d3bd4a85d43e50a",
         "name": "Every tick",
         "info": "",
-        "x": 160,
-        "y": 320,
+        "x": 130,
+        "y": 300,
         "wires": []
     },
     {
@@ -188,8 +213,8 @@
             "442e7bc38dd4c3b7",
             "758310f9eb5818de"
         ],
-        "x": 355,
-        "y": 140,
+        "x": 325,
+        "y": 120,
         "wires": [
             [
                 "3b0bc2707d02d065"
@@ -230,8 +255,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 620,
-        "y": 140,
+        "x": 590,
+        "y": 120,
         "wires": [
             [
                 "b1ba8f12990199b9"
@@ -245,8 +270,8 @@
         "g": "4d3bd4a85d43e50a",
         "name": "Always initialize to: http://nnn.nnn.nnn.nnn?command=state // where nnn.... is IP address of UPC device",
         "info": "",
-        "x": 790,
-        "y": 100,
+        "x": 760,
+        "y": 80,
         "wires": []
     },
     {
@@ -269,8 +294,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
-        "y": 140,
+        "x": 850,
+        "y": 120,
         "wires": [
             [
                 "647ce7a13353bbe2"
@@ -284,7 +309,7 @@
         "g": "4d3bd4a85d43e50a",
         "group": "4f349049de3d568f",
         "name": "Keypad",
-        "order": 4,
+        "order": 21,
         "width": 6,
         "height": 4,
         "format": "<md-card-title>\n    <md-card-title-text>\n        <p class=\"md-headline\">{{msg.payload.deviceName}}</p>\n    </md-card-title-text>\n    <span ng-class=\"msg.payload.universal_state.machine_state=='2' ? 'fa fa-unlock fa-2x' : 'fa fa-lock fa-2x'\"></span>\n</md-card-title>\n<md-card-content>\n    <div ng-style=\"{width:'100%',height:'8px','background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\" ></div>\n    <p>\n        {{msg.payload.description?msg.payload.description:'Unknown'}}\n<br>\n        {{msg.payload.id?msg.payload.id:'Unknown'}}\n        - {{msg.payload.time?msg.payload.time:'Unknown'}}\n<br>\n        {{msg.payload.universal_state.input_states?universal_state.input_states:'Unknown'}}\n    </p>\n    <div style=\"text-align:center\">\n        <span style=\"font-size: 2em;\">&nbsp;</span>\n    </div>\n</md-card-content>",
@@ -293,11 +318,44 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1060,
-        "y": 580,
+        "x": 1030,
+        "y": 560,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "d2274598b27b193f",
+        "type": "ui_template",
+        "z": "82bca98606cd74a6",
+        "g": "3fd8681d9a9f1459",
+        "group": "7d8a085018b16642",
+        "name": "Keypad",
+        "order": 16,
+        "width": 13,
+        "height": 1,
+        "format": "<div style=\"display: flex; justify-content: space-evenly; align-items: center;\">\n<p style=\"width: 20%\" class=\"md-title\">{{msg.payload.description?msg.payload.description:'Unknown'}} </p>\n\n\n<p style=\"width: 20%\">{{msg.payload.description?msg.payload.deviceName:'Unknown'}}</p>\n<p style=\"width: 20%\">{{msg.payload.id?msg.payload.id:'Unknown'}}</p>\n<div\n    ng-style=\"{width:'9%',height:'20px', 'text-align': 'center', 'color': 'white','font-weight': 'bold' ,'background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\">\n    {{ msg.payload.universal_state.machine_state=='2' ? 'Solved' : 'Armed' }}\n</div>\n<p style=\"width: 20%\"> {{msg.payload.time?msg.payload.time:'Unknown'}} </p>\n\n\n</div>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1040,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d010b513fe24478d",
+        "type": "comment",
+        "z": "82bca98606cd74a6",
+        "g": "3fd8681d9a9f1459",
+        "name": "shows devices in \"Devices Dashboard\"",
+        "info": "",
+        "x": 1130,
+        "y": 440,
+        "wires": []
     },
     {
         "id": "4f349049de3d568f",
@@ -311,11 +369,31 @@
         "className": ""
     },
     {
+        "id": "7d8a085018b16642",
+        "type": "ui_group",
+        "name": "Room 1",
+        "tab": "b62d0539.6fc68",
+        "order": 2,
+        "disp": true,
+        "width": "15",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "7d66f574.b154cc",
         "type": "ui_tab",
-        "name": "Devices",
+        "name": "Devices - Beta",
         "icon": "dashboard",
         "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b62d0539.6fc68",
+        "type": "ui_tab",
+        "name": "Devices Dashboard",
+        "icon": "dashboard",
+        "order": 1,
         "disabled": false,
         "hidden": false
     }
