@@ -1,0 +1,775 @@
+[
+    {
+        "id": "125e22cad7d86e40",
+        "type": "tab",
+        "label": "UPC_Guillotine_Emulator",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "354a3f4d6182ac87",
+        "type": "group",
+        "z": "125e22cad7d86e40",
+        "name": "Emulate UPC API",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "8a3a297b13697e01",
+            "41f8a6fd1077b69e",
+            "11608db8768e6de2",
+            "81c0791dde528fe4"
+        ],
+        "x": 74,
+        "y": 699,
+        "w": 832,
+        "h": 82
+    },
+    {
+        "id": "3c3fc5477c011596",
+        "type": "group",
+        "z": "125e22cad7d86e40",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "856867ea73cb6038",
+            "5edc6c7b64f4eccb",
+            "a1a173cdfe1759a2",
+            "0af26ad4eec3a386",
+            "77ee0d12fc8ac48e",
+            "d45c0a186dacd138",
+            "4239120526110260",
+            "17c2b6a4cb42c9ff",
+            "ac333651d1f4649d",
+            "a60cb3909fa59d58",
+            "1f1dc1954107e03d",
+            "ac87e4a3092d36b0",
+            "977dac509a4d8b29",
+            "56afe053a07f0509",
+            "451ee6fcdaa229f5",
+            "17cbc370921dfcdd",
+            "2b1d0b42fe0f86b0",
+            "1995d391d7461942",
+            "1fb7d093958230af",
+            "48fc8899e9c7ebd1"
+        ],
+        "x": 74,
+        "y": 79,
+        "w": 992,
+        "h": 582
+    },
+    {
+        "id": "856867ea73cb6038",
+        "type": "ui_slider",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "9154f43a07fe01ef",
+        "order": 1,
+        "width": 1,
+        "height": 6,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 170,
+        "y": 520,
+        "wires": [
+            [
+                "d45c0a186dacd138",
+                "4239120526110260"
+            ]
+        ]
+    },
+    {
+        "id": "5edc6c7b64f4eccb",
+        "type": "ui_led",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "order": 3,
+        "group": "9154f43a07fe01ef",
+        "width": 2,
+        "height": 2,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "gameOn",
+                "valueType": "str"
+            },
+            {
+                "color": "#6b6b6b",
+                "value": "gameOff",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 990,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "a1a173cdfe1759a2",
+        "type": "change",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "gameOn",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 500,
+        "wires": [
+            [
+                "5edc6c7b64f4eccb",
+                "0af26ad4eec3a386",
+                "77ee0d12fc8ac48e"
+            ]
+        ]
+    },
+    {
+        "id": "0af26ad4eec3a386",
+        "type": "ui_led",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "order": 8,
+        "group": "9154f43a07fe01ef",
+        "width": 2,
+        "height": 2,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#0840e7",
+                "value": "gameOn",
+                "valueType": "str"
+            },
+            {
+                "color": "#6b6b6b",
+                "value": "gameOff",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 990,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "77ee0d12fc8ac48e",
+        "type": "ui_led",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "order": 13,
+        "group": "9154f43a07fe01ef",
+        "width": 2,
+        "height": 2,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#a234d5",
+                "value": "gameOn",
+                "valueType": "str"
+            },
+            {
+                "color": "#6b6b6b",
+                "value": "gameOff",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 990,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "d45c0a186dacd138",
+        "type": "switch",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "10",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 500,
+        "wires": [
+            [
+                "a1a173cdfe1759a2",
+                "ac87e4a3092d36b0"
+            ]
+        ]
+    },
+    {
+        "id": "4239120526110260",
+        "type": "switch",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 540,
+        "wires": [
+            [
+                "17c2b6a4cb42c9ff",
+                "977dac509a4d8b29"
+            ]
+        ]
+    },
+    {
+        "id": "17c2b6a4cb42c9ff",
+        "type": "change",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "gameOff",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 540,
+        "wires": [
+            [
+                "77ee0d12fc8ac48e",
+                "0af26ad4eec3a386",
+                "5edc6c7b64f4eccb"
+            ]
+        ]
+    },
+    {
+        "id": "ac333651d1f4649d",
+        "type": "link in",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "name": "link in 24",
+        "links": [
+            "442e7bc38dd4c3b7",
+            "758310f9eb5818de"
+        ],
+        "x": 135,
+        "y": 220,
+        "wires": [
+            [
+                "a60cb3909fa59d58"
+            ]
+        ]
+    },
+    {
+        "id": "a60cb3909fa59d58",
+        "type": "change",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "name": "Initialize Device",
+        "rules": [
+            {
+                "t": "set",
+                "p": "deviceState",
+                "pt": "flow",
+                "to": "0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "deviceId",
+                "pt": "flow",
+                "to": "99129022401008",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1f1dc1954107e03d",
+        "type": "change",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "deviceState",
+                "pt": "flow",
+                "to": "2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8a3a297b13697e01",
+        "type": "http in",
+        "z": "125e22cad7d86e40",
+        "g": "354a3f4d6182ac87",
+        "name": "UPC API",
+        "url": "/upc/mock/99129022401008",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 740,
+        "wires": [
+            [
+                "41f8a6fd1077b69e"
+            ]
+        ]
+    },
+    {
+        "id": "41f8a6fd1077b69e",
+        "type": "change",
+        "z": "125e22cad7d86e40",
+        "g": "354a3f4d6182ac87",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"id\":\"\",\"sv\":\"01.01.06\",\"hv\":\"5\",\"puzzle_state\":{\"number_of_steps\":\"10\",\"current_step\":\"10\",\"attempt_number\":\"0\"},\"universal_state\":{\"machine_state\":\"2\",\"output_state\":\"1\",\"input_states\":\"65534\",\"overwritten_inputs\":\"0\"},\"message\":{\"type\":\"info\",\"content\":\"OK!\"}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 740,
+        "wires": [
+            [
+                "81c0791dde528fe4"
+            ]
+        ]
+    },
+    {
+        "id": "11608db8768e6de2",
+        "type": "http response",
+        "z": "125e22cad7d86e40",
+        "g": "354a3f4d6182ac87",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 830,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "81c0791dde528fe4",
+        "type": "function",
+        "z": "125e22cad7d86e40",
+        "g": "354a3f4d6182ac87",
+        "name": "Update payload with UPC state",
+        "func": "let payload = msg.payload; //get payload\npayload.universal_state.machine_state = flow.get(\"deviceState\");\npayload.id = flow.get(\"deviceId\");\nmsg.payload = payload;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 740,
+        "wires": [
+            [
+                "11608db8768e6de2"
+            ]
+        ]
+    },
+    {
+        "id": "ac87e4a3092d36b0",
+        "type": "change",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "deviceState",
+                "pt": "flow",
+                "to": "2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "977dac509a4d8b29",
+        "type": "change",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "name": "set flow deviceState",
+        "rules": [
+            {
+                "t": "set",
+                "p": "deviceState",
+                "pt": "flow",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "56afe053a07f0509",
+        "type": "change",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 280,
+        "wires": [
+            [
+                "856867ea73cb6038",
+                "2b1d0b42fe0f86b0"
+            ]
+        ]
+    },
+    {
+        "id": "451ee6fcdaa229f5",
+        "type": "change",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "10",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 160,
+        "wires": [
+            [
+                "856867ea73cb6038",
+                "17cbc370921dfcdd"
+            ]
+        ]
+    },
+    {
+        "id": "17cbc370921dfcdd",
+        "type": "change",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "gameOn",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 120,
+        "wires": [
+            [
+                "77ee0d12fc8ac48e",
+                "0af26ad4eec3a386",
+                "5edc6c7b64f4eccb"
+            ]
+        ]
+    },
+    {
+        "id": "2b1d0b42fe0f86b0",
+        "type": "change",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "gameOff",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 300,
+        "wires": [
+            [
+                "77ee0d12fc8ac48e",
+                "0af26ad4eec3a386",
+                "5edc6c7b64f4eccb"
+            ]
+        ]
+    },
+    {
+        "id": "1995d391d7461942",
+        "type": "ui_button",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "name": "",
+        "group": "7d8a085018b16642",
+        "order": 3,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "SOLVE",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 140,
+        "wires": [
+            [
+                "1f1dc1954107e03d",
+                "451ee6fcdaa229f5"
+            ]
+        ]
+    },
+    {
+        "id": "1fb7d093958230af",
+        "type": "ui_button",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "name": "",
+        "group": "7d8a085018b16642",
+        "order": 2,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "RESET",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "a60cb3909fa59d58",
+                "56afe053a07f0509"
+            ]
+        ]
+    },
+    {
+        "id": "48fc8899e9c7ebd1",
+        "type": "ui_template",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "group": "f08ba3d0ec182a89",
+        "name": "Style",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n\n\n#UPC_Emulators_Guillotine{\n    background: url(https://img.freepik.com/fotos-premium/material-hormigon-o-cemento-textura-fondo-pared-abstracta_43029-1419.jpg?w=1480);\n}\n#UPC_Emulators_Guillotine_cards{\n    border: solid 2px #827e7e;\n}\n </style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "className": "",
+        "x": 950,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9154f43a07fe01ef",
+        "type": "ui_group",
+        "name": "Guillotine",
+        "tab": "7f2947c85d1fbc50",
+        "order": 1,
+        "disp": true,
+        "width": 5,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7d8a085018b16642",
+        "type": "ui_group",
+        "name": "Room 1",
+        "tab": "b62d0539.6fc68",
+        "order": 2,
+        "disp": true,
+        "width": "15",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f08ba3d0ec182a89",
+        "type": "ui_group",
+        "name": "Game Control",
+        "tab": "a38c3d325d960343",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7f2947c85d1fbc50",
+        "type": "ui_tab",
+        "name": "UPC Emulators",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b62d0539.6fc68",
+        "type": "ui_tab",
+        "name": "Devices Dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a38c3d325d960343",
+        "type": "ui_tab",
+        "name": "Main",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
