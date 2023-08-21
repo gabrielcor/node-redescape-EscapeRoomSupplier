@@ -1,9 +1,9 @@
-# Get UPC State of Robert
+# Get UPC State of 1019
 
-This flow gets the UPC state of the Robert Emulator and shows the result in a "Devices Dashboard" tab in the Dashboard. 
+This flow gets the UPC state of the 1019 Emulator and shows the result in a "Devices Dashboard" tab in the Dashboard. 
 It also shows the result in the old dashboard "Devices - Beta"
 
-![Get UPC State Robert](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/getRobert0.png)
+![Get UPC State 1019](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/get1019-0.png)
 
 
 To acomplish that, we initialize the following flow variables
@@ -11,11 +11,11 @@ To acomplish that, we initialize the following flow variables
 
 IMPORTANT! Take into account that the IP address should be changed if necessary.
 
-###  deviceName: the name that we want to show for the device, ESRS-TEST02.
+###  deviceName: the name that we want to show for the device, ESRS-TEST03.
 
-###  description: Robert.
+###  description: 1019.
 
-![Initialize target URL & device data flow properties](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/getRobert1.png)
+![Initialize target URL & device data flow properties](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/get1019-1.png)
 
 
 The rest of the flow is pretty straightforward and you don't have to modify it unless you want specific behavior for the dashboard.
@@ -29,6 +29,6 @@ The rest of the flow is pretty straightforward and you don't have to modify it u
 5) Parse the JSON and send it to display in the dashboard.
 
 
-![View on dashboard](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/getRobert2.png)
+![View on dashboard](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/get1019-2.png)
 
 ### In the last screenshot, you can see the newly added reset and solve buttons, which allow interaction with the UPS from the dashboard where its status is displayed.

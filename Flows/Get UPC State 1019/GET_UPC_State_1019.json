@@ -1,0 +1,400 @@
+[
+    {
+        "id": "731251dd7bcdf99d",
+        "type": "tab",
+        "label": "UPC_1019_State",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "44b54af6b304eeab",
+        "type": "group",
+        "z": "731251dd7bcdf99d",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "aba2f0d60ce6d29b",
+            "df474a4d76e40d49",
+            "2fd87668832127fb",
+            "d832eb954bb63467",
+            "3c9d8001fbe5baa5",
+            "6d94c6a84c310104",
+            "fbc40436db02de92",
+            "eade73b162d465b0",
+            "342214a9122d347d",
+            "0a7eb3a3aa967cb7",
+            "f0fd065cd2582b73",
+            "7519d85797fab76c",
+            "52575cf10c3a5587"
+        ],
+        "x": 24,
+        "y": 59,
+        "w": 1228,
+        "h": 562
+    },
+    {
+        "id": "52575cf10c3a5587",
+        "type": "group",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "a5a8caa099d20ee7",
+            "95fac28b1a560bea"
+        ],
+        "x": 874,
+        "y": 419,
+        "w": 352,
+        "h": 122
+    },
+    {
+        "id": "aba2f0d60ce6d29b",
+        "type": "link in",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
+        "name": "link in 9",
+        "links": [
+            "c7c4685c94a69e6f"
+        ],
+        "x": 135,
+        "y": 360,
+        "wires": [
+            [
+                "d832eb954bb63467"
+            ]
+        ]
+    },
+    {
+        "id": "df474a4d76e40d49",
+        "type": "http request",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
+        "name": "Call API on UPC device",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:1880/upc/mock/99129022401003",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 500,
+        "y": 360,
+        "wires": [
+            [
+                "2fd87668832127fb"
+            ]
+        ]
+    },
+    {
+        "id": "2fd87668832127fb",
+        "type": "rbe",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 700,
+        "y": 360,
+        "wires": [
+            [
+                "fbc40436db02de92"
+            ]
+        ]
+    },
+    {
+        "id": "d832eb954bb63467",
+        "type": "change",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
+        "name": "set msg request",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "deviceUrl",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 270,
+        "y": 360,
+        "wires": [
+            [
+                "df474a4d76e40d49"
+            ]
+        ]
+    },
+    {
+        "id": "3c9d8001fbe5baa5",
+        "type": "ui_template",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
+        "group": "4f349049de3d568f",
+        "name": "1019",
+        "order": 9,
+        "width": 6,
+        "height": 4,
+        "format": "<md-card-title>\n    <md-card-title-text>\n        <p class=\"md-headline\">{{msg.payload.deviceName}}</p>\n    </md-card-title-text>\n    <span ng-class=\"msg.payload.universal_state.machine_state=='2' ? 'fa fa-unlock fa-2x' : 'fa fa-lock fa-2x'\"></span>\n</md-card-title>\n<md-card-content>\n    <div ng-style=\"{width:'100%',height:'8px','background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\" ></div>\n    <p>\n        {{msg.payload.description?msg.payload.description:'Unknown'}}\n<br>\n        {{msg.payload.id?msg.payload.id:'Unknown'}}\n        - {{msg.payload.time?msg.payload.time:'Unknown'}}\n<br>\n        {{msg.payload.universal_state.input_states?universal_state.input_states:'Unknown'}}\n    </p>\n    <div style=\"text-align:center\">\n        <span style=\"font-size: 2em;\">&nbsp;</span>\n    </div>\n</md-card-content>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 970,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6d94c6a84c310104",
+        "type": "function",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
+        "name": "Assign values to display",
+        "func": "let payload = msg.payload; //get payload\nlet id = msg.payload.id; // comes from the device\n\npayload.deviceName = flow.get(\"deviceName\");\npayload.description = flow.get(\"description\");\n\nlet d= new Date();\npayload.time = d.toLocaleTimeString();\nmsg.payload = payload;\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 580,
+        "wires": [
+            [
+                "3c9d8001fbe5baa5",
+                "a5a8caa099d20ee7"
+            ]
+        ]
+    },
+    {
+        "id": "fbc40436db02de92",
+        "type": "json",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 840,
+        "y": 360,
+        "wires": [
+            [
+                "6d94c6a84c310104"
+            ]
+        ]
+    },
+    {
+        "id": "eade73b162d465b0",
+        "type": "comment",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
+        "name": "Every tick",
+        "info": "",
+        "x": 110,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "342214a9122d347d",
+        "type": "link in",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
+        "name": "link in 10",
+        "links": [
+            "442e7bc38dd4c3b7",
+            "758310f9eb5818de"
+        ],
+        "x": 305,
+        "y": 140,
+        "wires": [
+            [
+                "0a7eb3a3aa967cb7"
+            ]
+        ]
+    },
+    {
+        "id": "0a7eb3a3aa967cb7",
+        "type": "change",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
+        "name": "Initialize target URL & device data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "deviceUrl",
+                "pt": "flow",
+                "to": "http://127.0.0.1/?command=state",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "deviceName",
+                "pt": "flow",
+                "to": "ESRS-TEST03",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "description",
+                "pt": "flow",
+                "to": "1019",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 140,
+        "wires": [
+            [
+                "7519d85797fab76c"
+            ]
+        ]
+    },
+    {
+        "id": "f0fd065cd2582b73",
+        "type": "comment",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
+        "name": "Always initialize to: http://nnn.nnn.nnn.nnn?command=state // where nnn.... is IP address of UPC device",
+        "info": "",
+        "x": 740,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "7519d85797fab76c",
+        "type": "change",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"id\":\"NOT connected\",\"sv\":\"01.01.06\",\"hv\":\"5\",\"puzzle_state\":{\"number_of_steps\":\"10\",\"current_step\":\"10\",\"attempt_number\":\"0\"},\"universal_state\":{\"machine_state\":\"0\",\"output_state\":\"\",\"input_states\":\"65534\",\"overwritten_inputs\":\"0\"},\"message\":{\"type\":\"info\",\"content\":\"OK!\"}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 140,
+        "wires": [
+            [
+                "6d94c6a84c310104"
+            ]
+        ]
+    },
+    {
+        "id": "a5a8caa099d20ee7",
+        "type": "ui_template",
+        "z": "731251dd7bcdf99d",
+        "g": "52575cf10c3a5587",
+        "group": "7d8a085018b16642",
+        "name": "1019",
+        "order": 7,
+        "width": 13,
+        "height": 1,
+        "format": "<div style=\"display: flex; justify-content: space-evenly; align-items: center;\">\n<p style=\"width: 20%\" class=\"md-title\">{{msg.payload.description?msg.payload.description:'Unknown'}} </p>\n\n\n<p style=\"width: 20%\">{{msg.payload.description?msg.payload.deviceName:'Unknown'}}</p>\n<p style=\"width: 20%\">{{msg.payload.id?msg.payload.id:'Unknown'}}</p>\n<div\n    ng-style=\"{width:'9%',height:'20px', 'text-align': 'center', 'color': 'white','font-weight': 'bold' ,'background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\">\n    {{ msg.payload.universal_state.machine_state=='2' ? 'Solved' : 'Armed' }}\n</div>\n<p style=\"width: 20%\"> {{msg.payload.time?msg.payload.time:'Unknown'}} </p>\n\n\n</div>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1050,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "95fac28b1a560bea",
+        "type": "comment",
+        "z": "731251dd7bcdf99d",
+        "g": "52575cf10c3a5587",
+        "name": "shows device in \"Devices Dashboard\"",
+        "info": "",
+        "x": 1050,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "4f349049de3d568f",
+        "type": "ui_group",
+        "name": "Room 1",
+        "tab": "7d66f574.b154cc",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7d8a085018b16642",
+        "type": "ui_group",
+        "name": "Room 1",
+        "tab": "b62d0539.6fc68",
+        "order": 2,
+        "disp": true,
+        "width": "15",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7d66f574.b154cc",
+        "type": "ui_tab",
+        "name": "Devices - Beta",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b62d0539.6fc68",
+        "type": "ui_tab",
+        "name": "Devices Dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
