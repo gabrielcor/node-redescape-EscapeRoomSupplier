@@ -2,7 +2,7 @@
 
 This flow is an emulator with one slider and three led lights, once the slider is moved to the correct position (number 10), it turns on the three lights, showing the puzzle es completed. 
 
-## Emulator View on Dashboard 
+## Emulator View on Dashboard
 
 ![Emulator View on Dashboard ](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/guillotine0.png)
 
@@ -24,6 +24,10 @@ Once the slider ir in the top position, the switch node sends a message to the c
 Also, when the slider is bottom position, the switch node sends a message to the change nodes.
 The bottom one identified as flow.deviceState, changes the flow variable "deviceState" to 0. 
 The middle change node sends a msg.payload to the LED lights to turn them off.
+
+### Output
+After the players lower the key, it activates the entire game (electronic elements, lights, sounds, and effects). 
+Once the game starts, it cannot be stopped.
 
 ### IMPORTANT
 To use the LED Lights in Node-RED, installing the LED node is needed. 
