@@ -1,0 +1,287 @@
+[
+    {
+        "id": "03a85bb2954851e1",
+        "type": "tab",
+        "label": "UPC_Life_Emulator",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "44900be756773348",
+        "type": "group",
+        "z": "03a85bb2954851e1",
+        "name": "Emulate UPC API",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c009297e63f19e25",
+            "ebd2c254fde93982",
+            "110bac43e2942ce7",
+            "413882300d4cc9f4"
+        ],
+        "x": 74,
+        "y": 359,
+        "w": 832,
+        "h": 82
+    },
+    {
+        "id": "2d17e868fcb5b6d8",
+        "type": "group",
+        "z": "03a85bb2954851e1",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "4e31c5a57d291a43",
+            "bc7a4cd51817bc5a",
+            "71714e5ffeec6dda",
+            "9c0486f89eaa59e7",
+            "9a39e758cd9181f6"
+        ],
+        "x": 74,
+        "y": 59,
+        "w": 452,
+        "h": 282
+    },
+    {
+        "id": "4e31c5a57d291a43",
+        "type": "link in",
+        "z": "03a85bb2954851e1",
+        "g": "2d17e868fcb5b6d8",
+        "name": "link in 29",
+        "links": [
+            "442e7bc38dd4c3b7",
+            "758310f9eb5818de"
+        ],
+        "x": 165,
+        "y": 100,
+        "wires": [
+            [
+                "bc7a4cd51817bc5a"
+            ]
+        ]
+    },
+    {
+        "id": "bc7a4cd51817bc5a",
+        "type": "change",
+        "z": "03a85bb2954851e1",
+        "g": "2d17e868fcb5b6d8",
+        "name": "Initialize Device",
+        "rules": [
+            {
+                "t": "set",
+                "p": "deviceState",
+                "pt": "flow",
+                "to": "0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "deviceId",
+                "pt": "flow",
+                "to": "99129022401009",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "71714e5ffeec6dda",
+        "type": "change",
+        "z": "03a85bb2954851e1",
+        "g": "2d17e868fcb5b6d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "deviceState",
+                "pt": "flow",
+                "to": "2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c009297e63f19e25",
+        "type": "http in",
+        "z": "03a85bb2954851e1",
+        "g": "44900be756773348",
+        "name": "UPC API",
+        "url": "/upc/mock/99129022401009",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 400,
+        "wires": [
+            [
+                "ebd2c254fde93982"
+            ]
+        ]
+    },
+    {
+        "id": "ebd2c254fde93982",
+        "type": "change",
+        "z": "03a85bb2954851e1",
+        "g": "44900be756773348",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"id\":\"\",\"sv\":\"01.01.06\",\"hv\":\"5\",\"puzzle_state\":{\"number_of_steps\":\"10\",\"current_step\":\"10\",\"attempt_number\":\"0\"},\"universal_state\":{\"machine_state\":\"2\",\"output_state\":\"1\",\"input_states\":\"65534\",\"overwritten_inputs\":\"0\"},\"message\":{\"type\":\"info\",\"content\":\"OK!\"}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 400,
+        "wires": [
+            [
+                "413882300d4cc9f4"
+            ]
+        ]
+    },
+    {
+        "id": "110bac43e2942ce7",
+        "type": "http response",
+        "z": "03a85bb2954851e1",
+        "g": "44900be756773348",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 830,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "413882300d4cc9f4",
+        "type": "function",
+        "z": "03a85bb2954851e1",
+        "g": "44900be756773348",
+        "name": "Update payload with UPC state",
+        "func": "let payload = msg.payload; //get payload\npayload.universal_state.machine_state = flow.get(\"deviceState\");\npayload.id = flow.get(\"deviceId\");\nmsg.payload = payload;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 400,
+        "wires": [
+            [
+                "110bac43e2942ce7"
+            ]
+        ]
+    },
+    {
+        "id": "9c0486f89eaa59e7",
+        "type": "ui_button",
+        "z": "03a85bb2954851e1",
+        "g": "2d17e868fcb5b6d8",
+        "name": "",
+        "group": "7d8a085018b16642",
+        "order": 11,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "RESET",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 160,
+        "y": 200,
+        "wires": [
+            [
+                "bc7a4cd51817bc5a"
+            ]
+        ]
+    },
+    {
+        "id": "9a39e758cd9181f6",
+        "type": "ui_button",
+        "z": "03a85bb2954851e1",
+        "g": "2d17e868fcb5b6d8",
+        "name": "",
+        "group": "7d8a085018b16642",
+        "order": 12,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "SOLVE",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 300,
+        "wires": [
+            [
+                "71714e5ffeec6dda"
+            ]
+        ]
+    },
+    {
+        "id": "7d8a085018b16642",
+        "type": "ui_group",
+        "name": "Room 1",
+        "tab": "b62d0539.6fc68",
+        "order": 2,
+        "disp": true,
+        "width": "15",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b62d0539.6fc68",
+        "type": "ui_tab",
+        "name": "Devices Dashboard",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    }
+]
