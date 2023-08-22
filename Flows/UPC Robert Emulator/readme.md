@@ -110,4 +110,4 @@ The second one clears the text input that informs whether the answer is correct 
 
 
 ## Output
-Users with the code 1019 can open a locked box in the laboratory.
+The users receive a clue for puzzle 1019.
