@@ -1,0 +1,217 @@
+[
+    {
+        "id": "adb8d8cdddab91af",
+        "type": "tab",
+        "label": "Puzzles Dashboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9d4ed765130d62dd",
+        "type": "group",
+        "z": "adb8d8cdddab91af",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "bc2df2804ad4743c",
+            "4a7855e292ed35c0",
+            "70d38f97b99e1d32",
+            "7c6e01b4bf5fe9ec",
+            "03d0b6ced2edc9b8"
+        ],
+        "x": 34,
+        "y": 19,
+        "w": 652,
+        "h": 162
+    },
+    {
+        "id": "bc2df2804ad4743c",
+        "type": "ui_ui_control",
+        "z": "adb8d8cdddab91af",
+        "g": "9d4ed765130d62dd",
+        "name": "",
+        "events": "all",
+        "x": 320,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4a7855e292ed35c0",
+        "type": "ui_button",
+        "z": "adb8d8cdddab91af",
+        "g": "9d4ed765130d62dd",
+        "name": "",
+        "group": "96e207b0c167ede9",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Room 1",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"group\":{\"hide\":[\"Devices_Dashboard_Room_2\",\"Devices_Dashboard_Room_3\"],\"show\":[\"Devices_Dashboard_Room_1\"]}}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 60,
+        "wires": [
+            [
+                "bc2df2804ad4743c"
+            ]
+        ]
+    },
+    {
+        "id": "70d38f97b99e1d32",
+        "type": "ui_button",
+        "z": "adb8d8cdddab91af",
+        "g": "9d4ed765130d62dd",
+        "name": "",
+        "group": "96e207b0c167ede9",
+        "order": 3,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Room 2",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"group\":{\"hide\":[\"Devices_Dashboard_Room_1\",\"Devices_Dashboard_Room_3\"],\"show\":[\"Devices_Dashboard_Room_2\"]}}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 100,
+        "wires": [
+            [
+                "bc2df2804ad4743c"
+            ]
+        ]
+    },
+    {
+        "id": "7c6e01b4bf5fe9ec",
+        "type": "ui_button",
+        "z": "adb8d8cdddab91af",
+        "g": "9d4ed765130d62dd",
+        "name": "",
+        "group": "96e207b0c167ede9",
+        "order": 4,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Room 3",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"group\":{\"hide\":[\"Devices_Dashboard_Room_1\",\"Devices_Dashboard_Room_2\"],\"show\":[\"Devices_Dashboard_Room_3\"]}}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 140,
+        "wires": [
+            [
+                "bc2df2804ad4743c"
+            ]
+        ]
+    },
+    {
+        "id": "03d0b6ced2edc9b8",
+        "type": "ui_template",
+        "z": "adb8d8cdddab91af",
+        "g": "9d4ed765130d62dd",
+        "group": "f08ba3d0ec182a89",
+        "name": "Styles of Puzzles Dashboard",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "format": "<style> \n#Devices_Dashboard_Room_1_cards{\n    background: #e4e4e4;\n}\n\n#Devices_Dashboard_Room_1_cards md-card{\nborder: solid 1px gray;\nbackground: #ffffff\n}\n\n\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "className": "",
+        "x": 540,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c66cbb0d1ea7ab11",
+        "type": "ui_spacer",
+        "z": "adb8d8cdddab91af",
+        "name": "spacer",
+        "group": "96e207b0c167ede9",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "52aef166cd4c3401",
+        "type": "ui_spacer",
+        "z": "adb8d8cdddab91af",
+        "name": "spacer",
+        "group": "96e207b0c167ede9",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "96e207b0c167ede9",
+        "type": "ui_group",
+        "name": "Select Room Puzzles Dashboard",
+        "tab": "b62d0539.6fc68",
+        "order": 1,
+        "disp": true,
+        "width": "11",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f08ba3d0ec182a89",
+        "type": "ui_group",
+        "name": "Game Control",
+        "tab": "a38c3d325d960343",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b62d0539.6fc68",
+        "type": "ui_tab",
+        "name": "Devices Dashboard",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a38c3d325d960343",
+        "type": "ui_tab",
+        "name": "Main",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
