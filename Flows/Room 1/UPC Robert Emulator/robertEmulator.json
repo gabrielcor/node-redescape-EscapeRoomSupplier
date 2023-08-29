@@ -1,0 +1,643 @@
+[
+    {
+        "id": "7e1cf664680e0f36",
+        "type": "tab",
+        "label": "UPC_Emulator_Robert",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4c64de43192e8de5",
+        "type": "group",
+        "z": "7e1cf664680e0f36",
+        "name": "Emulate UPC API",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "0ba28732363fd1d4",
+            "8f8d49870529046b",
+            "6e7bdfa6f944389a",
+            "a0538ec5dcb664ae"
+        ],
+        "x": 634,
+        "y": 139,
+        "w": 832,
+        "h": 82
+    },
+    {
+        "id": "edc3c2fee7b76557",
+        "type": "group",
+        "z": "7e1cf664680e0f36",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "1437d5f2323d0e82",
+            "c20ea002a6367dc3",
+            "8d03f98f9f1e234d",
+            "59fe843cd9c85c71",
+            "7730c7c2124b0681",
+            "d611a34b5313fafa"
+        ],
+        "x": 314,
+        "y": 559,
+        "w": 732,
+        "h": 262
+    },
+    {
+        "id": "b8d738c51cc170c9",
+        "type": "group",
+        "z": "7e1cf664680e0f36",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "623ce64bb88a6c8a",
+            "7498380b1de784f3",
+            "94ef468cbe242625"
+        ],
+        "x": 74,
+        "y": 419,
+        "w": 572,
+        "h": 82
+    },
+    {
+        "id": "0488d53ef3391804",
+        "type": "group",
+        "z": "7e1cf664680e0f36",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "b413d1dd14e47d45",
+            "bf30a63c0fe9b780",
+            "6cff7a6d6b44254e",
+            "370907ad7cdded1a",
+            "d4e6ccb4aefc87d4",
+            "888dd780740ae6a4",
+            "867b125335435dc5"
+        ],
+        "x": 74,
+        "y": 79,
+        "w": 522,
+        "h": 262
+    },
+    {
+        "id": "b413d1dd14e47d45",
+        "type": "link in",
+        "z": "7e1cf664680e0f36",
+        "g": "0488d53ef3391804",
+        "name": "link in 13",
+        "links": [
+            "442e7bc38dd4c3b7",
+            "758310f9eb5818de",
+            "13a2b4889be5cffd",
+            "6c5758792eacf62c",
+            "5ee20c428a74623a"
+        ],
+        "x": 115,
+        "y": 180,
+        "wires": [
+            [
+                "bf30a63c0fe9b780"
+            ]
+        ]
+    },
+    {
+        "id": "bf30a63c0fe9b780",
+        "type": "change",
+        "z": "7e1cf664680e0f36",
+        "g": "0488d53ef3391804",
+        "name": "Initialize Device",
+        "rules": [
+            {
+                "t": "set",
+                "p": "#:(file)::deviceState",
+                "pt": "flow",
+                "to": "0",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "#:(file)::deviceId",
+                "pt": "flow",
+                "to": "99129022401004",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6cff7a6d6b44254e",
+        "type": "change",
+        "z": "7e1cf664680e0f36",
+        "g": "0488d53ef3391804",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "#:(file)::deviceState",
+                "pt": "flow",
+                "to": "2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0ba28732363fd1d4",
+        "type": "http in",
+        "z": "7e1cf664680e0f36",
+        "g": "4c64de43192e8de5",
+        "name": "UPC API",
+        "url": "/upc/mock/99129022401004",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 720,
+        "y": 180,
+        "wires": [
+            [
+                "8f8d49870529046b"
+            ]
+        ]
+    },
+    {
+        "id": "8f8d49870529046b",
+        "type": "change",
+        "z": "7e1cf664680e0f36",
+        "g": "4c64de43192e8de5",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"id\":\"\",\"sv\":\"01.01.06\",\"hv\":\"5\",\"puzzle_state\":{\"number_of_steps\":\"10\",\"current_step\":\"10\",\"attempt_number\":\"0\"},\"universal_state\":{\"machine_state\":\"2\",\"output_state\":\"1\",\"input_states\":\"65534\",\"overwritten_inputs\":\"0\"},\"message\":{\"type\":\"info\",\"content\":\"OK!\"}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 180,
+        "wires": [
+            [
+                "a0538ec5dcb664ae"
+            ]
+        ]
+    },
+    {
+        "id": "6e7bdfa6f944389a",
+        "type": "http response",
+        "z": "7e1cf664680e0f36",
+        "g": "4c64de43192e8de5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1390,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a0538ec5dcb664ae",
+        "type": "function",
+        "z": "7e1cf664680e0f36",
+        "g": "4c64de43192e8de5",
+        "name": "Update payload with UPC state",
+        "func": "let payload = msg.payload; //get payload\npayload.universal_state.machine_state = flow.get(\"deviceState\", \"file\");\npayload.id = flow.get(\"deviceId\", \"file\");\nmsg.payload = payload;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 180,
+        "wires": [
+            [
+                "6e7bdfa6f944389a"
+            ]
+        ]
+    },
+    {
+        "id": "623ce64bb88a6c8a",
+        "type": "ui_template",
+        "z": "7e1cf664680e0f36",
+        "g": "b8d738c51cc170c9",
+        "group": "9be2afdf9015bdf5",
+        "name": "robert div",
+        "order": 1,
+        "width": 6,
+        "height": 3,
+        "format": "\n\n<div id=\"robertDiv\" style=\"background-color:{{ msg.payload}}; text-align: center; font-size: 35px; height: 10rem; display: flex; align-items: center; justify-content: center; color: #00000054;\">\n    R O B E R T\n</div>\n\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 560,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7498380b1de784f3",
+        "type": "function",
+        "z": "7e1cf664680e0f36",
+        "g": "b8d738c51cc170c9",
+        "name": "change background color",
+        "func": "let sliderValue = msg.payload\n\n\nif (sliderValue == 1 || sliderValue == 2 || sliderValue == 0){\n    msg.payload = \"#000000\"\n    return msg\n}\n\n\nif (sliderValue == 3 || sliderValue == 4 ) {\n    msg.payload = \"#020202\"\n    return msg\n}\n\nif (sliderValue == 5) {\n    msg.payload = \"#121111\"\n    return msg\n}\n\nif (sliderValue == 6) {\n    msg.payload = \"#121111\"\n    return msg\n}\n\n\nif (sliderValue == 7) {\n    msg.payload = \"#1f1c1c\"\n    return msg\n}\n\nif (sliderValue == 8) {\n    msg.payload = \"#2e2727\"\n    return msg\n}\n\nif (sliderValue == 9) {\n    msg.payload = \"#382e2e\"\n    return msg\n}\nif (sliderValue == 10) {\n    msg.payload = \"#635050\"\n    return msg\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 460,
+        "wires": [
+            [
+                "623ce64bb88a6c8a"
+            ]
+        ]
+    },
+    {
+        "id": "94ef468cbe242625",
+        "type": "ui_slider",
+        "z": "7e1cf664680e0f36",
+        "g": "b8d738c51cc170c9",
+        "name": "",
+        "label": "slider",
+        "tooltip": "",
+        "group": "9be2afdf9015bdf5",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "7498380b1de784f3"
+            ]
+        ]
+    },
+    {
+        "id": "1437d5f2323d0e82",
+        "type": "ui_text_input",
+        "z": "7e1cf664680e0f36",
+        "g": "edc3c2fee7b76557",
+        "name": "",
+        "label": "Answer:",
+        "tooltip": "",
+        "group": "9be2afdf9015bdf5",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": "2000",
+        "topic": "topic",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "msg",
+        "x": 400,
+        "y": 600,
+        "wires": [
+            [
+                "c20ea002a6367dc3"
+            ]
+        ]
+    },
+    {
+        "id": "c20ea002a6367dc3",
+        "type": "function",
+        "z": "7e1cf664680e0f36",
+        "g": "edc3c2fee7b76557",
+        "name": "function 5",
+        "func": "let inputMessage = msg.payload\n\n\nif(inputMessage == \"ROBERT\" || inputMessage == \"robert\" || inputMessage == \"Robert\"){\n\n    msg.payload = \"RESOLVED!\"\n    return msg\n} else {\n    msg.payload = \"INCORRECT!\"\n    return msg\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 600,
+        "wires": [
+            [
+                "8d03f98f9f1e234d",
+                "7730c7c2124b0681"
+            ]
+        ]
+    },
+    {
+        "id": "8d03f98f9f1e234d",
+        "type": "switch",
+        "z": "7e1cf664680e0f36",
+        "g": "edc3c2fee7b76557",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "RESOLVED!",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 670,
+        "y": 700,
+        "wires": [
+            [
+                "59fe843cd9c85c71",
+                "d611a34b5313fafa"
+            ]
+        ]
+    },
+    {
+        "id": "59fe843cd9c85c71",
+        "type": "change",
+        "z": "7e1cf664680e0f36",
+        "g": "edc3c2fee7b76557",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "#:(file)::deviceState",
+                "pt": "flow",
+                "to": "2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7730c7c2124b0681",
+        "type": "ui_text_input",
+        "z": "7e1cf664680e0f36",
+        "g": "edc3c2fee7b76557",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "9be2afdf9015bdf5",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 960,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d611a34b5313fafa",
+        "type": "change",
+        "z": "7e1cf664680e0f36",
+        "g": "edc3c2fee7b76557",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 780,
+        "wires": [
+            [
+                "1437d5f2323d0e82"
+            ]
+        ]
+    },
+    {
+        "id": "370907ad7cdded1a",
+        "type": "change",
+        "z": "7e1cf664680e0f36",
+        "g": "0488d53ef3391804",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 300,
+        "wires": [
+            [
+                "94ef468cbe242625"
+            ]
+        ]
+    },
+    {
+        "id": "d4e6ccb4aefc87d4",
+        "type": "change",
+        "z": "7e1cf664680e0f36",
+        "g": "0488d53ef3391804",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 240,
+        "wires": [
+            [
+                "7730c7c2124b0681"
+            ]
+        ]
+    },
+    {
+        "id": "888dd780740ae6a4",
+        "type": "ui_button",
+        "z": "7e1cf664680e0f36",
+        "g": "0488d53ef3391804",
+        "name": "",
+        "group": "7d8a085018b16642",
+        "order": 6,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "SOLVE",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 220,
+        "y": 120,
+        "wires": [
+            [
+                "6cff7a6d6b44254e"
+            ]
+        ]
+    },
+    {
+        "id": "867b125335435dc5",
+        "type": "ui_button",
+        "z": "7e1cf664680e0f36",
+        "g": "0488d53ef3391804",
+        "name": "",
+        "group": "7d8a085018b16642",
+        "order": 5,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "RESET",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 230,
+        "y": 240,
+        "wires": [
+            [
+                "d4e6ccb4aefc87d4",
+                "370907ad7cdded1a",
+                "bf30a63c0fe9b780"
+            ]
+        ]
+    },
+    {
+        "id": "9be2afdf9015bdf5",
+        "type": "ui_group",
+        "name": "Robert",
+        "tab": "7f2947c85d1fbc50",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7d8a085018b16642",
+        "type": "ui_group",
+        "name": "Room 1",
+        "tab": "b62d0539.6fc68",
+        "order": 2,
+        "disp": true,
+        "width": "15",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7f2947c85d1fbc50",
+        "type": "ui_tab",
+        "name": "UPC Emulators",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b62d0539.6fc68",
+        "type": "ui_tab",
+        "name": "Devices Dashboard",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    }
+]

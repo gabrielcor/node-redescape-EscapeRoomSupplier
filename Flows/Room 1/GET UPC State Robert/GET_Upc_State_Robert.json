@@ -1,0 +1,405 @@
+[
+    {
+        "id": "d54d078f6f658f4e",
+        "type": "tab",
+        "label": "UPC_State_Robert",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8dfe9eda62ac2675",
+        "type": "group",
+        "z": "d54d078f6f658f4e",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "9af29a3840faa682",
+            "ba680a36559756f2",
+            "712f5bafc4be7578",
+            "14498629a39de937",
+            "f04a0e3e709290d1",
+            "0f505acc242a80d5",
+            "77eb002f25c4629e",
+            "d3221a63c91d6742",
+            "6a8e6b2b20f11dbb",
+            "09b3554bc717a8e9",
+            "4b02793cc300c8ca",
+            "65a328d02bea3d76",
+            "64cdb9db818e4ee9"
+        ],
+        "x": 34,
+        "y": 39,
+        "w": 1178,
+        "h": 562
+    },
+    {
+        "id": "64cdb9db818e4ee9",
+        "type": "group",
+        "z": "d54d078f6f658f4e",
+        "g": "8dfe9eda62ac2675",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "bfc360af797b8c79",
+            "88e17a239cdf219e"
+        ],
+        "x": 834,
+        "y": 399,
+        "w": 352,
+        "h": 122
+    },
+    {
+        "id": "9af29a3840faa682",
+        "type": "link in",
+        "z": "d54d078f6f658f4e",
+        "g": "8dfe9eda62ac2675",
+        "name": "link in 11",
+        "links": [
+            "c7c4685c94a69e6f",
+            "cf8a926349843480",
+            "a6ab45fc89fa3f30"
+        ],
+        "x": 145,
+        "y": 340,
+        "wires": [
+            [
+                "14498629a39de937"
+            ]
+        ]
+    },
+    {
+        "id": "ba680a36559756f2",
+        "type": "http request",
+        "z": "d54d078f6f658f4e",
+        "g": "8dfe9eda62ac2675",
+        "name": "Call API on UPC device",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:1880/upc/mock/99129022401004",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 510,
+        "y": 340,
+        "wires": [
+            [
+                "712f5bafc4be7578"
+            ]
+        ]
+    },
+    {
+        "id": "712f5bafc4be7578",
+        "type": "rbe",
+        "z": "d54d078f6f658f4e",
+        "g": "8dfe9eda62ac2675",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 710,
+        "y": 340,
+        "wires": [
+            [
+                "77eb002f25c4629e"
+            ]
+        ]
+    },
+    {
+        "id": "14498629a39de937",
+        "type": "change",
+        "z": "d54d078f6f658f4e",
+        "g": "8dfe9eda62ac2675",
+        "name": "set msg request",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "#:(file)::deviceUrl",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 340,
+        "wires": [
+            [
+                "ba680a36559756f2"
+            ]
+        ]
+    },
+    {
+        "id": "f04a0e3e709290d1",
+        "type": "ui_template",
+        "z": "d54d078f6f658f4e",
+        "g": "8dfe9eda62ac2675",
+        "group": "4f349049de3d568f",
+        "name": "Robert",
+        "order": 5,
+        "width": 6,
+        "height": 4,
+        "format": "<md-card-title>\n    <md-card-title-text>\n        <p class=\"md-headline\">{{msg.payload.deviceName}}</p>\n    </md-card-title-text>\n    <span ng-class=\"msg.payload.universal_state.machine_state=='2' ? 'fa fa-unlock fa-2x' : 'fa fa-lock fa-2x'\"></span>\n</md-card-title>\n<md-card-content>\n    <div ng-style=\"{width:'100%',height:'8px','background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\" ></div>\n    <p>\n        {{msg.payload.description?msg.payload.description:'Unknown'}}\n<br>\n        {{msg.payload.id?msg.payload.id:'Unknown'}}\n        - {{msg.payload.time?msg.payload.time:'Unknown'}}\n<br>\n        {{msg.payload.universal_state.input_states?universal_state.input_states:'Unknown'}}\n    </p>\n    <div style=\"text-align:center\">\n        <span style=\"font-size: 2em;\">&nbsp;</span>\n    </div>\n</md-card-content>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1030,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0f505acc242a80d5",
+        "type": "function",
+        "z": "d54d078f6f658f4e",
+        "g": "8dfe9eda62ac2675",
+        "name": "Assign values to display",
+        "func": "let payload = msg.payload; //get payload\nlet id = msg.payload.id; // comes from the device\n\npayload.deviceName = flow.get(\"deviceName\", \"file\");\npayload.description = flow.get(\"description\", \"file\");\n\nlet d= new Date();\npayload.time = d.toLocaleTimeString();\nmsg.payload = payload;\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 560,
+        "wires": [
+            [
+                "f04a0e3e709290d1",
+                "bfc360af797b8c79"
+            ]
+        ]
+    },
+    {
+        "id": "77eb002f25c4629e",
+        "type": "json",
+        "z": "d54d078f6f658f4e",
+        "g": "8dfe9eda62ac2675",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 850,
+        "y": 340,
+        "wires": [
+            [
+                "0f505acc242a80d5"
+            ]
+        ]
+    },
+    {
+        "id": "d3221a63c91d6742",
+        "type": "comment",
+        "z": "d54d078f6f658f4e",
+        "g": "8dfe9eda62ac2675",
+        "name": "Every tick",
+        "info": "",
+        "x": 120,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "6a8e6b2b20f11dbb",
+        "type": "link in",
+        "z": "d54d078f6f658f4e",
+        "g": "8dfe9eda62ac2675",
+        "name": "link in 12",
+        "links": [
+            "442e7bc38dd4c3b7",
+            "758310f9eb5818de",
+            "13a2b4889be5cffd",
+            "6c5758792eacf62c",
+            "5ee20c428a74623a"
+        ],
+        "x": 315,
+        "y": 120,
+        "wires": [
+            [
+                "09b3554bc717a8e9"
+            ]
+        ]
+    },
+    {
+        "id": "09b3554bc717a8e9",
+        "type": "change",
+        "z": "d54d078f6f658f4e",
+        "g": "8dfe9eda62ac2675",
+        "name": "Initialize target URL & device data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "#:(file)::deviceUrl",
+                "pt": "flow",
+                "to": "http://127.0.0.1/?command=state",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "#:(file)::deviceName",
+                "pt": "flow",
+                "to": "ESRS-TEST02",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "#:(file)::description",
+                "pt": "flow",
+                "to": "Robert",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 120,
+        "wires": [
+            [
+                "65a328d02bea3d76"
+            ]
+        ]
+    },
+    {
+        "id": "4b02793cc300c8ca",
+        "type": "comment",
+        "z": "d54d078f6f658f4e",
+        "g": "8dfe9eda62ac2675",
+        "name": "Always initialize to: http://nnn.nnn.nnn.nnn?command=state // where nnn.... is IP address of UPC device",
+        "info": "",
+        "x": 750,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "65a328d02bea3d76",
+        "type": "change",
+        "z": "d54d078f6f658f4e",
+        "g": "8dfe9eda62ac2675",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"id\":\"NOT connected\",\"sv\":\"01.01.06\",\"hv\":\"5\",\"puzzle_state\":{\"number_of_steps\":\"10\",\"current_step\":\"10\",\"attempt_number\":\"0\"},\"universal_state\":{\"machine_state\":\"0\",\"output_state\":\"\",\"input_states\":\"65534\",\"overwritten_inputs\":\"0\"},\"message\":{\"type\":\"info\",\"content\":\"OK!\"}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 120,
+        "wires": [
+            [
+                "0f505acc242a80d5"
+            ]
+        ]
+    },
+    {
+        "id": "bfc360af797b8c79",
+        "type": "ui_template",
+        "z": "d54d078f6f658f4e",
+        "g": "64cdb9db818e4ee9",
+        "group": "7d8a085018b16642",
+        "name": "Robert",
+        "order": 4,
+        "width": 13,
+        "height": 1,
+        "format": "<div style=\"display: flex; justify-content: space-evenly; align-items: center;\"> \n<p style=\"width: 20%\" class=\"md-title\">{{msg.payload.description?msg.payload.description:'Unknown'}}</p>\n\n\n<p style=\"width: 20%\">{{msg.payload.description?msg.payload.deviceName:'Unknown'}}</p>\n<p style=\"width: 20%\">{{msg.payload.id?msg.payload.id:'Unknown'}}</p>\n<div ng-style=\"{width:'9%',height:'20px', 'text-align': 'center', 'color': 'white','font-weight': 'bold' ,'background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\">\n    {{ msg.payload.universal_state.machine_state=='2' ? 'Solved' : 'Armed' }}\n</div>\n<p style=\"width: 20%\"> {{msg.payload.time?msg.payload.time:'Unknown'}} </p>\n\n</div>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1030,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "88e17a239cdf219e",
+        "type": "comment",
+        "z": "d54d078f6f658f4e",
+        "g": "64cdb9db818e4ee9",
+        "name": "shows device in \"Devices Dashboard\"",
+        "info": "",
+        "x": 1010,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "4f349049de3d568f",
+        "type": "ui_group",
+        "name": "Room 1",
+        "tab": "7d66f574.b154cc",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7d8a085018b16642",
+        "type": "ui_group",
+        "name": "Room 1",
+        "tab": "b62d0539.6fc68",
+        "order": 2,
+        "disp": true,
+        "width": "15",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7d66f574.b154cc",
+        "type": "ui_tab",
+        "name": "Devices - Beta",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b62d0539.6fc68",
+        "type": "ui_tab",
+        "name": "Devices Dashboard",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    }
+]

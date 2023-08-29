@@ -59,7 +59,8 @@
             "2b1d0b42fe0f86b0",
             "1995d391d7461942",
             "1fb7d093958230af",
-            "48fc8899e9c7ebd1"
+            "48fc8899e9c7ebd1",
+            "05a83f7605524af7"
         ],
         "x": 74,
         "y": 79,
@@ -313,7 +314,10 @@
         "name": "link in 24",
         "links": [
             "442e7bc38dd4c3b7",
-            "758310f9eb5818de"
+            "758310f9eb5818de",
+            "13a2b4889be5cffd",
+            "6c5758792eacf62c",
+            "5ee20c428a74623a"
         ],
         "x": 135,
         "y": 220,
@@ -332,14 +336,14 @@
         "rules": [
             {
                 "t": "set",
-                "p": "deviceState",
+                "p": "#:(file)::deviceState",
                 "pt": "flow",
                 "to": "0",
                 "tot": "str"
             },
             {
                 "t": "set",
-                "p": "deviceId",
+                "p": "#:(file)::deviceId",
                 "pt": "flow",
                 "to": "99129022401008",
                 "tot": "str"
@@ -365,7 +369,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "deviceState",
+                "p": "#:(file)::deviceState",
                 "pt": "flow",
                 "to": "2",
                 "tot": "str"
@@ -446,7 +450,7 @@
         "z": "125e22cad7d86e40",
         "g": "354a3f4d6182ac87",
         "name": "Update payload with UPC state",
-        "func": "let payload = msg.payload; //get payload\npayload.universal_state.machine_state = flow.get(\"deviceState\");\npayload.id = flow.get(\"deviceId\");\nmsg.payload = payload;\nreturn msg;\n",
+        "func": "let payload = msg.payload; //get payload\npayload.universal_state.machine_state = flow.get(\"deviceState\", \"file\");\npayload.id = flow.get(\"deviceId\", \"file\");\nmsg.payload = payload;\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -469,7 +473,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "deviceState",
+                "p": "#:(file)::deviceState",
                 "pt": "flow",
                 "to": "2",
                 "tot": "str"
@@ -495,7 +499,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "deviceState",
+                "p": "#:(file)::deviceState",
                 "pt": "flow",
                 "to": "0",
                 "tot": "str"
@@ -626,7 +630,8 @@
             [
                 "77ee0d12fc8ac48e",
                 "0af26ad4eec3a386",
-                "5edc6c7b64f4eccb"
+                "5edc6c7b64f4eccb",
+                "05a83f7605524af7"
             ]
         ]
     },
@@ -713,6 +718,23 @@
         ]
     },
     {
+        "id": "05a83f7605524af7",
+        "type": "debug",
+        "z": "125e22cad7d86e40",
+        "g": "3c3fc5477c011596",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 220,
+        "wires": []
+    },
+    {
         "id": "9154f43a07fe01ef",
         "type": "ui_group",
         "name": "Guillotine",
@@ -759,7 +781,7 @@
         "type": "ui_tab",
         "name": "Devices Dashboard",
         "icon": "dashboard",
-        "order": 1,
+        "order": 4,
         "disabled": false,
         "hidden": false
     },

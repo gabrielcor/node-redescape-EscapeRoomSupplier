@@ -156,7 +156,10 @@
         "name": "link in 14",
         "links": [
             "442e7bc38dd4c3b7",
-            "758310f9eb5818de"
+            "758310f9eb5818de",
+            "13a2b4889be5cffd",
+            "6c5758792eacf62c",
+            "5ee20c428a74623a"
         ],
         "x": 75,
         "y": 100,
@@ -175,14 +178,14 @@
         "rules": [
             {
                 "t": "set",
-                "p": "deviceState",
+                "p": "#:(file)::deviceState",
                 "pt": "flow",
                 "to": "0",
                 "tot": "str"
             },
             {
                 "t": "set",
-                "p": "deviceId",
+                "p": "#:(file)::deviceId",
                 "pt": "flow",
                 "to": "99129022401005",
                 "tot": "str"
@@ -208,7 +211,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "deviceState",
+                "p": "#:(file)::deviceState",
                 "pt": "flow",
                 "to": "2",
                 "tot": "str"
@@ -318,7 +321,7 @@
         "z": "e8cb6675f9879849",
         "g": "1b25a78939cb2e52",
         "name": "Update payload with UPC state",
-        "func": "let payload = msg.payload; //get payload\npayload.universal_state.machine_state = flow.get(\"deviceState\");\npayload.id = flow.get(\"deviceId\");\nmsg.payload = payload;\nreturn msg;\n",
+        "func": "let payload = msg.payload; //get payload\npayload.universal_state.machine_state = flow.get(\"deviceState\", \"file\");\npayload.id = flow.get(\"deviceId\", \"file\");\nmsg.payload = payload;\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -370,7 +373,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "simbol1",
+                "p": "#:(file)::simbol1",
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
@@ -509,7 +512,7 @@
         "z": "e8cb6675f9879849",
         "g": "f95591efd68e9094",
         "name": "checks simbols",
-        "func": "let element1 = flow.get('simbol1')\nlet element2 = flow.get('simbol2')\nlet element3 = flow.get('simbol3')\nlet element4 = flow.get('simbol4')\n\nif(element1 == \"H2\" && element2 == \"N\" && element3 == \"C2\" && element4 == \"H2\"){\n    \n    let m1 = { payload: 95 };\n    let m2 = { payload: 98 };\n    let m3 = { payload: 97 };\n    let m4 = { payload: 94 };\n\n    return [m1, m2, m3, m4]\n} else{\n    let m1 = { payload: 9 }\n    let m2 = { payload: 8 }\n    let m3 = { payload: 7 }\n    let m4 = { payload: 4 }\n    return [m1, m2, m3, m4]\n}\n\n",
+        "func": "let element1 = flow.get('simbol1', \"file\")\nlet element2 = flow.get('simbol2', \"file\")\nlet element3 = flow.get('simbol3', \"file\")\nlet element4 = flow.get('simbol4', \"file\")\n\nif(element1 == \"H2\" && element2 == \"N\" && element3 == \"C2\" && element4 == \"H2\"){\n    \n    let m1 = { payload: 95 };\n    let m2 = { payload: 98 };\n    let m3 = { payload: 97 };\n    let m4 = { payload: 94 };\n\n    return [m1, m2, m3, m4]\n} else{\n    let m1 = { payload: 9 }\n    let m2 = { payload: 8 }\n    let m3 = { payload: 7 }\n    let m4 = { payload: 4 }\n    return [m1, m2, m3, m4]\n}\n\n",
         "outputs": 4,
         "noerr": 0,
         "initialize": "",
@@ -570,7 +573,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "simbol2",
+                "p": "#:(file)::simbol2",
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
@@ -772,7 +775,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "simbol3",
+                "p": "#:(file)::simbol3",
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
@@ -943,7 +946,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "simbol4",
+                "p": "#:(file)::simbol4",
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
@@ -1107,7 +1110,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "deviceState",
+                "p": "#:(file)::deviceState",
                 "pt": "flow",
                 "to": "2",
                 "tot": "str"
@@ -1130,7 +1133,7 @@
         "z": "e8cb6675f9879849",
         "g": "f95591efd68e9094",
         "name": "validation",
-        "func": "let element1 = flow.get('simbol1')\nlet element2 = flow.get('simbol2')\nlet element3 = flow.get('simbol3')\nlet element4 = flow.get('simbol4')\n\n\n\nmsg.payload = (element1 === \"H2\" && element2 === \"N\" && element3 === \"C2\" && element4 === \"H2\") ? \"ok\" : \"not\";\nreturn msg\n",
+        "func": "let element1 = flow.get('simbol1', \"file\")\nlet element2 = flow.get('simbol2', \"file\")\nlet element3 = flow.get('simbol3', \"file\")\nlet element4 = flow.get('simbol4', \"file\")\n\n\n\nmsg.payload = (element1 === \"H2\" && element2 === \"N\" && element3 === \"C2\" && element4 === \"H2\") ? \"ok\" : \"not\";\nreturn msg\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1179,28 +1182,28 @@
         "rules": [
             {
                 "t": "set",
-                "p": "simbol1",
+                "p": "#:(file)::simbol1",
                 "pt": "flow",
                 "to": "\"\"",
                 "tot": "str"
             },
             {
                 "t": "set",
-                "p": "simbol2",
+                "p": "#:(file)::simbol2",
                 "pt": "flow",
                 "to": "\"\"",
                 "tot": "str"
             },
             {
                 "t": "set",
-                "p": "simbol3",
+                "p": "#:(file)::simbol3",
                 "pt": "flow",
                 "to": "\"\"",
                 "tot": "str"
             },
             {
                 "t": "set",
-                "p": "simbol4",
+                "p": "#:(file)::simbol4",
                 "pt": "flow",
                 "to": "\"\"",
                 "tot": "str"
@@ -1351,7 +1354,7 @@
         "type": "ui_tab",
         "name": "Devices Dashboard",
         "icon": "dashboard",
-        "order": 1,
+        "order": 4,
         "disabled": false,
         "hidden": false
     },

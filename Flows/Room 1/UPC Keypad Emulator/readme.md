@@ -66,10 +66,12 @@ If the msg.payload is correct or incorrect, the switch nodes are connected to th
 ![Puzzle Resolution](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/Keypad4.png)
 If the msg.payload of the function node is 'Correct,' it proceeds through the switch node to the 'set flow.deviceState' node and assigns the value '2' to the flow variable 'deviceState,' indicating that the puzzle has been completed and resolved.
 
-
-
- ## Full Flow View 
+## Full Flow View 
 ![Full Flow View](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/Keypad5.png)
 
 ### CSS Styles
 CSS style is inside the node template identified as "STYLE".
+
+
+ ## Output
+Opens the maglock of the door.

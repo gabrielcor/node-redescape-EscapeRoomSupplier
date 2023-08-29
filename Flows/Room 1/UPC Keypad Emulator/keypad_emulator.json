@@ -179,7 +179,7 @@
         "z": "8c20c86ebb1f1d3e",
         "g": "d3dcf3a3d952be1a",
         "name": "Update payload with UPC state",
-        "func": "let payload = msg.payload; //get payload\npayload.universal_state.machine_state = flow.get(\"deviceState\");\npayload.id = flow.get(\"deviceId\");\nmsg.payload = payload;\nreturn msg;\n",
+        "func": "let payload = msg.payload; //get payload\npayload.universal_state.machine_state = flow.get(\"deviceState\", \"file\");\npayload.id = flow.get(\"deviceId\", \"file\");\nmsg.payload = payload;\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -201,7 +201,10 @@
         "name": "link in 17",
         "links": [
             "442e7bc38dd4c3b7",
-            "758310f9eb5818de"
+            "758310f9eb5818de",
+            "13a2b4889be5cffd",
+            "6c5758792eacf62c",
+            "5ee20c428a74623a"
         ],
         "x": 65,
         "y": 100,
@@ -220,14 +223,14 @@
         "rules": [
             {
                 "t": "set",
-                "p": "deviceState",
+                "p": "#:(file)::deviceState",
                 "pt": "flow",
                 "to": "0",
                 "tot": "str"
             },
             {
                 "t": "set",
-                "p": "deviceId",
+                "p": "#:(file)::deviceId",
                 "pt": "flow",
                 "to": "99129022401006",
                 "tot": "str"
@@ -253,7 +256,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "deviceState",
+                "p": "#:(file)::deviceState",
                 "pt": "flow",
                 "to": "2",
                 "tot": "str"
@@ -306,7 +309,7 @@
         "g": "106c4ea7054c0968",
         "name": "2",
         "group": "d5bfe8ea68b4fefe",
-        "order": 4,
+        "order": 3,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -335,7 +338,7 @@
         "g": "106c4ea7054c0968",
         "name": "3",
         "group": "d5bfe8ea68b4fefe",
-        "order": 2,
+        "order": 4,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -364,7 +367,7 @@
         "g": "106c4ea7054c0968",
         "name": "4",
         "group": "d5bfe8ea68b4fefe",
-        "order": 6,
+        "order": 5,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -393,7 +396,7 @@
         "g": "106c4ea7054c0968",
         "name": "8",
         "group": "d5bfe8ea68b4fefe",
-        "order": 10,
+        "order": 9,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -422,7 +425,7 @@
         "g": "106c4ea7054c0968",
         "name": "5",
         "group": "d5bfe8ea68b4fefe",
-        "order": 7,
+        "order": 6,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -451,7 +454,7 @@
         "g": "106c4ea7054c0968",
         "name": "7",
         "group": "d5bfe8ea68b4fefe",
-        "order": 9,
+        "order": 8,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -480,7 +483,7 @@
         "g": "106c4ea7054c0968",
         "name": "1",
         "group": "d5bfe8ea68b4fefe",
-        "order": 3,
+        "order": 2,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -509,7 +512,7 @@
         "g": "106c4ea7054c0968",
         "name": "6",
         "group": "d5bfe8ea68b4fefe",
-        "order": 5,
+        "order": 7,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -538,7 +541,7 @@
         "g": "106c4ea7054c0968",
         "name": "9",
         "group": "d5bfe8ea68b4fefe",
-        "order": 8,
+        "order": 10,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -597,7 +600,7 @@
         "g": "106c4ea7054c0968",
         "name": "EVALUATE",
         "group": "d5bfe8ea68b4fefe",
-        "order": 15,
+        "order": 14,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -625,7 +628,7 @@
         "z": "8c20c86ebb1f1d3e",
         "g": "106c4ea7054c0968",
         "name": "evaluate password",
-        "func": "let correctPassword = \"241091\";\n\nif (msg.payload === \"CLEAR\") {\n    flow.set(\"enteredPassword\", \"\");\n} else if (msg.payload === \"EVALUATE\") {\n    let enteredPassword = flow.get(\"enteredPassword\") || \"\";\n    if (enteredPassword === correctPassword) {\n        \n        msg.payload = \"Correcto\"\n        flow.set(\"enteredPassword\", \"\");\n        return msg\n    } else {\n        msg.payload = \"Incorrecto\"\n        flow.set(\"enteredPassword\", \"\");\n        return msg\n    }\n} else {\n    let enteredPassword = (flow.get(\"enteredPassword\") || \"\") + msg.payload;\n    flow.set(\"enteredPassword\", enteredPassword);\n}\n\nreturn msg;",
+        "func": "let correctPassword = \"241091\";\n\nif (msg.payload === \"CLEAR\") {\n    flow.set(\"enteredPassword\", \"\", \"file\");\n} else if (msg.payload === \"EVALUATE\") {\n    let enteredPassword = flow.get(\"enteredPassword\", \"file\") || \"\";\n    if (enteredPassword === correctPassword) {\n        \n        msg.payload = \"Correcto\"\n        flow.set(\"enteredPassword\", \"\", \"file\");\n        return msg\n    } else {\n        msg.payload = \"Incorrecto\"\n        flow.set(\"enteredPassword\", \"\", \"file\");\n        return msg\n    }\n} else {\n    let enteredPassword = (flow.get(\"enteredPassword\", \"file\") || \"\") + msg.payload;\n    flow.set(\"enteredPassword\", enteredPassword, \"file\");\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -649,7 +652,7 @@
         "label": "",
         "tooltip": "",
         "group": "d5bfe8ea68b4fefe",
-        "order": 16,
+        "order": 15,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -701,7 +704,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "deviceState",
+                "p": "#:(file)::deviceState",
                 "pt": "flow",
                 "to": "2",
                 "tot": "str"
@@ -908,156 +911,6 @@
         ]
     },
     {
-        "id": "78e11cfdf3c2a5ba",
-        "type": "ui_spacer",
-        "z": "8c20c86ebb1f1d3e",
-        "name": "spacer",
-        "group": "9154f43a07fe01ef",
-        "order": 2,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "482851280f70cb63",
-        "type": "ui_spacer",
-        "z": "8c20c86ebb1f1d3e",
-        "name": "spacer",
-        "group": "9154f43a07fe01ef",
-        "order": 4,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "b78856ba8b054b53",
-        "type": "ui_spacer",
-        "z": "8c20c86ebb1f1d3e",
-        "name": "spacer",
-        "group": "9154f43a07fe01ef",
-        "order": 5,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "9da545ef823ba804",
-        "type": "ui_spacer",
-        "z": "8c20c86ebb1f1d3e",
-        "name": "spacer",
-        "group": "9154f43a07fe01ef",
-        "order": 6,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "989c9f5babe368d9",
-        "type": "ui_spacer",
-        "z": "8c20c86ebb1f1d3e",
-        "name": "spacer",
-        "group": "9154f43a07fe01ef",
-        "order": 7,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "2c0a4d6c97dc8f61",
-        "type": "ui_spacer",
-        "z": "8c20c86ebb1f1d3e",
-        "name": "spacer",
-        "group": "9154f43a07fe01ef",
-        "order": 9,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "e4096dc8bd2c9cfc",
-        "type": "ui_spacer",
-        "z": "8c20c86ebb1f1d3e",
-        "name": "spacer",
-        "group": "9154f43a07fe01ef",
-        "order": 10,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "fd214bc4300a3b83",
-        "type": "ui_spacer",
-        "z": "8c20c86ebb1f1d3e",
-        "name": "spacer",
-        "group": "9154f43a07fe01ef",
-        "order": 11,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "abaf8eed8268aca7",
-        "type": "ui_spacer",
-        "z": "8c20c86ebb1f1d3e",
-        "name": "spacer",
-        "group": "9154f43a07fe01ef",
-        "order": 12,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "9049dbf336d2cf03",
-        "type": "ui_spacer",
-        "z": "8c20c86ebb1f1d3e",
-        "name": "spacer",
-        "group": "9154f43a07fe01ef",
-        "order": 14,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "36775984bc1ba763",
-        "type": "ui_spacer",
-        "z": "8c20c86ebb1f1d3e",
-        "name": "spacer",
-        "group": "9154f43a07fe01ef",
-        "order": 15,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "57fb1fda6cdc362f",
-        "type": "ui_spacer",
-        "z": "8c20c86ebb1f1d3e",
-        "name": "spacer",
-        "group": "9154f43a07fe01ef",
-        "order": 16,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "1d6d34c4a9f951a0",
-        "type": "ui_spacer",
-        "z": "8c20c86ebb1f1d3e",
-        "name": "spacer",
-        "group": "d5bfe8ea68b4fefe",
-        "order": 11,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "b59d451c65fe980e",
-        "type": "ui_spacer",
-        "z": "8c20c86ebb1f1d3e",
-        "name": "spacer",
-        "group": "d5bfe8ea68b4fefe",
-        "order": 13,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "db657fac3ca8538c",
-        "type": "ui_spacer",
-        "z": "8c20c86ebb1f1d3e",
-        "name": "spacer",
-        "group": "d5bfe8ea68b4fefe",
-        "order": 14,
-        "width": 3,
-        "height": 1
-    },
-    {
         "id": "85c6ca85f670872f",
         "type": "ui_spacer",
         "z": "8c20c86ebb1f1d3e",
@@ -1108,6 +961,146 @@
         "height": 1
     },
     {
+        "id": "6c18f02651bccbc7",
+        "type": "ui_spacer",
+        "z": "8c20c86ebb1f1d3e",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "4f836b79fa1e4a9b",
+        "type": "ui_spacer",
+        "z": "8c20c86ebb1f1d3e",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "918128aa2d00b4c3",
+        "type": "ui_spacer",
+        "z": "8c20c86ebb1f1d3e",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d14feaf47a8fbda8",
+        "type": "ui_spacer",
+        "z": "8c20c86ebb1f1d3e",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8ea75100a3eae278",
+        "type": "ui_spacer",
+        "z": "8c20c86ebb1f1d3e",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "e7281279c07228bf",
+        "type": "ui_spacer",
+        "z": "8c20c86ebb1f1d3e",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 9,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "43c561ae4314ceee",
+        "type": "ui_spacer",
+        "z": "8c20c86ebb1f1d3e",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 10,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "67d3e7c4407fd4bf",
+        "type": "ui_spacer",
+        "z": "8c20c86ebb1f1d3e",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 11,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "1c2113e14b66b5ec",
+        "type": "ui_spacer",
+        "z": "8c20c86ebb1f1d3e",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 12,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8f014f77c54753b8",
+        "type": "ui_spacer",
+        "z": "8c20c86ebb1f1d3e",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 14,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "632abb653203c1e0",
+        "type": "ui_spacer",
+        "z": "8c20c86ebb1f1d3e",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 15,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "c612419f1092ce4a",
+        "type": "ui_spacer",
+        "z": "8c20c86ebb1f1d3e",
+        "name": "spacer",
+        "group": "9154f43a07fe01ef",
+        "order": 16,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "dd8a05eabf1f140b",
+        "type": "ui_spacer",
+        "z": "8c20c86ebb1f1d3e",
+        "name": "spacer",
+        "group": "d5bfe8ea68b4fefe",
+        "order": 11,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2b7832560618af30",
+        "type": "ui_spacer",
+        "z": "8c20c86ebb1f1d3e",
+        "name": "spacer",
+        "group": "d5bfe8ea68b4fefe",
+        "order": 13,
+        "width": 1,
+        "height": 1
+    },
+    {
         "id": "d5bfe8ea68b4fefe",
         "type": "ui_group",
         "name": "Keypad",
@@ -1141,17 +1134,6 @@
         "className": ""
     },
     {
-        "id": "9154f43a07fe01ef",
-        "type": "ui_group",
-        "name": "Guillotine",
-        "tab": "7f2947c85d1fbc50",
-        "order": 1,
-        "disp": true,
-        "width": 5,
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "4f349049de3d568f",
         "type": "ui_group",
         "name": "Room 1",
@@ -1159,6 +1141,17 @@
         "order": 1,
         "disp": true,
         "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9154f43a07fe01ef",
+        "type": "ui_group",
+        "name": "Guillotine",
+        "tab": "7f2947c85d1fbc50",
+        "order": 1,
+        "disp": true,
+        "width": 5,
         "collapse": false,
         "className": ""
     },
@@ -1185,7 +1178,7 @@
         "type": "ui_tab",
         "name": "Devices Dashboard",
         "icon": "dashboard",
-        "order": 1,
+        "order": 4,
         "disabled": false,
         "hidden": false
     },

@@ -1,16 +1,16 @@
 [
     {
-        "id": "71538ff0daee5e65",
+        "id": "0bef36713adaed02",
         "type": "tab",
-        "label": "GET_UPC_State_Guillotine",
+        "label": "UPC_Life_State",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "151d1d7e0cea99c8",
+        "id": "1cc3561ca9ab3fb4",
         "type": "group",
-        "z": "71538ff0daee5e65",
+        "z": "0bef36713adaed02",
         "style": {
             "stroke": "#999999",
             "stroke-opacity": "1",
@@ -21,30 +21,30 @@
             "color": "#a4a4a4"
         },
         "nodes": [
-            "2a9b6cb55f4a4955",
-            "47c3823c106b6ccd",
-            "aee6c07715a75421",
-            "2ceebfa863fb316f",
-            "09ca642e08dfc263",
-            "c17abca03743bccb",
-            "470a45b8f1582379",
-            "9098b4eece42cc8b",
-            "77b43e02e2c2995c",
-            "b6dd4209f8ffe3be",
-            "203ddb5d50739325",
-            "e14b0440ce512aa1",
-            "d4f67a1f4be8bb30"
+            "fc9ead18a6bc8bfd",
+            "c91857f91723ce43",
+            "60066cd9c8ebcd69",
+            "91e7659219697388",
+            "2d974039703218ed",
+            "bd2c27e2c791eef5",
+            "9eb708851c144abe",
+            "76ad125d53bb0e3f",
+            "f92d896751f45c22",
+            "3fd8975dd0aa8743",
+            "b80d5320accd6ee2",
+            "158d9504840490e7",
+            "af1e0de3d410d5fd"
         ],
         "x": 24,
-        "y": 79,
-        "w": 1278,
+        "y": 39,
+        "w": 1188,
         "h": 562
     },
     {
-        "id": "d4f67a1f4be8bb30",
+        "id": "af1e0de3d410d5fd",
         "type": "group",
-        "z": "71538ff0daee5e65",
-        "g": "151d1d7e0cea99c8",
+        "z": "0bef36713adaed02",
+        "g": "1cc3561ca9ab3fb4",
         "style": {
             "stroke": "#999999",
             "stroke-opacity": "1",
@@ -55,41 +55,43 @@
             "color": "#a4a4a4"
         },
         "nodes": [
-            "34a9d5b9dd12c0b6",
-            "223db8dbe31fa88c"
+            "58011264e4f232aa",
+            "b5c7c6327fea2487"
         ],
-        "x": 924,
-        "y": 439,
+        "x": 834,
+        "y": 399,
         "w": 352,
         "h": 122
     },
     {
-        "id": "2a9b6cb55f4a4955",
+        "id": "fc9ead18a6bc8bfd",
         "type": "link in",
-        "z": "71538ff0daee5e65",
-        "g": "151d1d7e0cea99c8",
-        "name": "link in 25",
+        "z": "0bef36713adaed02",
+        "g": "1cc3561ca9ab3fb4",
+        "name": "link in 27",
         "links": [
-            "c7c4685c94a69e6f"
+            "c7c4685c94a69e6f",
+            "cf8a926349843480",
+            "a6ab45fc89fa3f30"
         ],
         "x": 135,
-        "y": 380,
+        "y": 340,
         "wires": [
             [
-                "2ceebfa863fb316f"
+                "91e7659219697388"
             ]
         ]
     },
     {
-        "id": "47c3823c106b6ccd",
+        "id": "c91857f91723ce43",
         "type": "http request",
-        "z": "71538ff0daee5e65",
-        "g": "151d1d7e0cea99c8",
+        "z": "0bef36713adaed02",
+        "g": "1cc3561ca9ab3fb4",
         "name": "Call API on UPC device",
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://127.0.0.1:1880/upc/mock/99129022401008",
+        "url": "http://127.0.0.1:1880/upc/mock/99129022401009",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -98,18 +100,18 @@
         "senderr": false,
         "headers": [],
         "x": 500,
-        "y": 380,
+        "y": 340,
         "wires": [
             [
-                "aee6c07715a75421"
+                "60066cd9c8ebcd69"
             ]
         ]
     },
     {
-        "id": "aee6c07715a75421",
+        "id": "60066cd9c8ebcd69",
         "type": "rbe",
-        "z": "71538ff0daee5e65",
-        "g": "151d1d7e0cea99c8",
+        "z": "0bef36713adaed02",
+        "g": "1cc3561ca9ab3fb4",
         "name": "",
         "func": "rbe",
         "gap": "",
@@ -119,25 +121,25 @@
         "property": "payload",
         "topi": "topic",
         "x": 700,
-        "y": 380,
+        "y": 340,
         "wires": [
             [
-                "c17abca03743bccb"
+                "9eb708851c144abe"
             ]
         ]
     },
     {
-        "id": "2ceebfa863fb316f",
+        "id": "91e7659219697388",
         "type": "change",
-        "z": "71538ff0daee5e65",
-        "g": "151d1d7e0cea99c8",
+        "z": "0bef36713adaed02",
+        "g": "1cc3561ca9ab3fb4",
         "name": "set msg request",
         "rules": [
             {
                 "t": "set",
                 "p": "url",
                 "pt": "msg",
-                "to": "deviceUrl",
+                "to": "#:(file)::deviceUrl",
                 "tot": "flow"
             }
         ],
@@ -147,106 +149,131 @@
         "to": "",
         "reg": false,
         "x": 270,
-        "y": 380,
+        "y": 340,
         "wires": [
             [
-                "47c3823c106b6ccd"
+                "c91857f91723ce43"
             ]
         ]
     },
     {
-        "id": "09ca642e08dfc263",
+        "id": "2d974039703218ed",
+        "type": "ui_template",
+        "z": "0bef36713adaed02",
+        "g": "1cc3561ca9ab3fb4",
+        "group": "4f349049de3d568f",
+        "name": "Life",
+        "order": 13,
+        "width": 6,
+        "height": 4,
+        "format": "<md-card-title>\n    <md-card-title-text>\n        <p class=\"md-headline\">{{msg.payload.deviceName}}</p>\n    </md-card-title-text>\n    <span ng-class=\"msg.payload.universal_state.machine_state=='2' ? 'fa fa-unlock fa-2x' : 'fa fa-lock fa-2x'\"></span>\n</md-card-title>\n<md-card-content>\n    <div ng-style=\"{width:'100%',height:'8px','background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\" ></div>\n    <p>\n        {{msg.payload.description?msg.payload.description:'Unknown'}}\n<br>\n        {{msg.payload.id?msg.payload.id:'Unknown'}}\n        - {{msg.payload.time?msg.payload.time:'Unknown'}}\n<br>\n        {{msg.payload.universal_state.input_states?universal_state.input_states:'Unknown'}}\n    </p>\n    <div style=\"text-align:center\">\n        <span style=\"font-size: 2em;\">&nbsp;</span>\n    </div>\n</md-card-content>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1000,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bd2c27e2c791eef5",
         "type": "function",
-        "z": "71538ff0daee5e65",
-        "g": "151d1d7e0cea99c8",
+        "z": "0bef36713adaed02",
+        "g": "1cc3561ca9ab3fb4",
         "name": "Assign values to display",
-        "func": "var payload = msg.payload; //get payload\nvar id = msg.payload.id; // comes from the device\n\npayload.deviceName = flow.get(\"deviceName\");\npayload.description = flow.get(\"description\");\n\nvar d= new Date();\npayload.time = d.toLocaleTimeString();\nmsg.payload = payload;\n\n\nreturn msg;",
+        "func": "let payload = msg.payload; //get payload\nlet id = msg.payload.id; // comes from the device\n\npayload.deviceName = flow.get(\"deviceName\", \"file\");\npayload.description = flow.get(\"description\", \"file\");\n\nlet d= new Date();\npayload.time = d.toLocaleTimeString();\nmsg.payload = payload;\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 760,
-        "y": 600,
+        "y": 560,
         "wires": [
             [
-                "e14b0440ce512aa1",
-                "34a9d5b9dd12c0b6"
+                "2d974039703218ed",
+                "58011264e4f232aa"
             ]
         ]
     },
     {
-        "id": "c17abca03743bccb",
+        "id": "9eb708851c144abe",
         "type": "json",
-        "z": "71538ff0daee5e65",
-        "g": "151d1d7e0cea99c8",
+        "z": "0bef36713adaed02",
+        "g": "1cc3561ca9ab3fb4",
         "name": "",
         "property": "payload",
         "action": "obj",
         "pretty": false,
         "x": 840,
-        "y": 380,
+        "y": 340,
         "wires": [
             [
-                "09ca642e08dfc263"
+                "bd2c27e2c791eef5"
             ]
         ]
     },
     {
-        "id": "470a45b8f1582379",
+        "id": "76ad125d53bb0e3f",
         "type": "comment",
-        "z": "71538ff0daee5e65",
-        "g": "151d1d7e0cea99c8",
+        "z": "0bef36713adaed02",
+        "g": "1cc3561ca9ab3fb4",
         "name": "Every tick",
         "info": "",
         "x": 110,
-        "y": 340,
+        "y": 300,
         "wires": []
     },
     {
-        "id": "9098b4eece42cc8b",
+        "id": "f92d896751f45c22",
         "type": "link in",
-        "z": "71538ff0daee5e65",
-        "g": "151d1d7e0cea99c8",
-        "name": "link in 26",
+        "z": "0bef36713adaed02",
+        "g": "1cc3561ca9ab3fb4",
+        "name": "link in 28",
         "links": [
             "442e7bc38dd4c3b7",
-            "758310f9eb5818de"
+            "758310f9eb5818de",
+            "13a2b4889be5cffd",
+            "6c5758792eacf62c",
+            "5ee20c428a74623a"
         ],
         "x": 305,
-        "y": 160,
+        "y": 120,
         "wires": [
             [
-                "77b43e02e2c2995c"
+                "3fd8975dd0aa8743"
             ]
         ]
     },
     {
-        "id": "77b43e02e2c2995c",
+        "id": "3fd8975dd0aa8743",
         "type": "change",
-        "z": "71538ff0daee5e65",
-        "g": "151d1d7e0cea99c8",
+        "z": "0bef36713adaed02",
+        "g": "1cc3561ca9ab3fb4",
         "name": "Initialize target URL & device data",
         "rules": [
             {
                 "t": "set",
-                "p": "deviceUrl",
+                "p": "#:(file)::deviceUrl",
                 "pt": "flow",
                 "to": "http://127.0.0.1/?command=state",
                 "tot": "str"
             },
             {
                 "t": "set",
-                "p": "deviceName",
+                "p": "#:(file)::deviceName",
                 "pt": "flow",
-                "to": "ESRS-TEST01",
+                "to": "ESRS-TEST04",
                 "tot": "str"
             },
             {
                 "t": "set",
-                "p": "description",
+                "p": "#:(file)::description",
                 "pt": "flow",
-                "to": "Guillotine",
+                "to": "Life",
                 "tot": "str"
             }
         ],
@@ -256,29 +283,29 @@
         "to": "",
         "reg": false,
         "x": 570,
-        "y": 160,
+        "y": 120,
         "wires": [
             [
-                "203ddb5d50739325"
+                "158d9504840490e7"
             ]
         ]
     },
     {
-        "id": "b6dd4209f8ffe3be",
+        "id": "b80d5320accd6ee2",
         "type": "comment",
-        "z": "71538ff0daee5e65",
-        "g": "151d1d7e0cea99c8",
+        "z": "0bef36713adaed02",
+        "g": "1cc3561ca9ab3fb4",
         "name": "Always initialize to: http://nnn.nnn.nnn.nnn?command=state // where nnn.... is IP address of UPC device",
         "info": "",
         "x": 740,
-        "y": 120,
+        "y": 80,
         "wires": []
     },
     {
-        "id": "203ddb5d50739325",
+        "id": "158d9504840490e7",
         "type": "change",
-        "z": "71538ff0daee5e65",
-        "g": "151d1d7e0cea99c8",
+        "z": "0bef36713adaed02",
+        "g": "1cc3561ca9ab3fb4",
         "name": "",
         "rules": [
             {
@@ -295,43 +322,21 @@
         "to": "",
         "reg": false,
         "x": 830,
-        "y": 160,
+        "y": 120,
         "wires": [
             [
-                "09ca642e08dfc263"
+                "bd2c27e2c791eef5"
             ]
         ]
     },
     {
-        "id": "e14b0440ce512aa1",
+        "id": "58011264e4f232aa",
         "type": "ui_template",
-        "z": "71538ff0daee5e65",
-        "g": "151d1d7e0cea99c8",
-        "group": "4f349049de3d568f",
-        "name": "Guillotine",
-        "order": 1,
-        "width": 6,
-        "height": 4,
-        "format": "<md-card-title>\n    <md-card-title-text>\n        <p class=\"md-headline\">{{msg.payload.deviceName}}</p>\n    </md-card-title-text>\n    <span ng-class=\"msg.payload.universal_state.machine_state=='2' ? 'fa fa-unlock fa-2x' : 'fa fa-lock fa-2x'\"></span>\n</md-card-title>\n<md-card-content>\n    <div ng-style=\"{width:'100%',height:'8px','background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\" ></div>\n    <p>\n        {{msg.payload.description?msg.payload.description:'Unknown'}}\n<br>\n        {{msg.payload.id?msg.payload.id:'Unknown'}}\n        - {{msg.payload.time?msg.payload.time:'Unknown'}}\n<br>\n        {{msg.payload.universal_state.input_states?universal_state.input_states:'Unknown'}}\n    </p>\n    <div style=\"text-align:center\">\n        <span style=\"font-size: 2em;\">&nbsp;</span>\n    </div>\n</md-card-content>",
-        "storeOutMessages": false,
-        "fwdInMessages": false,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1010,
-        "y": 600,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "34a9d5b9dd12c0b6",
-        "type": "ui_template",
-        "z": "71538ff0daee5e65",
-        "g": "d4f67a1f4be8bb30",
+        "z": "0bef36713adaed02",
+        "g": "af1e0de3d410d5fd",
         "group": "7d8a085018b16642",
-        "name": "Guillotine",
-        "order": 1,
+        "name": "Life",
+        "order": 10,
         "width": 13,
         "height": 1,
         "format": "<div style=\"display: flex; justify-content: space-evenly; align-items: center;\">\n<p style=\"width: 20%\" class=\"md-title\">{{msg.payload.description?msg.payload.description:'Unknown'}} </p>\n\n\n<p style=\"width: 20%\">{{msg.payload.description?msg.payload.deviceName:'Unknown'}}</p>\n<p style=\"width: 20%\">{{msg.payload.id?msg.payload.id:'Unknown'}}</p>\n<div\n    ng-style=\"{width:'9%',height:'20px', 'text-align': 'center', 'color': 'white','font-weight': 'bold' ,'background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\">\n    {{ msg.payload.universal_state.machine_state=='2' ? 'Solved' : 'Armed' }}\n</div>\n<p style=\"width: 20%\"> {{msg.payload.time?msg.payload.time:'Unknown'}} </p>\n\n\n</div>",
@@ -340,21 +345,21 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1100,
-        "y": 520,
+        "x": 990,
+        "y": 480,
         "wires": [
             []
         ]
     },
     {
-        "id": "223db8dbe31fa88c",
+        "id": "b5c7c6327fea2487",
         "type": "comment",
-        "z": "71538ff0daee5e65",
-        "g": "d4f67a1f4be8bb30",
+        "z": "0bef36713adaed02",
+        "g": "af1e0de3d410d5fd",
         "name": "shows device in \"Devices Dashboard\"",
         "info": "",
-        "x": 1100,
-        "y": 480,
+        "x": 1010,
+        "y": 440,
         "wires": []
     },
     {
@@ -393,7 +398,7 @@
         "type": "ui_tab",
         "name": "Devices Dashboard",
         "icon": "dashboard",
-        "order": 1,
+        "order": 4,
         "disabled": false,
         "hidden": false
     }
