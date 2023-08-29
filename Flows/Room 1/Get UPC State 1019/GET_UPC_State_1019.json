@@ -1,16 +1,16 @@
 [
     {
-        "id": "d54d078f6f658f4e",
+        "id": "731251dd7bcdf99d",
         "type": "tab",
-        "label": "UPC_State_Robert",
+        "label": "UPC_1019_State",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "8dfe9eda62ac2675",
+        "id": "44b54af6b304eeab",
         "type": "group",
-        "z": "d54d078f6f658f4e",
+        "z": "731251dd7bcdf99d",
         "style": {
             "stroke": "#999999",
             "stroke-opacity": "1",
@@ -21,30 +21,30 @@
             "color": "#a4a4a4"
         },
         "nodes": [
-            "9af29a3840faa682",
-            "ba680a36559756f2",
-            "712f5bafc4be7578",
-            "14498629a39de937",
-            "f04a0e3e709290d1",
-            "0f505acc242a80d5",
-            "77eb002f25c4629e",
-            "d3221a63c91d6742",
-            "6a8e6b2b20f11dbb",
-            "09b3554bc717a8e9",
-            "4b02793cc300c8ca",
-            "65a328d02bea3d76",
-            "64cdb9db818e4ee9"
+            "aba2f0d60ce6d29b",
+            "df474a4d76e40d49",
+            "2fd87668832127fb",
+            "d832eb954bb63467",
+            "3c9d8001fbe5baa5",
+            "6d94c6a84c310104",
+            "fbc40436db02de92",
+            "eade73b162d465b0",
+            "342214a9122d347d",
+            "0a7eb3a3aa967cb7",
+            "f0fd065cd2582b73",
+            "7519d85797fab76c",
+            "52575cf10c3a5587"
         ],
-        "x": 34,
-        "y": 39,
-        "w": 1258,
-        "h": 582
+        "x": 24,
+        "y": 59,
+        "w": 1228,
+        "h": 562
     },
     {
-        "id": "64cdb9db818e4ee9",
+        "id": "52575cf10c3a5587",
         "type": "group",
-        "z": "d54d078f6f658f4e",
-        "g": "8dfe9eda62ac2675",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
         "style": {
             "stroke": "#999999",
             "stroke-opacity": "1",
@@ -55,41 +55,43 @@
             "color": "#a4a4a4"
         },
         "nodes": [
-            "bfc360af797b8c79",
-            "88e17a239cdf219e"
+            "a5a8caa099d20ee7",
+            "95fac28b1a560bea"
         ],
-        "x": 914,
-        "y": 399,
+        "x": 874,
+        "y": 419,
         "w": 352,
         "h": 122
     },
     {
-        "id": "9af29a3840faa682",
+        "id": "aba2f0d60ce6d29b",
         "type": "link in",
-        "z": "d54d078f6f658f4e",
-        "g": "8dfe9eda62ac2675",
-        "name": "link in 11",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
+        "name": "link in 9",
         "links": [
-            "c7c4685c94a69e6f"
+            "c7c4685c94a69e6f",
+            "cf8a926349843480",
+            "a6ab45fc89fa3f30"
         ],
-        "x": 145,
-        "y": 340,
+        "x": 135,
+        "y": 360,
         "wires": [
             [
-                "14498629a39de937"
+                "d832eb954bb63467"
             ]
         ]
     },
     {
-        "id": "ba680a36559756f2",
+        "id": "df474a4d76e40d49",
         "type": "http request",
-        "z": "d54d078f6f658f4e",
-        "g": "8dfe9eda62ac2675",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
         "name": "Call API on UPC device",
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://127.0.0.1:1880/upc/mock/99129022401004",
+        "url": "http://127.0.0.1:1880/upc/mock/99129022401003",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -97,19 +99,19 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 510,
-        "y": 340,
+        "x": 500,
+        "y": 360,
         "wires": [
             [
-                "712f5bafc4be7578"
+                "2fd87668832127fb"
             ]
         ]
     },
     {
-        "id": "712f5bafc4be7578",
+        "id": "2fd87668832127fb",
         "type": "rbe",
-        "z": "d54d078f6f658f4e",
-        "g": "8dfe9eda62ac2675",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
         "name": "",
         "func": "rbe",
         "gap": "",
@@ -118,26 +120,26 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 710,
-        "y": 340,
+        "x": 700,
+        "y": 360,
         "wires": [
             [
-                "77eb002f25c4629e"
+                "fbc40436db02de92"
             ]
         ]
     },
     {
-        "id": "14498629a39de937",
+        "id": "d832eb954bb63467",
         "type": "change",
-        "z": "d54d078f6f658f4e",
-        "g": "8dfe9eda62ac2675",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
         "name": "set msg request",
         "rules": [
             {
                 "t": "set",
                 "p": "url",
                 "pt": "msg",
-                "to": "deviceUrl",
+                "to": "#:(file)::deviceUrl",
                 "tot": "flow"
             }
         ],
@@ -146,22 +148,22 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 280,
-        "y": 340,
+        "x": 270,
+        "y": 360,
         "wires": [
             [
-                "ba680a36559756f2"
+                "df474a4d76e40d49"
             ]
         ]
     },
     {
-        "id": "f04a0e3e709290d1",
+        "id": "3c9d8001fbe5baa5",
         "type": "ui_template",
-        "z": "d54d078f6f658f4e",
-        "g": "8dfe9eda62ac2675",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
         "group": "4f349049de3d568f",
-        "name": "Robert",
-        "order": 5,
+        "name": "1019",
+        "order": 9,
         "width": 6,
         "height": 4,
         "format": "<md-card-title>\n    <md-card-title-text>\n        <p class=\"md-headline\">{{msg.payload.deviceName}}</p>\n    </md-card-title-text>\n    <span ng-class=\"msg.payload.universal_state.machine_state=='2' ? 'fa fa-unlock fa-2x' : 'fa fa-lock fa-2x'\"></span>\n</md-card-title>\n<md-card-content>\n    <div ng-style=\"{width:'100%',height:'8px','background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\" ></div>\n    <p>\n        {{msg.payload.description?msg.payload.description:'Unknown'}}\n<br>\n        {{msg.payload.id?msg.payload.id:'Unknown'}}\n        - {{msg.payload.time?msg.payload.time:'Unknown'}}\n<br>\n        {{msg.payload.universal_state.input_states?universal_state.input_states:'Unknown'}}\n    </p>\n    <div style=\"text-align:center\">\n        <span style=\"font-size: 2em;\">&nbsp;</span>\n    </div>\n</md-card-content>",
@@ -170,105 +172,108 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1010,
+        "x": 970,
         "y": 580,
         "wires": [
             []
         ]
     },
     {
-        "id": "0f505acc242a80d5",
+        "id": "6d94c6a84c310104",
         "type": "function",
-        "z": "d54d078f6f658f4e",
-        "g": "8dfe9eda62ac2675",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
         "name": "Assign values to display",
-        "func": "let payload = msg.payload; //get payload\nlet id = msg.payload.id; // comes from the device\n\npayload.deviceName = flow.get(\"deviceName\");\npayload.description = flow.get(\"description\");\n\nlet d= new Date();\npayload.time = d.toLocaleTimeString();\nmsg.payload = payload;\n\n\nreturn msg;",
+        "func": "let payload = msg.payload; //get payload\nlet id = msg.payload.id; // comes from the device\n\npayload.deviceName = flow.get(\"deviceName\", \"file\");\npayload.description = flow.get(\"description\", \"file\");\n\nlet d= new Date();\npayload.time = d.toLocaleTimeString();\nmsg.payload = payload;\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 770,
-        "y": 560,
+        "x": 710,
+        "y": 580,
         "wires": [
             [
-                "f04a0e3e709290d1",
-                "bfc360af797b8c79"
+                "3c9d8001fbe5baa5",
+                "a5a8caa099d20ee7"
             ]
         ]
     },
     {
-        "id": "77eb002f25c4629e",
+        "id": "fbc40436db02de92",
         "type": "json",
-        "z": "d54d078f6f658f4e",
-        "g": "8dfe9eda62ac2675",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
         "name": "",
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 850,
-        "y": 340,
+        "x": 840,
+        "y": 360,
         "wires": [
             [
-                "0f505acc242a80d5"
+                "6d94c6a84c310104"
             ]
         ]
     },
     {
-        "id": "d3221a63c91d6742",
+        "id": "eade73b162d465b0",
         "type": "comment",
-        "z": "d54d078f6f658f4e",
-        "g": "8dfe9eda62ac2675",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
         "name": "Every tick",
         "info": "",
-        "x": 120,
-        "y": 300,
+        "x": 110,
+        "y": 320,
         "wires": []
     },
     {
-        "id": "6a8e6b2b20f11dbb",
+        "id": "342214a9122d347d",
         "type": "link in",
-        "z": "d54d078f6f658f4e",
-        "g": "8dfe9eda62ac2675",
-        "name": "link in 12",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
+        "name": "link in 10",
         "links": [
             "442e7bc38dd4c3b7",
-            "758310f9eb5818de"
+            "758310f9eb5818de",
+            "13a2b4889be5cffd",
+            "6c5758792eacf62c",
+            "5ee20c428a74623a"
         ],
-        "x": 315,
-        "y": 120,
+        "x": 305,
+        "y": 140,
         "wires": [
             [
-                "09b3554bc717a8e9"
+                "0a7eb3a3aa967cb7"
             ]
         ]
     },
     {
-        "id": "09b3554bc717a8e9",
+        "id": "0a7eb3a3aa967cb7",
         "type": "change",
-        "z": "d54d078f6f658f4e",
-        "g": "8dfe9eda62ac2675",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
         "name": "Initialize target URL & device data",
         "rules": [
             {
                 "t": "set",
-                "p": "deviceUrl",
+                "p": "#:(file)::deviceUrl",
                 "pt": "flow",
                 "to": "http://127.0.0.1/?command=state",
                 "tot": "str"
             },
             {
                 "t": "set",
-                "p": "deviceName",
+                "p": "#:(file)::deviceName",
                 "pt": "flow",
-                "to": "ESRS-TEST02",
+                "to": "ESRS-TEST03",
                 "tot": "str"
             },
             {
                 "t": "set",
-                "p": "description",
+                "p": "#:(file)::description",
                 "pt": "flow",
-                "to": "Robert",
+                "to": "1019",
                 "tot": "str"
             }
         ],
@@ -277,30 +282,30 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 580,
-        "y": 120,
+        "x": 570,
+        "y": 140,
         "wires": [
             [
-                "65a328d02bea3d76"
+                "7519d85797fab76c"
             ]
         ]
     },
     {
-        "id": "4b02793cc300c8ca",
+        "id": "f0fd065cd2582b73",
         "type": "comment",
-        "z": "d54d078f6f658f4e",
-        "g": "8dfe9eda62ac2675",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
         "name": "Always initialize to: http://nnn.nnn.nnn.nnn?command=state // where nnn.... is IP address of UPC device",
         "info": "",
-        "x": 750,
-        "y": 80,
+        "x": 740,
+        "y": 100,
         "wires": []
     },
     {
-        "id": "65a328d02bea3d76",
+        "id": "7519d85797fab76c",
         "type": "change",
-        "z": "d54d078f6f658f4e",
-        "g": "8dfe9eda62ac2675",
+        "z": "731251dd7bcdf99d",
+        "g": "44b54af6b304eeab",
         "name": "",
         "rules": [
             {
@@ -316,45 +321,45 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 840,
-        "y": 120,
+        "x": 830,
+        "y": 140,
         "wires": [
             [
-                "0f505acc242a80d5"
+                "6d94c6a84c310104"
             ]
         ]
     },
     {
-        "id": "bfc360af797b8c79",
+        "id": "a5a8caa099d20ee7",
         "type": "ui_template",
-        "z": "d54d078f6f658f4e",
-        "g": "64cdb9db818e4ee9",
+        "z": "731251dd7bcdf99d",
+        "g": "52575cf10c3a5587",
         "group": "7d8a085018b16642",
-        "name": "Robert",
-        "order": 4,
+        "name": "1019",
+        "order": 7,
         "width": 13,
         "height": 1,
-        "format": "<div style=\"display: flex; justify-content: space-evenly; align-items: center;\"> \n<p style=\"width: 20%\" class=\"md-title\">{{msg.payload.description?msg.payload.description:'Unknown'}}</p>\n\n\n<p style=\"width: 20%\">{{msg.payload.description?msg.payload.deviceName:'Unknown'}}</p>\n<p style=\"width: 20%\">{{msg.payload.id?msg.payload.id:'Unknown'}}</p>\n<div ng-style=\"{width:'9%',height:'20px', 'text-align': 'center', 'color': 'white','font-weight': 'bold' ,'background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\">\n    {{ msg.payload.universal_state.machine_state=='2' ? 'Solved' : 'Armed' }}\n</div>\n<p style=\"width: 20%\"> {{msg.payload.time?msg.payload.time:'Unknown'}} </p>\n\n</div>",
+        "format": "<div style=\"display: flex; justify-content: space-evenly; align-items: center;\">\n<p style=\"width: 20%\" class=\"md-title\">{{msg.payload.description?msg.payload.description:'Unknown'}} </p>\n\n\n<p style=\"width: 20%\">{{msg.payload.description?msg.payload.deviceName:'Unknown'}}</p>\n<p style=\"width: 20%\">{{msg.payload.id?msg.payload.id:'Unknown'}}</p>\n<div\n    ng-style=\"{width:'9%',height:'20px', 'text-align': 'center', 'color': 'white','font-weight': 'bold' ,'background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\">\n    {{ msg.payload.universal_state.machine_state=='2' ? 'Solved' : 'Armed' }}\n</div>\n<p style=\"width: 20%\"> {{msg.payload.time?msg.payload.time:'Unknown'}} </p>\n\n\n</div>",
         "storeOutMessages": false,
         "fwdInMessages": false,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1110,
-        "y": 480,
+        "x": 1050,
+        "y": 500,
         "wires": [
             []
         ]
     },
     {
-        "id": "88e17a239cdf219e",
+        "id": "95fac28b1a560bea",
         "type": "comment",
-        "z": "d54d078f6f658f4e",
-        "g": "64cdb9db818e4ee9",
+        "z": "731251dd7bcdf99d",
+        "g": "52575cf10c3a5587",
         "name": "shows device in \"Devices Dashboard\"",
         "info": "",
-        "x": 1090,
-        "y": 440,
+        "x": 1050,
+        "y": 460,
         "wires": []
     },
     {
@@ -393,7 +398,7 @@
         "type": "ui_tab",
         "name": "Devices Dashboard",
         "icon": "dashboard",
-        "order": 1,
+        "order": 4,
         "disabled": false,
         "hidden": false
     }

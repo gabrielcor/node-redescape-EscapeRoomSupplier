@@ -1,16 +1,16 @@
 [
     {
-        "id": "0bef36713adaed02",
+        "id": "82bca98606cd74a6",
         "type": "tab",
-        "label": "UPC_Life_State",
+        "label": "Get_UPC_Keypad",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "1cc3561ca9ab3fb4",
+        "id": "4d3bd4a85d43e50a",
         "type": "group",
-        "z": "0bef36713adaed02",
+        "z": "82bca98606cd74a6",
         "style": {
             "stroke": "#999999",
             "stroke-opacity": "1",
@@ -21,30 +21,30 @@
             "color": "#a4a4a4"
         },
         "nodes": [
-            "fc9ead18a6bc8bfd",
-            "c91857f91723ce43",
-            "60066cd9c8ebcd69",
-            "91e7659219697388",
-            "2d974039703218ed",
-            "bd2c27e2c791eef5",
-            "9eb708851c144abe",
-            "76ad125d53bb0e3f",
-            "f92d896751f45c22",
-            "3fd8975dd0aa8743",
-            "b80d5320accd6ee2",
-            "158d9504840490e7",
-            "af1e0de3d410d5fd"
+            "e56ffad3246f3029",
+            "82f8ca747169711a",
+            "462e9408ea3a0ddb",
+            "603f5e54876a8e55",
+            "647ce7a13353bbe2",
+            "44ef8f5531fb085f",
+            "ab6bfa579f49c0f8",
+            "cbc7f5e0fa87249c",
+            "3b0bc2707d02d065",
+            "71ad163314174cf7",
+            "b1ba8f12990199b9",
+            "9f0e824c3912eabf",
+            "3fd8681d9a9f1459"
         ],
-        "x": 24,
+        "x": 44,
         "y": 39,
-        "w": 1188,
+        "w": 1288,
         "h": 562
     },
     {
-        "id": "af1e0de3d410d5fd",
+        "id": "3fd8681d9a9f1459",
         "type": "group",
-        "z": "0bef36713adaed02",
-        "g": "1cc3561ca9ab3fb4",
+        "z": "82bca98606cd74a6",
+        "g": "4d3bd4a85d43e50a",
         "style": {
             "stroke": "#999999",
             "stroke-opacity": "1",
@@ -55,41 +55,43 @@
             "color": "#a4a4a4"
         },
         "nodes": [
-            "58011264e4f232aa",
-            "b5c7c6327fea2487"
+            "d2274598b27b193f",
+            "d010b513fe24478d"
         ],
-        "x": 834,
+        "x": 954,
         "y": 399,
         "w": 352,
         "h": 122
     },
     {
-        "id": "fc9ead18a6bc8bfd",
+        "id": "e56ffad3246f3029",
         "type": "link in",
-        "z": "0bef36713adaed02",
-        "g": "1cc3561ca9ab3fb4",
-        "name": "link in 27",
+        "z": "82bca98606cd74a6",
+        "g": "4d3bd4a85d43e50a",
+        "name": "link in 18",
         "links": [
-            "c7c4685c94a69e6f"
+            "c7c4685c94a69e6f",
+            "cf8a926349843480",
+            "a6ab45fc89fa3f30"
         ],
-        "x": 135,
+        "x": 155,
         "y": 340,
         "wires": [
             [
-                "91e7659219697388"
+                "603f5e54876a8e55"
             ]
         ]
     },
     {
-        "id": "c91857f91723ce43",
+        "id": "82f8ca747169711a",
         "type": "http request",
-        "z": "0bef36713adaed02",
-        "g": "1cc3561ca9ab3fb4",
+        "z": "82bca98606cd74a6",
+        "g": "4d3bd4a85d43e50a",
         "name": "Call API on UPC device",
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "http://127.0.0.1:1880/upc/mock/99129022401009",
+        "url": "http://127.0.0.1:1880/upc/mock/99129022401006",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -97,19 +99,19 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 500,
+        "x": 520,
         "y": 340,
         "wires": [
             [
-                "60066cd9c8ebcd69"
+                "462e9408ea3a0ddb"
             ]
         ]
     },
     {
-        "id": "60066cd9c8ebcd69",
+        "id": "462e9408ea3a0ddb",
         "type": "rbe",
-        "z": "0bef36713adaed02",
-        "g": "1cc3561ca9ab3fb4",
+        "z": "82bca98606cd74a6",
+        "g": "4d3bd4a85d43e50a",
         "name": "",
         "func": "rbe",
         "gap": "",
@@ -118,19 +120,19 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 700,
+        "x": 720,
         "y": 340,
         "wires": [
             [
-                "9eb708851c144abe"
+                "44ef8f5531fb085f"
             ]
         ]
     },
     {
-        "id": "91e7659219697388",
+        "id": "603f5e54876a8e55",
         "type": "change",
-        "z": "0bef36713adaed02",
-        "g": "1cc3561ca9ab3fb4",
+        "z": "82bca98606cd74a6",
+        "g": "4d3bd4a85d43e50a",
         "name": "set msg request",
         "rules": [
             {
@@ -146,108 +148,89 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 270,
+        "x": 290,
         "y": 340,
         "wires": [
             [
-                "c91857f91723ce43"
+                "82f8ca747169711a"
             ]
         ]
     },
     {
-        "id": "2d974039703218ed",
-        "type": "ui_template",
-        "z": "0bef36713adaed02",
-        "g": "1cc3561ca9ab3fb4",
-        "group": "4f349049de3d568f",
-        "name": "Life",
-        "order": 13,
-        "width": 6,
-        "height": 4,
-        "format": "<md-card-title>\n    <md-card-title-text>\n        <p class=\"md-headline\">{{msg.payload.deviceName}}</p>\n    </md-card-title-text>\n    <span ng-class=\"msg.payload.universal_state.machine_state=='2' ? 'fa fa-unlock fa-2x' : 'fa fa-lock fa-2x'\"></span>\n</md-card-title>\n<md-card-content>\n    <div ng-style=\"{width:'100%',height:'8px','background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\" ></div>\n    <p>\n        {{msg.payload.description?msg.payload.description:'Unknown'}}\n<br>\n        {{msg.payload.id?msg.payload.id:'Unknown'}}\n        - {{msg.payload.time?msg.payload.time:'Unknown'}}\n<br>\n        {{msg.payload.universal_state.input_states?universal_state.input_states:'Unknown'}}\n    </p>\n    <div style=\"text-align:center\">\n        <span style=\"font-size: 2em;\">&nbsp;</span>\n    </div>\n</md-card-content>",
-        "storeOutMessages": false,
-        "fwdInMessages": false,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1000,
-        "y": 560,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bd2c27e2c791eef5",
+        "id": "647ce7a13353bbe2",
         "type": "function",
-        "z": "0bef36713adaed02",
-        "g": "1cc3561ca9ab3fb4",
+        "z": "82bca98606cd74a6",
+        "g": "4d3bd4a85d43e50a",
         "name": "Assign values to display",
-        "func": "let payload = msg.payload; //get payload\nlet id = msg.payload.id; // comes from the device\n\npayload.deviceName = flow.get(\"deviceName\");\npayload.description = flow.get(\"description\");\n\nlet d= new Date();\npayload.time = d.toLocaleTimeString();\nmsg.payload = payload;\n\n\nreturn msg;",
+        "func": "var payload = msg.payload; //get payload\nvar id = msg.payload.id; // comes from the device\n\npayload.deviceName = flow.get(\"deviceName\");\npayload.description = flow.get(\"description\");\n\nvar d= new Date();\npayload.time = d.toLocaleTimeString();\nmsg.payload = payload;\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
+        "x": 780,
         "y": 560,
         "wires": [
             [
-                "2d974039703218ed",
-                "58011264e4f232aa"
+                "9f0e824c3912eabf",
+                "d2274598b27b193f"
             ]
         ]
     },
     {
-        "id": "9eb708851c144abe",
+        "id": "44ef8f5531fb085f",
         "type": "json",
-        "z": "0bef36713adaed02",
-        "g": "1cc3561ca9ab3fb4",
+        "z": "82bca98606cd74a6",
+        "g": "4d3bd4a85d43e50a",
         "name": "",
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 840,
+        "x": 860,
         "y": 340,
         "wires": [
             [
-                "bd2c27e2c791eef5"
+                "647ce7a13353bbe2"
             ]
         ]
     },
     {
-        "id": "76ad125d53bb0e3f",
+        "id": "ab6bfa579f49c0f8",
         "type": "comment",
-        "z": "0bef36713adaed02",
-        "g": "1cc3561ca9ab3fb4",
+        "z": "82bca98606cd74a6",
+        "g": "4d3bd4a85d43e50a",
         "name": "Every tick",
         "info": "",
-        "x": 110,
+        "x": 130,
         "y": 300,
         "wires": []
     },
     {
-        "id": "f92d896751f45c22",
+        "id": "cbc7f5e0fa87249c",
         "type": "link in",
-        "z": "0bef36713adaed02",
-        "g": "1cc3561ca9ab3fb4",
-        "name": "link in 28",
+        "z": "82bca98606cd74a6",
+        "g": "4d3bd4a85d43e50a",
+        "name": "link in 19",
         "links": [
             "442e7bc38dd4c3b7",
-            "758310f9eb5818de"
+            "758310f9eb5818de",
+            "13a2b4889be5cffd",
+            "6c5758792eacf62c",
+            "5ee20c428a74623a"
         ],
-        "x": 305,
+        "x": 325,
         "y": 120,
         "wires": [
             [
-                "3fd8975dd0aa8743"
+                "3b0bc2707d02d065"
             ]
         ]
     },
     {
-        "id": "3fd8975dd0aa8743",
+        "id": "3b0bc2707d02d065",
         "type": "change",
-        "z": "0bef36713adaed02",
-        "g": "1cc3561ca9ab3fb4",
+        "z": "82bca98606cd74a6",
+        "g": "4d3bd4a85d43e50a",
         "name": "Initialize target URL & device data",
         "rules": [
             {
@@ -261,14 +244,14 @@
                 "t": "set",
                 "p": "deviceName",
                 "pt": "flow",
-                "to": "ESRS-TEST04",
+                "to": "ESRS-TEST06",
                 "tot": "str"
             },
             {
                 "t": "set",
                 "p": "description",
                 "pt": "flow",
-                "to": "Life",
+                "to": "Keypad",
                 "tot": "str"
             }
         ],
@@ -277,30 +260,30 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 570,
+        "x": 590,
         "y": 120,
         "wires": [
             [
-                "158d9504840490e7"
+                "b1ba8f12990199b9"
             ]
         ]
     },
     {
-        "id": "b80d5320accd6ee2",
+        "id": "71ad163314174cf7",
         "type": "comment",
-        "z": "0bef36713adaed02",
-        "g": "1cc3561ca9ab3fb4",
+        "z": "82bca98606cd74a6",
+        "g": "4d3bd4a85d43e50a",
         "name": "Always initialize to: http://nnn.nnn.nnn.nnn?command=state // where nnn.... is IP address of UPC device",
         "info": "",
-        "x": 740,
+        "x": 760,
         "y": 80,
         "wires": []
     },
     {
-        "id": "158d9504840490e7",
+        "id": "b1ba8f12990199b9",
         "type": "change",
-        "z": "0bef36713adaed02",
-        "g": "1cc3561ca9ab3fb4",
+        "z": "82bca98606cd74a6",
+        "g": "4d3bd4a85d43e50a",
         "name": "",
         "rules": [
             {
@@ -316,22 +299,44 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 830,
+        "x": 850,
         "y": 120,
         "wires": [
             [
-                "bd2c27e2c791eef5"
+                "647ce7a13353bbe2"
             ]
         ]
     },
     {
-        "id": "58011264e4f232aa",
+        "id": "9f0e824c3912eabf",
         "type": "ui_template",
-        "z": "0bef36713adaed02",
-        "g": "af1e0de3d410d5fd",
+        "z": "82bca98606cd74a6",
+        "g": "4d3bd4a85d43e50a",
+        "group": "4f349049de3d568f",
+        "name": "Keypad",
+        "order": 21,
+        "width": 6,
+        "height": 4,
+        "format": "<md-card-title>\n    <md-card-title-text>\n        <p class=\"md-headline\">{{msg.payload.deviceName}}</p>\n    </md-card-title-text>\n    <span ng-class=\"msg.payload.universal_state.machine_state=='2' ? 'fa fa-unlock fa-2x' : 'fa fa-lock fa-2x'\"></span>\n</md-card-title>\n<md-card-content>\n    <div ng-style=\"{width:'100%',height:'8px','background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\" ></div>\n    <p>\n        {{msg.payload.description?msg.payload.description:'Unknown'}}\n<br>\n        {{msg.payload.id?msg.payload.id:'Unknown'}}\n        - {{msg.payload.time?msg.payload.time:'Unknown'}}\n<br>\n        {{msg.payload.universal_state.input_states?universal_state.input_states:'Unknown'}}\n    </p>\n    <div style=\"text-align:center\">\n        <span style=\"font-size: 2em;\">&nbsp;</span>\n    </div>\n</md-card-content>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1030,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d2274598b27b193f",
+        "type": "ui_template",
+        "z": "82bca98606cd74a6",
+        "g": "3fd8681d9a9f1459",
         "group": "7d8a085018b16642",
-        "name": "Life",
-        "order": 10,
+        "name": "Keypad",
+        "order": 16,
         "width": 13,
         "height": 1,
         "format": "<div style=\"display: flex; justify-content: space-evenly; align-items: center;\">\n<p style=\"width: 20%\" class=\"md-title\">{{msg.payload.description?msg.payload.description:'Unknown'}} </p>\n\n\n<p style=\"width: 20%\">{{msg.payload.description?msg.payload.deviceName:'Unknown'}}</p>\n<p style=\"width: 20%\">{{msg.payload.id?msg.payload.id:'Unknown'}}</p>\n<div\n    ng-style=\"{width:'9%',height:'20px', 'text-align': 'center', 'color': 'white','font-weight': 'bold' ,'background-color':msg.payload.universal_state.machine_state=='2' ? 'green' : 'red'}\">\n    {{ msg.payload.universal_state.machine_state=='2' ? 'Solved' : 'Armed' }}\n</div>\n<p style=\"width: 20%\"> {{msg.payload.time?msg.payload.time:'Unknown'}} </p>\n\n\n</div>",
@@ -340,20 +345,20 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 990,
+        "x": 1040,
         "y": 480,
         "wires": [
             []
         ]
     },
     {
-        "id": "b5c7c6327fea2487",
+        "id": "d010b513fe24478d",
         "type": "comment",
-        "z": "0bef36713adaed02",
-        "g": "af1e0de3d410d5fd",
-        "name": "shows device in \"Devices Dashboard\"",
+        "z": "82bca98606cd74a6",
+        "g": "3fd8681d9a9f1459",
+        "name": "shows devices in \"Devices Dashboard\"",
         "info": "",
-        "x": 1010,
+        "x": 1130,
         "y": 440,
         "wires": []
     },

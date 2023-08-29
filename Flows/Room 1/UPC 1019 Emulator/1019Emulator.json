@@ -1,35 +1,35 @@
 [
     {
-        "id": "03a85bb2954851e1",
+        "id": "ca6787d72a7dc54c",
         "type": "tab",
-        "label": "UPC_Life_Emulator",
+        "label": "UPC_1019_Emulator",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "44900be756773348",
+        "id": "e4e332ee18f9c08d",
         "type": "group",
-        "z": "03a85bb2954851e1",
+        "z": "ca6787d72a7dc54c",
         "name": "Emulate UPC API",
         "style": {
             "label": true
         },
         "nodes": [
-            "c009297e63f19e25",
-            "ebd2c254fde93982",
-            "110bac43e2942ce7",
-            "413882300d4cc9f4"
+            "5eb7b84fd070c3b7",
+            "ac952f05238cd977",
+            "4eaa657a99d24bbd",
+            "681f9dae01abeb39"
         ],
-        "x": 74,
-        "y": 359,
+        "x": 54,
+        "y": 339,
         "w": 832,
         "h": 82
     },
     {
-        "id": "2d17e868fcb5b6d8",
+        "id": "c69da273f99c0c85",
         "type": "group",
-        "z": "03a85bb2954851e1",
+        "z": "ca6787d72a7dc54c",
         "style": {
             "stroke": "#999999",
             "stroke-opacity": "1",
@@ -40,54 +40,57 @@
             "color": "#a4a4a4"
         },
         "nodes": [
-            "4e31c5a57d291a43",
-            "bc7a4cd51817bc5a",
-            "71714e5ffeec6dda",
-            "9c0486f89eaa59e7",
-            "9a39e758cd9181f6"
+            "680fe6b69bb721b8",
+            "4531827b1f1bf9e1",
+            "d7f8c87508975722",
+            "cc90086c50d0d88f",
+            "c8efe286e290e181"
         ],
-        "x": 74,
-        "y": 59,
-        "w": 452,
+        "x": 54,
+        "y": 39,
+        "w": 422,
         "h": 282
     },
     {
-        "id": "4e31c5a57d291a43",
+        "id": "680fe6b69bb721b8",
         "type": "link in",
-        "z": "03a85bb2954851e1",
-        "g": "2d17e868fcb5b6d8",
-        "name": "link in 29",
+        "z": "ca6787d72a7dc54c",
+        "g": "c69da273f99c0c85",
+        "name": "link in 8",
         "links": [
             "442e7bc38dd4c3b7",
-            "758310f9eb5818de"
+            "758310f9eb5818de",
+            "13a2b4889be5cffd",
+            "6c5758792eacf62c",
+            "5ee20c428a74623a"
         ],
-        "x": 165,
-        "y": 100,
+        "x": 125,
+        "y": 80,
         "wires": [
             [
-                "bc7a4cd51817bc5a"
+                "4531827b1f1bf9e1"
             ]
         ]
     },
     {
-        "id": "bc7a4cd51817bc5a",
+        "id": "4531827b1f1bf9e1",
         "type": "change",
-        "z": "03a85bb2954851e1",
-        "g": "2d17e868fcb5b6d8",
+        "z": "ca6787d72a7dc54c",
+        "g": "c69da273f99c0c85",
         "name": "Initialize Device",
         "rules": [
             {
                 "t": "set",
-                "p": "deviceState",
+                "p": "#:(file)::deviceState",
                 "pt": "flow",
                 "to": "0",
                 "tot": "str"
             },
             {
                 "t": "set",
-                "p": "deviceId",
+                "p": "#:(file)::deviceId",
                 "pt": "flow",
-                "to": "99129022401009",
+                "to": "99129022401003",
                 "tot": "str"
             }
         ],
@@ -96,22 +99,51 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 420,
+        "x": 370,
         "y": 160,
         "wires": [
             []
         ]
     },
     {
-        "id": "71714e5ffeec6dda",
+        "id": "d7f8c87508975722",
+        "type": "ui_button",
+        "z": "ca6787d72a7dc54c",
+        "g": "c69da273f99c0c85",
+        "name": "",
+        "group": "7d8a085018b16642",
+        "order": 8,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "RESET",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "4531827b1f1bf9e1"
+            ]
+        ]
+    },
+    {
+        "id": "cc90086c50d0d88f",
         "type": "change",
-        "z": "03a85bb2954851e1",
-        "g": "2d17e868fcb5b6d8",
+        "z": "ca6787d72a7dc54c",
+        "g": "c69da273f99c0c85",
         "name": "",
         "rules": [
             {
                 "t": "set",
-                "p": "deviceState",
+                "p": "#:(file)::deviceState",
                 "pt": "flow",
                 "to": "2",
                 "tot": "str"
@@ -122,35 +154,35 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 380,
-        "y": 300,
+        "x": 350,
+        "y": 280,
         "wires": [
             []
         ]
     },
     {
-        "id": "c009297e63f19e25",
+        "id": "5eb7b84fd070c3b7",
         "type": "http in",
-        "z": "03a85bb2954851e1",
-        "g": "44900be756773348",
+        "z": "ca6787d72a7dc54c",
+        "g": "e4e332ee18f9c08d",
         "name": "UPC API",
-        "url": "/upc/mock/99129022401009",
+        "url": "/upc/mock/99129022401003",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 160,
-        "y": 400,
+        "x": 140,
+        "y": 380,
         "wires": [
             [
-                "ebd2c254fde93982"
+                "ac952f05238cd977"
             ]
         ]
     },
     {
-        "id": "ebd2c254fde93982",
+        "id": "ac952f05238cd977",
         "type": "change",
-        "z": "03a85bb2954851e1",
-        "g": "44900be756773348",
+        "z": "ca6787d72a7dc54c",
+        "g": "e4e332ee18f9c08d",
         "name": "",
         "rules": [
             {
@@ -166,83 +198,54 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 400,
+        "x": 340,
+        "y": 380,
         "wires": [
             [
-                "413882300d4cc9f4"
+                "681f9dae01abeb39"
             ]
         ]
     },
     {
-        "id": "110bac43e2942ce7",
+        "id": "4eaa657a99d24bbd",
         "type": "http response",
-        "z": "03a85bb2954851e1",
-        "g": "44900be756773348",
+        "z": "ca6787d72a7dc54c",
+        "g": "e4e332ee18f9c08d",
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 830,
-        "y": 400,
+        "x": 810,
+        "y": 380,
         "wires": []
     },
     {
-        "id": "413882300d4cc9f4",
+        "id": "681f9dae01abeb39",
         "type": "function",
-        "z": "03a85bb2954851e1",
-        "g": "44900be756773348",
+        "z": "ca6787d72a7dc54c",
+        "g": "e4e332ee18f9c08d",
         "name": "Update payload with UPC state",
-        "func": "let payload = msg.payload; //get payload\npayload.universal_state.machine_state = flow.get(\"deviceState\");\npayload.id = flow.get(\"deviceId\");\nmsg.payload = payload;\nreturn msg;\n",
+        "func": "let payload = msg.payload; //get payload\npayload.universal_state.machine_state = flow.get(\"deviceState\", \"file\");\npayload.id = flow.get(\"deviceId\", \"file\");\nmsg.payload = payload;\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
-        "y": 400,
+        "x": 590,
+        "y": 380,
         "wires": [
             [
-                "110bac43e2942ce7"
+                "4eaa657a99d24bbd"
             ]
         ]
     },
     {
-        "id": "9c0486f89eaa59e7",
+        "id": "c8efe286e290e181",
         "type": "ui_button",
-        "z": "03a85bb2954851e1",
-        "g": "2d17e868fcb5b6d8",
+        "z": "ca6787d72a7dc54c",
+        "g": "c69da273f99c0c85",
         "name": "",
         "group": "7d8a085018b16642",
-        "order": 11,
-        "width": 1,
-        "height": 1,
-        "passthru": false,
-        "label": "RESET",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "{}",
-        "payloadType": "json",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 160,
-        "y": 200,
-        "wires": [
-            [
-                "bc7a4cd51817bc5a"
-            ]
-        ]
-    },
-    {
-        "id": "9a39e758cd9181f6",
-        "type": "ui_button",
-        "z": "03a85bb2954851e1",
-        "g": "2d17e868fcb5b6d8",
-        "name": "",
-        "group": "7d8a085018b16642",
-        "order": 12,
+        "order": 9,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -256,11 +259,11 @@
         "payloadType": "json",
         "topic": "topic",
         "topicType": "msg",
-        "x": 170,
-        "y": 300,
+        "x": 130,
+        "y": 280,
         "wires": [
             [
-                "71714e5ffeec6dda"
+                "cc90086c50d0d88f"
             ]
         ]
     },
@@ -285,3 +288,6 @@
         "hidden": false
     }
 ]
+
+
+

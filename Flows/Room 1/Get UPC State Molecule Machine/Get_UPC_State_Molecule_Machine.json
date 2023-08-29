@@ -70,7 +70,9 @@
         "g": "dc490cd544f0ed0a",
         "name": "link in 15",
         "links": [
-            "c7c4685c94a69e6f"
+            "c7c4685c94a69e6f",
+            "cf8a926349843480",
+            "a6ab45fc89fa3f30"
         ],
         "x": 185,
         "y": 340,
@@ -211,7 +213,10 @@
         "name": "link in 16",
         "links": [
             "442e7bc38dd4c3b7",
-            "758310f9eb5818de"
+            "758310f9eb5818de",
+            "13a2b4889be5cffd",
+            "6c5758792eacf62c",
+            "5ee20c428a74623a"
         ],
         "x": 355,
         "y": 120,
@@ -393,7 +398,7 @@
         "type": "ui_tab",
         "name": "Devices Dashboard",
         "icon": "dashboard",
-        "order": 1,
+        "order": 4,
         "disabled": false,
         "hidden": false
     }
