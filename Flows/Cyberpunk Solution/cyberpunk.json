@@ -1,0 +1,1879 @@
+[
+    {
+        "id": "4ef6ec8e160d7941",
+        "type": "tab",
+        "label": "cyberpunk",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "52d9012078f36cd6",
+        "type": "group",
+        "z": "4ef6ec8e160d7941",
+        "name": "Send to Ciberpunk",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "9cd6823b4d22c76a",
+            "1b5da4c237862682",
+            "0b4bbfae2e999281",
+            "8c54a8f4deb06f9c",
+            "f566587fe6a81ac7"
+        ],
+        "x": 1134,
+        "y": 519,
+        "w": 552,
+        "h": 122
+    },
+    {
+        "id": "97b077d711190b76",
+        "type": "group",
+        "z": "4ef6ec8e160d7941",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "61a4f222bf3214fd",
+            "ea0a08ef4e0ae9d1"
+        ],
+        "x": 1194,
+        "y": 119,
+        "w": 312,
+        "h": 122
+    },
+    {
+        "id": "17fe46a0bfe7e18f",
+        "type": "group",
+        "z": "4ef6ec8e160d7941",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "ee2fd278655f1c84",
+            "5c9e9b8ac102fe78",
+            "1081279a6e03ff4e",
+            "65507d3f048a7053",
+            "9a4896d1df136fd7",
+            "17963d86354a687a",
+            "6d2e25341ea48279",
+            "171f75a86a48a71d",
+            "7cd9bcf1ae342c90",
+            "f68d2c4ae9965e2e",
+            "9fe105e1b63fa0b3",
+            "7115af4258ee0711",
+            "be26c192d745f1cc",
+            "2811c5bdb5f57982",
+            "51da6a0f84b1be0a",
+            "513fa399379becec",
+            "48bcfd6d5a2ce20d",
+            "b86ebf66c34d67ff",
+            "d1cc013ca6cdb866",
+            "9e47d4a9cdb4fb99",
+            "91089791b243eff6",
+            "b617b3b055ff7ab1",
+            "0d14e241c5fdcdeb",
+            "f6efd1b138731776",
+            "1a0e430c297ba158",
+            "046ac2e763c672df",
+            "cf0ab18835d91414",
+            "734dae0bf56196cb",
+            "8f9ae0f5692d271e",
+            "918f398d13116275",
+            "fa8f6a52fc699293",
+            "7983ea5ee6ba23dc",
+            "89ce16f3f8486812",
+            "d59269455dd1e3ab",
+            "6323901d6d360fea",
+            "e273b3c02c82d7c2",
+            "3c331edc2a4da066"
+        ],
+        "x": 14,
+        "y": 759,
+        "w": 1262,
+        "h": 842
+    },
+    {
+        "id": "9686aac05ee8e925",
+        "type": "group",
+        "z": "4ef6ec8e160d7941",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "976210e8e9e18715",
+            "f243e1c1422e3e27",
+            "b526317c3d918075",
+            "1a346d484b2b6995",
+            "ede80f092f582739",
+            "5ac330c173a9e082",
+            "75c0c297c7d14891",
+            "ee33fe2d4aa830ce",
+            "22da3c3ad61a9769",
+            "83ba6f2e898b7958",
+            "635d330e03d07ea2",
+            "85a5353d9acd375f",
+            "853093fb12ee0d3a",
+            "3acd8b80515648e0",
+            "7fa85107d538745d",
+            "d171aa3be2feb144"
+        ],
+        "x": 14,
+        "y": 19,
+        "w": 1072,
+        "h": 402
+    },
+    {
+        "id": "8fe8ebc744f7140e",
+        "type": "group",
+        "z": "4ef6ec8e160d7941",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "b690fceb60ed877e",
+            "2adf967130c4b507",
+            "cf5a8f605abd8f20",
+            "4e6723bb1d69f240",
+            "229cae6efa00c141",
+            "e094b04446381990",
+            "c26344d399adc777",
+            "c176831825ea6b2d",
+            "8220dd1c92474441",
+            "a6f2b1019ae7ad36",
+            "6d834ae9d9160432",
+            "cdd2d2cfd3508141",
+            "1e1b2eaed5bf0e3a"
+        ],
+        "x": 14,
+        "y": 439,
+        "w": 732,
+        "h": 262
+    },
+    {
+        "id": "976210e8e9e18715",
+        "type": "trigger",
+        "z": "4ef6ec8e160d7941",
+        "g": "9686aac05ee8e925",
+        "name": "",
+        "op1": "",
+        "op2": " ",
+        "op1type": "pay",
+        "op2type": "str",
+        "duration": "5",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 380,
+        "y": 160,
+        "wires": [
+            [
+                "f243e1c1422e3e27"
+            ]
+        ]
+    },
+    {
+        "id": "f243e1c1422e3e27",
+        "type": "change",
+        "z": "4ef6ec8e160d7941",
+        "g": "9686aac05ee8e925",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "displayText",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 160,
+        "wires": [
+            [
+                "ede80f092f582739"
+            ]
+        ]
+    },
+    {
+        "id": "b526317c3d918075",
+        "type": "comment",
+        "z": "4ef6ec8e160d7941",
+        "g": "9686aac05ee8e925",
+        "name": "Duration before clearing",
+        "info": "",
+        "x": 380,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "1a346d484b2b6995",
+        "type": "comment",
+        "z": "4ef6ec8e160d7941",
+        "g": "9686aac05ee8e925",
+        "name": "Set msg variable from payload",
+        "info": "",
+        "x": 650,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ede80f092f582739",
+        "type": "link out",
+        "z": "4ef6ec8e160d7941",
+        "g": "9686aac05ee8e925",
+        "name": "In-Game Text Display Out",
+        "mode": "link",
+        "links": [
+            "f566587fe6a81ac7"
+        ],
+        "x": 765,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "5ac330c173a9e082",
+        "type": "ui_dropdown",
+        "z": "4ef6ec8e160d7941",
+        "g": "9686aac05ee8e925",
+        "name": "",
+        "label": "Clue Picker",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "10b38989c60fb03e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "Miren Los Jarrones",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "Sienten eso?",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "Introducir pista",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "topicType": "str",
+        "className": "",
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "976210e8e9e18715",
+                "83ba6f2e898b7958",
+                "d171aa3be2feb144"
+            ]
+        ]
+    },
+    {
+        "id": "75c0c297c7d14891",
+        "type": "comment",
+        "z": "4ef6ec8e160d7941",
+        "g": "9686aac05ee8e925",
+        "name": "Predefined Messages",
+        "info": "",
+        "x": 140,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ee33fe2d4aa830ce",
+        "type": "ui_text_input",
+        "z": "4ef6ec8e160d7941",
+        "g": "9686aac05ee8e925",
+        "name": "",
+        "label": "Escribe Pista",
+        "tooltip": "",
+        "group": "10b38989c60fb03e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "str",
+        "x": 150,
+        "y": 320,
+        "wires": [
+            [
+                "976210e8e9e18715",
+                "83ba6f2e898b7958",
+                "7fa85107d538745d"
+            ]
+        ]
+    },
+    {
+        "id": "22da3c3ad61a9769",
+        "type": "ui_audio",
+        "z": "4ef6ec8e160d7941",
+        "g": "9686aac05ee8e925",
+        "name": "",
+        "group": "10b38989c60fb03e",
+        "voice": "",
+        "always": true,
+        "x": 1000,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "83ba6f2e898b7958",
+        "type": "file in",
+        "z": "4ef6ec8e160d7941",
+        "g": "9686aac05ee8e925",
+        "name": "getfilewithSound",
+        "filename": "/Users/rodrigoalsogaray/Desktop/pianoSounds/out-of-nowhere-message-tone.mp3",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 610,
+        "y": 260,
+        "wires": [
+            [
+                "22da3c3ad61a9769"
+            ]
+        ]
+    },
+    {
+        "id": "635d330e03d07ea2",
+        "type": "comment",
+        "z": "4ef6ec8e160d7941",
+        "g": "9686aac05ee8e925",
+        "name": "Free Text Messages",
+        "info": "",
+        "x": 150,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "85a5353d9acd375f",
+        "type": "comment",
+        "z": "4ef6ec8e160d7941",
+        "g": "9686aac05ee8e925",
+        "name": "Play audible alert for players",
+        "info": "",
+        "x": 640,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "9cd6823b4d22c76a",
+        "type": "join",
+        "z": "4ef6ec8e160d7941",
+        "g": "52d9012078f36cd6",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "",
+        "propertyType": "full",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "1",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 1270,
+        "y": 600,
+        "wires": [
+            [
+                "0b4bbfae2e999281"
+            ]
+        ]
+    },
+    {
+        "id": "1b5da4c237862682",
+        "type": "comment",
+        "z": "4ef6ec8e160d7941",
+        "g": "52d9012078f36cd6",
+        "name": "Combine text input clue, img & video",
+        "info": "",
+        "x": 1313,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "0b4bbfae2e999281",
+        "type": "uibuilder",
+        "z": "4ef6ec8e160d7941",
+        "g": "52d9012078f36cd6",
+        "name": "",
+        "topic": "",
+        "url": "cyberpunk",
+        "fwdInMessages": false,
+        "allowScripts": true,
+        "allowStyles": false,
+        "copyIndex": true,
+        "templateFolder": "blank",
+        "extTemplate": "",
+        "showfolder": false,
+        "reload": true,
+        "sourceFolder": "src",
+        "deployedVersion": "6.4.1",
+        "showMsgUib": false,
+        "x": 1570,
+        "y": 600,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8c54a8f4deb06f9c",
+        "type": "comment",
+        "z": "4ef6ec8e160d7941",
+        "g": "52d9012078f36cd6",
+        "name": "Send to display",
+        "info": "",
+        "x": 1580,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "f566587fe6a81ac7",
+        "type": "link in",
+        "z": "4ef6ec8e160d7941",
+        "g": "52d9012078f36cd6",
+        "name": "Ciberpunk",
+        "links": [
+            "a18b1a3a0f228da8",
+            "b7f389b32da9efa3",
+            "ede80f092f582739",
+            "2218c662c5924a83",
+            "f02e021520ab4223",
+            "65507d3f048a7053",
+            "7cd9bcf1ae342c90",
+            "cf5a8f605abd8f20",
+            "be26c192d745f1cc",
+            "513fa399379becec",
+            "0d14e241c5fdcdeb",
+            "7983ea5ee6ba23dc"
+        ],
+        "x": 1175,
+        "y": 600,
+        "wires": [
+            [
+                "9cd6823b4d22c76a"
+            ]
+        ]
+    },
+    {
+        "id": "ee2fd278655f1c84",
+        "type": "file in",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "help audio",
+        "filename": "/Users/rodrigoalsogaray/Desktop/pianoSounds/audioAyuda.mp3",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 550,
+        "y": 1140,
+        "wires": [
+            [
+                "5c9e9b8ac102fe78",
+                "17963d86354a687a"
+            ]
+        ]
+    },
+    {
+        "id": "6218a60bc1a166af",
+        "type": "link in",
+        "z": "4ef6ec8e160d7941",
+        "name": "link in 30",
+        "links": [
+            "5c9e9b8ac102fe78"
+        ],
+        "x": 975,
+        "y": 640,
+        "wires": [
+            [
+                "22da3c3ad61a9769"
+            ]
+        ]
+    },
+    {
+        "id": "5c9e9b8ac102fe78",
+        "type": "link out",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "link out 5",
+        "mode": "link",
+        "links": [
+            "6218a60bc1a166af"
+        ],
+        "x": 1005,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "1081279a6e03ff4e",
+        "type": "change",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "videoOverlaySrc",
+                "pt": "msg",
+                "to": "videos/Explainer-Videos.mp4",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 1260,
+        "wires": [
+            [
+                "7cd9bcf1ae342c90"
+            ]
+        ]
+    },
+    {
+        "id": "65507d3f048a7053",
+        "type": "link out",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "link out 6",
+        "mode": "link",
+        "links": [
+            "f566587fe6a81ac7"
+        ],
+        "x": 1235,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "9a4896d1df136fd7",
+        "type": "change",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "videoOverlaySrc",
+                "pt": "msg",
+                "to": "videos/chained.mp4",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1010,
+        "y": 1180,
+        "wires": [
+            [
+                "65507d3f048a7053"
+            ]
+        ]
+    },
+    {
+        "id": "17963d86354a687a",
+        "type": "trigger",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "",
+        "op1": "",
+        "op2": " ",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "6.4",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 790,
+        "y": 1140,
+        "wires": [
+            [
+                "9a4896d1df136fd7",
+                "6d2e25341ea48279"
+            ]
+        ]
+    },
+    {
+        "id": "b690fceb60ed877e",
+        "type": "change",
+        "z": "4ef6ec8e160d7941",
+        "g": "8fe8ebc744f7140e",
+        "name": "Bat",
+        "rules": [
+            {
+                "t": "set",
+                "p": "imageSrc",
+                "pt": "msg",
+                "to": "img/steampunk.jpeg",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 540,
+        "wires": [
+            [
+                "cf5a8f605abd8f20"
+            ]
+        ]
+    },
+    {
+        "id": "2adf967130c4b507",
+        "type": "change",
+        "z": "4ef6ec8e160d7941",
+        "g": "8fe8ebc744f7140e",
+        "name": "clear img",
+        "rules": [
+            {
+                "t": "set",
+                "p": "imageSrc",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 660,
+        "wires": [
+            [
+                "cf5a8f605abd8f20"
+            ]
+        ]
+    },
+    {
+        "id": "6d2e25341ea48279",
+        "type": "change",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "imageSrc",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 990,
+        "y": 1140,
+        "wires": [
+            [
+                "65507d3f048a7053"
+            ]
+        ]
+    },
+    {
+        "id": "171f75a86a48a71d",
+        "type": "change",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "imageSrc",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 1300,
+        "wires": [
+            [
+                "7cd9bcf1ae342c90"
+            ]
+        ]
+    },
+    {
+        "id": "7cd9bcf1ae342c90",
+        "type": "link out",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "link out 7",
+        "mode": "link",
+        "links": [
+            "f566587fe6a81ac7"
+        ],
+        "x": 775,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "cf5a8f605abd8f20",
+        "type": "link out",
+        "z": "4ef6ec8e160d7941",
+        "g": "8fe8ebc744f7140e",
+        "name": "link out 8",
+        "mode": "link",
+        "links": [
+            "f566587fe6a81ac7"
+        ],
+        "x": 705,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "4e6723bb1d69f240",
+        "type": "change",
+        "z": "4ef6ec8e160d7941",
+        "g": "8fe8ebc744f7140e",
+        "name": "Darth Steam",
+        "rules": [
+            {
+                "t": "set",
+                "p": "imageSrc",
+                "pt": "msg",
+                "to": "img/darthSteam.jpeg",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 580,
+        "wires": [
+            [
+                "cf5a8f605abd8f20"
+            ]
+        ]
+    },
+    {
+        "id": "229cae6efa00c141",
+        "type": "change",
+        "z": "4ef6ec8e160d7941",
+        "g": "8fe8ebc744f7140e",
+        "name": "operating room",
+        "rules": [
+            {
+                "t": "set",
+                "p": "imageSrc",
+                "pt": "msg",
+                "to": "img/quirofano.jpeg",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 620,
+        "wires": [
+            [
+                "cf5a8f605abd8f20"
+            ]
+        ]
+    },
+    {
+        "id": "e094b04446381990",
+        "type": "switch",
+        "z": "4ef6ec8e160d7941",
+        "g": "8fe8ebc744f7140e",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Bat",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 540,
+        "wires": [
+            [
+                "b690fceb60ed877e"
+            ]
+        ]
+    },
+    {
+        "id": "c26344d399adc777",
+        "type": "switch",
+        "z": "4ef6ec8e160d7941",
+        "g": "8fe8ebc744f7140e",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Darth",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 580,
+        "wires": [
+            [
+                "4e6723bb1d69f240"
+            ]
+        ]
+    },
+    {
+        "id": "c176831825ea6b2d",
+        "type": "switch",
+        "z": "4ef6ec8e160d7941",
+        "g": "8fe8ebc744f7140e",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Quirofano",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 620,
+        "wires": [
+            [
+                "229cae6efa00c141"
+            ]
+        ]
+    },
+    {
+        "id": "8220dd1c92474441",
+        "type": "switch",
+        "z": "4ef6ec8e160d7941",
+        "g": "8fe8ebc744f7140e",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Clear",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 660,
+        "wires": [
+            [
+                "2adf967130c4b507"
+            ]
+        ]
+    },
+    {
+        "id": "a6f2b1019ae7ad36",
+        "type": "ui_dropdown",
+        "z": "4ef6ec8e160d7941",
+        "g": "8fe8ebc744f7140e",
+        "name": "",
+        "label": "Img Picker",
+        "tooltip": "",
+        "place": "Select Option",
+        "group": "10b38989c60fb03e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "Bat",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "Darth",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "Quirofano",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "Clear",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "topicType": "str",
+        "className": "",
+        "x": 110,
+        "y": 600,
+        "wires": [
+            [
+                "e094b04446381990",
+                "c26344d399adc777",
+                "c176831825ea6b2d",
+                "8220dd1c92474441",
+                "1e1b2eaed5bf0e3a"
+            ]
+        ],
+        "info": "# Select Img"
+    },
+    {
+        "id": "6d834ae9d9160432",
+        "type": "comment",
+        "z": "4ef6ec8e160d7941",
+        "g": "8fe8ebc744f7140e",
+        "name": "select an image and send it to dashboard",
+        "info": "",
+        "x": 200,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "cdd2d2cfd3508141",
+        "type": "ui_template",
+        "z": "4ef6ec8e160d7941",
+        "g": "8fe8ebc744f7140e",
+        "group": "10b38989c60fb03e",
+        "name": "Imagenes",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<md-card-title-text>\n    <p style=\"font-size: 20px;  text-decoration: underline;\">Imágenes</p>\n</md-card-title-text>\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 100,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "853093fb12ee0d3a",
+        "type": "ui_template",
+        "z": "4ef6ec8e160d7941",
+        "g": "9686aac05ee8e925",
+        "group": "10b38989c60fb03e",
+        "name": "Pistas",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<md-card-title-text>\n    <p style=\"font-size: 20px;  text-decoration: underline;\">Pistas</p>\n</md-card-title-text>\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 530,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f68d2c4ae9965e2e",
+        "type": "ui_template",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "group": "10b38989c60fb03e",
+        "name": "Videos",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "format": "<md-card-title-text>\n    <p style=\"font-size: 20px;  text-decoration: underline;\">Videos</p>\n</md-card-title-text>\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 90,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9fe105e1b63fa0b3",
+        "type": "ui_dropdown",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "",
+        "label": "Video Picker",
+        "tooltip": "",
+        "place": "Select Option",
+        "group": "10b38989c60fb03e",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "Araña",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "Encadenado",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "Explainer",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "Clear",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "topicType": "str",
+        "className": "",
+        "x": 110,
+        "y": 1200,
+        "wires": [
+            [
+                "d1cc013ca6cdb866",
+                "9e47d4a9cdb4fb99",
+                "91089791b243eff6",
+                "8f9ae0f5692d271e",
+                "3c331edc2a4da066"
+            ]
+        ],
+        "info": "# Select Img"
+    },
+    {
+        "id": "7115af4258ee0711",
+        "type": "change",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "videoOverlaySrc",
+                "pt": "msg",
+                "to": "videos/10_Seconds_of_ Spider.mp4",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 880,
+        "wires": [
+            [
+                "be26c192d745f1cc"
+            ]
+        ]
+    },
+    {
+        "id": "be26c192d745f1cc",
+        "type": "link out",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "In-Game Text Display Out",
+        "mode": "link",
+        "links": [
+            "f566587fe6a81ac7"
+        ],
+        "x": 705,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "2811c5bdb5f57982",
+        "type": "trigger",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "",
+        "op1": "",
+        "op2": " ",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 490,
+        "y": 980,
+        "wires": [
+            [
+                "51da6a0f84b1be0a",
+                "48bcfd6d5a2ce20d"
+            ]
+        ]
+    },
+    {
+        "id": "51da6a0f84b1be0a",
+        "type": "change",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "videoOverlaySrc",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 980,
+        "wires": [
+            [
+                "513fa399379becec"
+            ]
+        ]
+    },
+    {
+        "id": "513fa399379becec",
+        "type": "link out",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "In-Game Text Display Out",
+        "mode": "link",
+        "links": [
+            "f566587fe6a81ac7"
+        ],
+        "x": 895,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "48bcfd6d5a2ce20d",
+        "type": "change",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "imageSrc",
+                "pt": "msg",
+                "to": "img/steampunk.jpeg",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 1020,
+        "wires": [
+            [
+                "513fa399379becec"
+            ]
+        ]
+    },
+    {
+        "id": "b86ebf66c34d67ff",
+        "type": "change",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "imageSrc",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 840,
+        "wires": [
+            [
+                "be26c192d745f1cc"
+            ]
+        ]
+    },
+    {
+        "id": "d1cc013ca6cdb866",
+        "type": "switch",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "Spider",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Araña",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 880,
+        "wires": [
+            [
+                "b86ebf66c34d67ff",
+                "7115af4258ee0711",
+                "2811c5bdb5f57982"
+            ]
+        ]
+    },
+    {
+        "id": "9e47d4a9cdb4fb99",
+        "type": "switch",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "Encadenado",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Encadenado",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 1140,
+        "wires": [
+            [
+                "ee2fd278655f1c84"
+            ]
+        ]
+    },
+    {
+        "id": "91089791b243eff6",
+        "type": "switch",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "Explainer",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Explainer",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 1260,
+        "wires": [
+            [
+                "1081279a6e03ff4e",
+                "171f75a86a48a71d",
+                "b617b3b055ff7ab1"
+            ]
+        ]
+    },
+    {
+        "id": "b617b3b055ff7ab1",
+        "type": "trigger",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "",
+        "op1": "",
+        "op2": " ",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "30",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 510,
+        "y": 1400,
+        "wires": [
+            [
+                "f6efd1b138731776",
+                "1a0e430c297ba158"
+            ]
+        ]
+    },
+    {
+        "id": "0d14e241c5fdcdeb",
+        "type": "link out",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "In-Game Text Display Out",
+        "mode": "link",
+        "links": [
+            "f566587fe6a81ac7"
+        ],
+        "x": 945,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "f6efd1b138731776",
+        "type": "change",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "videoOverlaySrc",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 1400,
+        "wires": [
+            [
+                "0d14e241c5fdcdeb"
+            ]
+        ]
+    },
+    {
+        "id": "1a0e430c297ba158",
+        "type": "change",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "imageSrc",
+                "pt": "msg",
+                "to": "img/steampunk.jpeg",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 1440,
+        "wires": [
+            [
+                "0d14e241c5fdcdeb"
+            ]
+        ]
+    },
+    {
+        "id": "046ac2e763c672df",
+        "type": "comment",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "Assign video file and remove background image",
+        "info": "",
+        "x": 500,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "cf0ab18835d91414",
+        "type": "comment",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "When the video has finished, it removes it.",
+        "info": "",
+        "x": 560,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "734dae0bf56196cb",
+        "type": "comment",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "Assign video file and remove background image",
+        "info": "",
+        "x": 1060,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "8f9ae0f5692d271e",
+        "type": "switch",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "Clear",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Clear",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 290,
+        "y": 1520,
+        "wires": [
+            [
+                "918f398d13116275",
+                "fa8f6a52fc699293"
+            ]
+        ]
+    },
+    {
+        "id": "918f398d13116275",
+        "type": "change",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "videoOverlaySrc",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 1520,
+        "wires": [
+            [
+                "7983ea5ee6ba23dc"
+            ]
+        ]
+    },
+    {
+        "id": "fa8f6a52fc699293",
+        "type": "change",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "imageSrc",
+                "pt": "msg",
+                "to": "img/steampunk.jpeg",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 1560,
+        "wires": [
+            [
+                "7983ea5ee6ba23dc"
+            ]
+        ]
+    },
+    {
+        "id": "7983ea5ee6ba23dc",
+        "type": "link out",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "In-Game Text Display Out",
+        "mode": "link",
+        "links": [
+            "f566587fe6a81ac7"
+        ],
+        "x": 745,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "89ce16f3f8486812",
+        "type": "comment",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "Assign video file and remove background image",
+        "info": "",
+        "x": 440,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "61a4f222bf3214fd",
+        "type": "ui_template",
+        "z": "4ef6ec8e160d7941",
+        "g": "97b077d711190b76",
+        "group": "f08ba3d0ec182a89",
+        "name": "",
+        "order": 19,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n\n    #Main_Cyberpunk{\n        border: 2px solid rgb(168, 168, 168);\n        border-radius: 5%;\n        box-shadow: 0px 0px 0px 3px rgba(0,0,0,0.1);\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "className": "",
+        "x": 1280,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d59269455dd1e3ab",
+        "type": "comment",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "Assign a video file after the audio is finished",
+        "info": "",
+        "x": 570,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "6323901d6d360fea",
+        "type": "comment",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "Clear video src",
+        "info": "",
+        "x": 320,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "e273b3c02c82d7c2",
+        "type": "comment",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "Assign video file and remove background image",
+        "info": "",
+        "x": 620,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "ea0a08ef4e0ae9d1",
+        "type": "comment",
+        "z": "4ef6ec8e160d7941",
+        "g": "97b077d711190b76",
+        "name": "Cyberpunk style on dashboard",
+        "info": "",
+        "x": 1350,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "3acd8b80515648e0",
+        "type": "comment",
+        "z": "4ef6ec8e160d7941",
+        "g": "9686aac05ee8e925",
+        "name": "select/wrtie a clue and send it to dashboard",
+        "info": "",
+        "x": 230,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "7fa85107d538745d",
+        "type": "trigger",
+        "z": "4ef6ec8e160d7941",
+        "g": "9686aac05ee8e925",
+        "name": "",
+        "op1": "",
+        "op2": " ",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "5",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 140,
+        "y": 380,
+        "wires": [
+            [
+                "ee33fe2d4aa830ce"
+            ]
+        ]
+    },
+    {
+        "id": "d171aa3be2feb144",
+        "type": "trigger",
+        "z": "4ef6ec8e160d7941",
+        "g": "9686aac05ee8e925",
+        "name": "",
+        "op1": "",
+        "op2": " ",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "5",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "5ac330c173a9e082"
+            ]
+        ]
+    },
+    {
+        "id": "1e1b2eaed5bf0e3a",
+        "type": "trigger",
+        "z": "4ef6ec8e160d7941",
+        "g": "8fe8ebc744f7140e",
+        "name": "",
+        "op1": "",
+        "op2": " ",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "5",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 100,
+        "y": 660,
+        "wires": [
+            [
+                "a6f2b1019ae7ad36"
+            ]
+        ]
+    },
+    {
+        "id": "3c331edc2a4da066",
+        "type": "trigger",
+        "z": "4ef6ec8e160d7941",
+        "g": "17fe46a0bfe7e18f",
+        "name": "",
+        "op1": "",
+        "op2": " ",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "5",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 100,
+        "y": 1260,
+        "wires": [
+            [
+                "9fe105e1b63fa0b3"
+            ]
+        ]
+    },
+    {
+        "id": "f1481c95e10778f5",
+        "type": "ui_spacer",
+        "z": "4ef6ec8e160d7941",
+        "name": "spacer",
+        "group": "f08ba3d0ec182a89",
+        "order": 6,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "57d0afb8cf7d495c",
+        "type": "ui_spacer",
+        "z": "4ef6ec8e160d7941",
+        "name": "spacer",
+        "group": "733727e93f750e8c",
+        "order": 2,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "10b38989c60fb03e",
+        "type": "ui_group",
+        "name": "Cyberpunk",
+        "tab": "a38c3d325d960343",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f08ba3d0ec182a89",
+        "type": "ui_group",
+        "name": "Game Control",
+        "tab": "a38c3d325d960343",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "733727e93f750e8c",
+        "type": "ui_group",
+        "name": "In-Game Display",
+        "tab": "a38c3d325d960343",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a38c3d325d960343",
+        "type": "ui_tab",
+        "name": "Main",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
