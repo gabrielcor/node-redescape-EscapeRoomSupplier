@@ -10,6 +10,8 @@ While videos are currently sent manually here, the solution can be automated onc
 
 ![Dashboard View](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/cyberpunk0.png)
 
+![Get UPC State Sliders](https://github.com/gabrielcor/node-redescape-EscapeRoomSupplier/blob/develop_Rodrigo/Documentation/screenshots/GetSlider0.png)
+
 ### Clues
 The game master, in the "Clue Picker" dropdown menu, can choose one of the predefined clues, which will be displayed in written form on the screen. If needed, below the dropdown menu, the Game Master can type a custom clue to assist the users. These clues will appear on top of videos or images without affecting their functionality for a duration of 5 seconds, after which they will disappear.
 
